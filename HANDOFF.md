@@ -131,7 +131,8 @@ Esto es una propuesta mía, no decidida con Daniel. Confírmala antes de constru
 - **En Vercel se falla rápido:** con `VERCEL` definido, 1 reintento en vez de 5, para que el visitante no espere minutos.
 - **`.vercelignore`:** excluye `.env*`, embeddings, `scripts/` y `HANDOFF.md`. Verificado en el listado de archivos del deploy: sin `.env`.
 - **Regla de Daniel:** demos y pruebas pequeñas para cuidar la cuota gratuita; preguntar antes de corridas grandes.
-- **Pendiente:** commit y repositorio en GitHub (pedir permiso). Enlazar desde el portafolio.
+- **GitHub:** https://github.com/DanielAlejandro-Analytics/rag-docs-nextjs (privado, como el portafolio). Conectado a Vercel: cada push a `main` despliega a producción.
+- **Pendiente:** enlazar desde el portafolio; decidir si el repo pasa a público para reclutadores (si se hace, revisar antes qué de este HANDOFF conviene dejar).
 
 ## 8. Pasos siguientes (en orden)
 
