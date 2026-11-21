@@ -19,7 +19,7 @@ export function Nav() {
             key={href}
             href={href}
             aria-current={active ? "page" : undefined}
-            className={`flex items-center border-b-2 px-2 text-sm sm:px-3 sm:text-base ${
+            className={`flex items-center border-b-2 px-2 font-mono text-sm sm:px-3 ${
               active ? "border-accent text-accent" : "border-transparent text-muted hover:text-text"
             }`}
           >

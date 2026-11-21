@@ -49,7 +49,7 @@ export default function Resultados() {
           </table>
         </div>
         <p className="text-sm text-muted">
-          En verde, el método que usa el demo. La fusión mejora el inglés pero empeora el español, porque la pregunta original en español
+          En ámbar, el método que usa el demo. La fusión mejora el inglés pero empeora el español, porque la pregunta original en español
           solo agrega ruido a una búsqueda por palabras sobre documentación en inglés.
         </p>
       </section>

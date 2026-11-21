@@ -26,7 +26,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         <header className="border-b border-line">
           <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
-            <p className="py-4 text-base font-semibold sm:text-lg">
+            <p className="glow py-4 font-mono text-base font-medium sm:text-lg">
               RAG <span className="text-muted">· Docs de Next.js 16.4</span>
             </p>
             <Nav />
