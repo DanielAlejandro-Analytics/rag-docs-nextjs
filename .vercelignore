@@ -1,0 +1,9 @@
+data/embeddings.bin
+data/embeddings.json
+data/query-embeddings.json
+scripts/
+HANDOFF.md
+.env*
+.next
+node_modules
+.vercel

@@ -1,0 +1,3204 @@
+{
+  "date": "2026-11-21T17:29:05.473Z",
+  "rewriteModel": "gemini-3.5-flash-lite",
+  "runs": [
+    {
+      "lang": "en",
+      "method": "bm25",
+      "recall": {
+        "recall@1": 0.25,
+        "recall@3": 0.6,
+        "recall@5": 0.7,
+        "recall@10": 0.75
+      },
+      "mrr": 0.42627976190476186,
+      "perQuestion": [
+        {
+          "id": "q01",
+          "question": "How do I create a page whose URL contains a variable part, like a blog post slug?",
+          "query": "How do I create a page whose URL contains a variable part, like a blog post slug?",
+          "rank": 3,
+          "top5": [
+            "01-app/01-getting-started/03-layouts-and-pages#creating-a-nested-route",
+            "02-pages/03-building-your-application/01-routing/03-linking-and-navigating#linking-to-dynamic-paths",
+            "01-app/01-getting-started/03-layouts-and-pages#creating-a-dynamic-segment",
+            "01-app/01-getting-started/12-images#images-without-static-imports",
+            "01-app/03-api-reference/02-components/link#passing-a-url-object"
+          ]
+        },
+        {
+          "id": "q02",
+          "question": "After a Server Action changes data, how do I make the page show the updated data?",
+          "query": "After a Server Action changes data, how do I make the page show the updated data?",
+          "rank": 3,
+          "top5": [
+            "01-app/03-api-reference/04-functions/cookies#understanding-cookie-behavior-in-server-functions",
+            "02-pages/03-building-your-application/03-data-fetching/05-client-side#intro",
+            "01-app/01-getting-started/07-mutating-data#revalidate-data",
+            "01-app/01-getting-started/07-mutating-data#refresh-data",
+            "01-app/03-api-reference/04-functions/cacheLife#preset-cache-profiles"
+          ]
+        },
+        {
+          "id": "q03",
+          "question": "How can every page title automatically include the site name as a suffix?",
+          "query": "How can every page title automatically include the site name as a suffix?",
+          "rank": 3,
+          "top5": [
+            "01-app/02-guides/migrating/from-create-react-app#step-4-metadata",
+            "01-app/03-api-reference/04-functions/generate-metadata#twitter",
+            "01-app/03-api-reference/04-functions/generate-metadata#metadata-fields",
+            "02-pages/04-api-reference/01-components/head#avoid-duplicated-tags",
+            "01-app/03-api-reference/03-file-conventions/not-found#metadata"
+          ]
+        },
+        {
+          "id": "q04",
+          "question": "How can I show a skeleton while a route is fetching its data?",
+          "query": "How can I show a skeleton while a route is fetching its data?",
+          "rank": 0,
+          "top5": [
+            "01-app/02-guides/preserving-ui-state#prerendering-hidden-content",
+            "01-app/03-api-reference/03-file-conventions/layout#interaction-with-loading-js",
+            "01-app/02-guides/optimizing-the-static-shell#stream-request-time-work",
+            "01-app/02-guides/streaming#early-resource-discovery",
+            "01-app/01-getting-started/06-fetching-data#streaming"
+          ]
+        },
+        {
+          "id": "q05",
+          "question": "How do I show a fallback UI when a part of the app throws an unexpected runtime error?",
+          "query": "How do I show a fallback UI when a part of the app throws an unexpected runtime error?",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/error#intro",
+            "01-app/03-api-reference/04-functions/not-found#intro",
+            "01-app/03-api-reference/03-file-conventions/loading#instant-loading-states",
+            "01-app/03-api-reference/04-functions/forbidden#good-to-know",
+            "01-app/03-api-reference/04-functions/unauthorized#good-to-know"
+          ]
+        },
+        {
+          "id": "q06",
+          "question": "How do I customize the page shown when a URL does not exist in the App Router?",
+          "query": "How do I customize the page shown when a URL does not exist in the App Router?",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/not-found#metadata",
+            "01-app/01-getting-started/01-installation#set-up-your-editor",
+            "01-app/04-glossary#not-found",
+            "02-pages/04-api-reference/03-functions/use-router#router-push",
+            "02-pages/04-api-reference/03-functions/use-router#router-events"
+          ]
+        },
+        {
+          "id": "q07",
+          "question": "How do I build a JSON API endpoint inside the app directory?",
+          "query": "How do I build a JSON API endpoint inside the app directory?",
+          "rank": 5,
+          "top5": [
+            "01-app/03-api-reference/07-adapters/04-testing-adapters#custom-deploy-script-contract",
+            "01-app/02-guides/static-exports#server-components",
+            "01-app/02-guides/migrating/app-router-migration#step-6-migrating-data-fetching-methods",
+            "01-app/03-api-reference/05-config/01-next-config-js/transpilePackages#when-you-need-it",
+            "01-app/01-getting-started/15-route-handlers#convention"
+          ]
+        },
+        {
+          "id": "q08",
+          "question": "What happened to middleware in Next.js 16?",
+          "query": "What happened to middleware in Next.js 16?",
+          "rank": 3,
+          "top5": [
+            "01-app/02-guides/upgrading/version-16#middleware-to-proxy",
+            "01-app/03-api-reference/03-file-conventions/middleware#intro",
+            "01-app/01-getting-started/16-proxy#intro",
+            "01-app/03-api-reference/05-config/01-next-config-js/skipProxyUrlNormalize#deprecated-alias",
+            "01-app/02-guides/upgrading/codemods#16-0"
+          ]
+        },
+        {
+          "id": "q09",
+          "question": "How do I make a component run in the browser so it can use useState and onClick?",
+          "query": "How do I make a component run in the browser so it can use useState and onClick?",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/01-directives/use-client#usage",
+            "01-app/01-getting-started/07-mutating-data#event-handlers",
+            "01-app/02-guides/preserving-ui-state#dialog-and-initialization-logic",
+            "01-app/01-getting-started/11-css#import-styles-from-node-modules",
+            "01-app/01-getting-started/04-linking-and-navigating#native-history-api"
+          ]
+        },
+        {
+          "id": "q10",
+          "question": "How do I let the Image component load pictures hosted on another domain?",
+          "query": "How do I let the Image component load pictures hosted on another domain?",
+          "rank": 0,
+          "top5": [
+            "01-app/02-guides/multi-zones#intro",
+            "02-pages/03-building-your-application/01-routing/03-linking-and-navigating#caveats",
+            "01-app/03-api-reference/02-components/image#getimageprops",
+            "01-app/01-getting-started/05-server-and-client-components#third-party-components",
+            "01-app/02-guides/streaming#the-html-stream"
+          ]
+        },
+        {
+          "id": "q11",
+          "question": "How do I use a Google Font without sending requests to Google from the browser?",
+          "query": "How do I use a Google Font without sending requests to Google from the browser?",
+          "rank": 2,
+          "top5": [
+            "01-app/03-api-reference/02-components/font#intro",
+            "01-app/01-getting-started/13-fonts#google-fonts",
+            "01-app/03-api-reference/02-components/font#apply-the-font-in-head",
+            "01-app/01-getting-started/13-fonts#intro",
+            "01-app/02-guides/upgrading/codemods#13-2"
+          ]
+        },
+        {
+          "id": "q12",
+          "question": "How do I stop a link in the footer from being prefetched?",
+          "query": "How do I stop a link in the footer from being prefetched?",
+          "rank": 1,
+          "top5": [
+            "01-app/02-guides/prefetching#disabled-prefetch",
+            "02-pages/03-building-your-application/01-routing/01-pages-and-layouts#layout-pattern",
+            "01-app/02-guides/adopting-partial-prefetching#what-changes-for-link",
+            "02-pages/03-building-your-application/01-routing/01-pages-and-layouts#data-fetching",
+            "01-app/01-getting-started/04-linking-and-navigating#prefetching"
+          ]
+        },
+        {
+          "id": "q13",
+          "question": "How do I send the user to a different URL from a Server Component?",
+          "query": "How do I send the user to a different URL from a Server Component?",
+          "rank": 0,
+          "top5": [
+            "01-app/02-guides/third-party-libraries#google-tag-manager",
+            "01-app/02-guides/analytics#sending-results-to-external-systems",
+            "01-app/03-api-reference/04-functions/use-report-web-vitals#sending-results-to-external-systems",
+            "01-app/03-api-reference/02-components/link#prefetching-links-in-proxy",
+            "01-app/02-guides/progressive-web-apps#2-implementing-web-push-notifications"
+          ]
+        },
+        {
+          "id": "q14",
+          "question": "How do I read a cookie value in a Server Component?",
+          "query": "How do I read a cookie value in a Server Component?",
+          "rank": 7,
+          "top5": [
+            "01-app/03-api-reference/04-functions/after#with-request-apis",
+            "01-app/03-api-reference/03-file-conventions/route#cookies",
+            "01-app/03-api-reference/04-functions/cookies#deleting-cookies",
+            "01-app/02-guides/authentication-with-cache-components#step-1-read-the-current-user",
+            "01-app/01-getting-started/07-mutating-data#cookies"
+          ]
+        },
+        {
+          "id": "q15",
+          "question": "How do I prerender every blog post page at build time?",
+          "query": "How do I prerender every blog post page at build time?",
+          "rank": 0,
+          "top5": [
+            "02-pages/03-building-your-application/02-rendering/02-static-site-generation#static-generation-with-data",
+            "02-pages/04-api-reference/03-functions/get-static-paths#fallback-false",
+            "01-app/03-api-reference/03-file-conventions/dynamic-routes#with-cache-components",
+            "01-app/02-guides/incremental-static-regeneration-cache-components#choosing-what-to-prerender",
+            "01-app/02-guides/incremental-static-regeneration#time-based-revalidation"
+          ]
+        },
+        {
+          "id": "q16",
+          "question": "How can one layout render two independent sections, like team and analytics, at the same time?",
+          "query": "How can one layout render two independent sections, like team and analytics, at the same time?",
+          "rank": 2,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/parallel-routes#intro",
+            "01-app/03-api-reference/03-file-conventions/parallel-routes#slots",
+            "01-app/03-api-reference/03-file-conventions/parallel-routes#default-js",
+            "01-app/03-api-reference/03-file-conventions/parallel-routes#tab-groups",
+            "01-app/03-api-reference/03-file-conventions/default#intro"
+          ]
+        },
+        {
+          "id": "q17",
+          "question": "How do I open a photo in a modal while keeping a shareable URL for it?",
+          "query": "How do I open a photo in a modal while keeping a shareable URL for it?",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/intercepting-routes#modals",
+            "01-app/03-api-reference/03-file-conventions/intercepting-routes#intro",
+            "01-app/03-api-reference/03-file-conventions/parallel-routes#modals",
+            "01-app/04-glossary#intercepting-routes",
+            "01-app/01-getting-started/02-project-structure#parallel-and-intercepted-routes"
+          ]
+        },
+        {
+          "id": "q18",
+          "question": "How can I group routes into folders without the folder name showing up in the URL?",
+          "query": "How can I group routes into folders without the folder name showing up in the URL?",
+          "rank": 1,
+          "top5": [
+            "01-app/01-getting-started/02-project-structure#organize-routes-without-affecting-the-url-path",
+            "01-app/01-getting-started/02-project-structure#route-groups-and-private-folders",
+            "01-app/04-glossary#route-groups",
+            "01-app/01-getting-started/03-layouts-and-pages#creating-a-nested-route",
+            "01-app/01-getting-started/02-project-structure#opting-for-loading-skeletons-on-a-specific-route"
+          ]
+        },
+        {
+          "id": "q19",
+          "question": "Why is my environment variable undefined in client-side code?",
+          "query": "Why is my environment variable undefined in client-side code?",
+          "rank": 4,
+          "top5": [
+            "03-architecture/nextjs-compiler#define-replacing-variables-during-build",
+            "01-app/02-guides/environment-variables#runtime-environment-variables",
+            "01-app/02-guides/self-hosting#environment-variables",
+            "01-app/02-guides/environment-variables#bundling-environment-variables-for-the-browser",
+            "01-app/02-guides/migrating/from-create-react-app#step-9-migrate-environment-variables"
+          ]
+        },
+        {
+          "id": "q20",
+          "question": "How do I produce a minimal build to run in a Docker container?",
+          "query": "How do I produce a minimal build to run in a Docker container?",
+          "rank": 3,
+          "top5": [
+            "01-app/01-getting-started/17-deploying#templates-2",
+            "01-app/01-getting-started/17-deploying#intro",
+            "01-app/01-getting-started/17-deploying#docker",
+            "01-app/02-guides/local-development#2-avoid-common-docker-pitfalls",
+            "01-app/03-api-reference/01-directives/use-cache-remote#platform-support"
+          ]
+        },
+        {
+          "id": "q21",
+          "question": "How do I serve the whole app under a sub-path like /docs?",
+          "query": "How do I serve the whole app under a sub-path like /docs?",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/05-config/01-next-config-js/basePath#intro",
+            "01-app/02-guides/migrating/from-create-react-app#using-a-custom-homepage-in-cra",
+            "01-app/03-api-reference/03-file-conventions/public-folder#intro",
+            "01-app/03-api-reference/05-config/01-next-config-js/assetPrefix#intro",
+            "02-pages/02-guides/internationalization#sub-path-routing"
+          ]
+        },
+        {
+          "id": "q22",
+          "question": "How do I forward /api requests to another backend without changing the URL the user sees?",
+          "query": "How do I forward /api requests to another backend without changing the URL the user sees?",
+          "rank": 1,
+          "top5": [
+            "01-app/02-guides/backend-for-frontend#proxying-to-a-backend",
+            "01-app/02-guides/migrating/from-create-react-app#proxying-api-requests",
+            "01-app/02-guides/cdn-caching#what-you-can-safely-ignore",
+            "01-app/02-guides/backend-for-frontend#access-to-protected-resources",
+            "01-app/04-glossary#intercepting-routes"
+          ]
+        },
+        {
+          "id": "q23",
+          "question": "Why should a component that reads useSearchParams be wrapped in Suspense?",
+          "query": "Why should a component that reads useSearchParams be wrapped in Suspense?",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/04-functions/use-search-params#prerendering",
+            "01-app/03-api-reference/04-functions/use-router#router-events",
+            "02-pages/04-api-reference/03-functions/use-search-params#sharing-components-with-app-router",
+            "01-app/03-api-reference/04-functions/use-search-params#intro",
+            "01-app/02-guides/migrating-to-cache-components#await-params-inside-suspense"
+          ]
+        },
+        {
+          "id": "q24",
+          "question": "How do I navigate to another page from a button click handler?",
+          "query": "How do I navigate to another page from a button click handler?",
+          "rank": 2,
+          "top5": [
+            "02-pages/04-api-reference/03-functions/use-router#router-back",
+            "01-app/02-guides/redirecting#userouter-hook",
+            "01-app/01-getting-started/04-linking-and-navigating#native-history-api",
+            "01-app/03-api-reference/02-components/link#onnavigate",
+            "02-pages/04-api-reference/03-functions/use-router#router-reload"
+          ]
+        },
+        {
+          "id": "q25",
+          "question": "How do I handle a form submission on the server without writing an API endpoint?",
+          "query": "How do I handle a form submission on the server without writing an API endpoint?",
+          "rank": 0,
+          "top5": [
+            "02-pages/02-guides/forms#intro",
+            "01-app/02-guides/forms#programmatic-form-submission",
+            "02-pages/02-guides/forms#server-forms",
+            "01-app/02-guides/redirecting#permanentredirect-function",
+            "01-app/02-guides/redirecting#redirect-function"
+          ]
+        },
+        {
+          "id": "q26",
+          "question": "How do I control how long a cached function stays fresh?",
+          "query": "How do I control how long a cached function stays fresh?",
+          "rank": 0,
+          "top5": [
+            "01-app/01-getting-started/08-caching#where-cached-content-is-stored",
+            "02-pages/03-building-your-application/03-data-fetching/03-get-server-side-props#caching-with-server-side-rendering-ssr",
+            "01-app/03-api-reference/04-functions/cacheLife#cache-profile-properties",
+            "01-app/03-api-reference/05-config/01-next-config-js/headers#cache-control",
+            "01-app/04-glossary#app-shell"
+          ]
+        },
+        {
+          "id": "q27",
+          "question": "How can editors preview unpublished content from a headless CMS?",
+          "query": "How can editors preview unpublished content from a headless CMS?",
+          "rank": 3,
+          "top5": [
+            "02-pages/02-guides/preview-mode#fetch-preview-data",
+            "02-pages/02-guides/preview-mode#securely-accessing-it-from-your-headless-cms",
+            "01-app/02-guides/draft-mode#intro",
+            "02-pages/02-guides/draft-mode#intro",
+            "02-pages/02-guides/draft-mode#fetch-draft-data"
+          ]
+        },
+        {
+          "id": "q28",
+          "question": "How do I generate the image shown when a page is shared on social media?",
+          "query": "How do I generate the image shown when a page is shared on social media?",
+          "rank": 2,
+          "top5": [
+            "01-app/03-api-reference/04-functions/image-response#intro",
+            "01-app/03-api-reference/03-file-conventions/01-metadata/opengraph-image#intro",
+            "04-community/index#social-media",
+            "01-app/01-getting-started/14-metadata-and-og-images#static-open-graph-images",
+            "01-app/03-api-reference/04-functions/generate-metadata#applewebapp"
+          ]
+        },
+        {
+          "id": "q29",
+          "question": "How do I give search engines a list of all my URLs?",
+          "query": "How do I give search engines a list of all my URLs?",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/05-config/01-next-config-js/skipTrailingSlashRedirect#good-to-know",
+            "01-app/04-glossary#metadata",
+            "01-app/03-api-reference/05-config/01-next-config-js/serverActions#allowedorigins",
+            "01-app/02-guides/draft-mode#step-2-access-the-route-handler-from-your-headless-cms",
+            "01-app/03-api-reference/04-functions/use-search-params#intro"
+          ]
+        },
+        {
+          "id": "q30",
+          "question": "Where do I put code that must run once when the server starts, such as setting up monitoring?",
+          "query": "Where do I put code that must run once when the server starts, such as setting up monitoring?",
+          "rank": 0,
+          "top5": [
+            "01-app/02-guides/analytics#client-instrumentation",
+            "01-app/03-api-reference/03-file-conventions/instrumentation-client#intro",
+            "01-app/03-api-reference/03-file-conventions/instrumentation-client#execution-timing",
+            "01-app/03-api-reference/03-file-conventions/instrumentation-client#usage",
+            "01-app/02-guides/instrumentation#intro"
+          ]
+        },
+        {
+          "id": "q31",
+          "question": "How can TypeScript catch typos in the href of my links?",
+          "query": "How can TypeScript catch typos in the href of my links?",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/05-config/02-typescript#statically-typed-links",
+            "01-app/02-guides/production-checklist#type-safety",
+            "01-app/03-api-reference/05-config/02-typescript#version-changes",
+            "01-app/03-api-reference/05-config/01-next-config-js/typedRoutes#intro",
+            "01-app/03-api-reference/05-config/03-eslint#intro"
+          ]
+        },
+        {
+          "id": "q32",
+          "question": "In the Pages Router, how do I fetch fresh data on every request?",
+          "query": "In the Pages Router, how do I fetch fresh data on every request?",
+          "rank": 4,
+          "top5": [
+            "01-app/03-api-reference/04-functions/fetch#options-cache",
+            "01-app/02-guides/incremental-static-regeneration#on-demand-revalidation-with-revalidatepath",
+            "01-app/03-api-reference/04-functions/io#intro",
+            "02-pages/03-building-your-application/02-rendering/01-server-side-rendering#intro",
+            "01-app/02-guides/public-static-pages#step-2-add-the-product-list"
+          ]
+        },
+        {
+          "id": "q33",
+          "question": "In the Pages Router, how do I rebuild a static page in the background at most once per minute?",
+          "query": "In the Pages Router, how do I rebuild a static page in the background at most once per minute?",
+          "rank": 1,
+          "top5": [
+            "02-pages/04-api-reference/03-functions/get-static-props#revalidate",
+            "02-pages/04-api-reference/03-functions/get-static-paths#fallback-pages",
+            "01-app/03-api-reference/01-directives/use-cache-remote#reducing-database-load",
+            "01-app/03-api-reference/07-adapters/09-output-types#prerender-classification",
+            "01-app/02-guides/incremental-static-regeneration#intro"
+          ]
+        },
+        {
+          "id": "q34",
+          "question": "How do I create an API endpoint with the Pages Router?",
+          "query": "How do I create an API endpoint with the Pages Router?",
+          "rank": 0,
+          "top5": [
+            "01-app/02-guides/backend-for-frontend#intro",
+            "02-pages/02-guides/forms#server-forms",
+            "02-pages/04-api-reference/03-functions/use-search-params#updating-search-params",
+            "01-app/03-api-reference/06-cli/create-next-app#intro",
+            "02-pages/index#intro"
+          ]
+        },
+        {
+          "id": "q35",
+          "question": "In the Pages Router, where do I add global CSS and a layout shared by every page?",
+          "query": "In the Pages Router, where do I add global CSS and a layout shared by every page?",
+          "rank": 2,
+          "top5": [
+            "01-app/01-getting-started/11-css#global-css",
+            "02-pages/03-building-your-application/01-routing/05-custom-app#intro",
+            "01-app/02-guides/migrating/app-router-migration#step-7-styling",
+            "01-app/02-guides/tailwind-v3-css#configuring-tailwind-v3",
+            "02-pages/02-guides/tailwind-v3-css#intro"
+          ]
+        },
+        {
+          "id": "q36",
+          "question": "How do I run logging or analytics after the response has already been sent?",
+          "query": "How do I run logging or analytics after the response has already been sent?",
+          "rank": 2,
+          "top5": [
+            "01-app/02-guides/streaming#the-http-contract",
+            "01-app/03-api-reference/04-functions/after#intro",
+            "01-app/02-guides/streaming#error-handling-mid-stream",
+            "01-app/03-api-reference/03-file-conventions/proxy#event",
+            "01-app/02-guides/open-telemetry#start-response"
+          ]
+        },
+        {
+          "id": "q37",
+          "question": "How do I load a third-party script only when the browser is idle?",
+          "query": "How do I load a third-party script only when the browser is idle?",
+          "rank": 4,
+          "top5": [
+            "01-app/02-guides/scripts#strategy",
+            "01-app/02-guides/scripts#application-scripts",
+            "01-app/02-guides/scripts#layout-scripts",
+            "01-app/03-api-reference/02-components/script#lazyonload",
+            "01-app/03-api-reference/02-components/script#strategy"
+          ]
+        },
+        {
+          "id": "q38",
+          "question": "How do I set the title and description of a page in the App Router?",
+          "query": "How do I set the title and description of a page in the App Router?",
+          "rank": 8,
+          "top5": [
+            "04-community/01-contribution-guide#required-fields",
+            "01-app/03-api-reference/04-functions/generate-metadata#merging",
+            "01-app/02-guides/migrating-to-cache-components#generatemetadata-and-generateviewport",
+            "04-community/01-contribution-guide#nested-fields",
+            "04-community/01-contribution-guide#optional-fields"
+          ]
+        },
+        {
+          "id": "q39",
+          "question": "What is the difference between updateTag and revalidateTag?",
+          "query": "What is the difference between updateTag and revalidateTag?",
+          "rank": 3,
+          "top5": [
+            "01-app/03-api-reference/04-functions/revalidatePath#relationship-with-revalidatetag-and-updatetag",
+            "01-app/03-api-reference/04-functions/updateTag#error-when-used-outside-server-actions",
+            "01-app/03-api-reference/04-functions/updateTag#differences-from-revalidatetag",
+            "01-app/02-guides/migrating-to-cache-components#on-demand-revalidation-revalidatetag-revalidatepath-updatetag",
+            "01-app/02-guides/upgrading/version-16#revalidatetag"
+          ]
+        },
+        {
+          "id": "q40",
+          "question": "Can I keep using a webpack loader such as an SVG loader with Turbopack?",
+          "query": "Can I keep using a webpack loader such as an SVG loader with Turbopack?",
+          "rank": 2,
+          "top5": [
+            "01-app/03-api-reference/05-config/01-next-config-js/turbopack#supported-loaders",
+            "01-app/03-api-reference/05-config/01-next-config-js/turbopack#configuring-webpack-loaders",
+            "01-app/03-api-reference/05-config/01-next-config-js/turbopack#module-types",
+            "01-app/03-api-reference/05-config/01-next-config-js/turbopack#advanced-webpack-loader-conditions",
+            "01-app/03-api-reference/05-config/01-next-config-js/turbopack#inline-loader-configuration-with-import-attributes"
+          ]
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "method": "bm25+rewrite",
+      "recall": {
+        "recall@1": 0.375,
+        "recall@3": 0.575,
+        "recall@5": 0.75,
+        "recall@10": 0.85
+      },
+      "mrr": 0.5095039682539683,
+      "perQuestion": [
+        {
+          "id": "q01",
+          "question": "How do I create a page whose URL contains a variable part, like a blog post slug?",
+          "query": "dynamic routes [id] slug app router file conventions",
+          "rank": 3,
+          "top5": [
+            "02-pages/03-building-your-application/01-routing/02-dynamic-routes#convention",
+            "01-app/03-api-reference/04-functions/use-params#returns",
+            "01-app/01-getting-started/03-layouts-and-pages#creating-a-dynamic-segment",
+            "01-app/03-api-reference/02-components/link#linking-to-dynamic-route-segments",
+            "01-app/03-api-reference/04-functions/generate-image-metadata#image-generation-function-props"
+          ]
+        },
+        {
+          "id": "q02",
+          "question": "After a Server Action changes data, how do I make the page show the updated data?",
+          "query": "revalidatePath revalidateTag Server Actions router.refresh mutation data fetching Next.js",
+          "rank": 1,
+          "top5": [
+            "01-app/01-getting-started/07-mutating-data#revalidate-data",
+            "01-app/01-getting-started/07-mutating-data#redirect-after-a-mutation",
+            "01-app/02-guides/server-actions#choosing-a-cache-update",
+            "01-app/01-getting-started/07-mutating-data#refresh-data",
+            "01-app/02-guides/server-actions#a-single-response-carries-data-and-ui"
+          ]
+        },
+        {
+          "id": "q03",
+          "question": "How can every page title automatically include the site name as a suffix?",
+          "query": "generateMetadata template title default Next.js layout metadata object",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/04-functions/generate-metadata#metadata-fields",
+            "01-app/03-api-reference/03-file-conventions/layout#metadata",
+            "01-app/03-api-reference/04-functions/generate-metadata#types",
+            "01-app/01-getting-started/14-metadata-and-og-images#static-metadata",
+            "01-app/03-api-reference/04-functions/generate-metadata#the-metadata-object"
+          ]
+        },
+        {
+          "id": "q04",
+          "question": "How can I show a skeleton while a route is fetching its data?",
+          "query": "loading js suspense skeleton nextjs loading ui streaming",
+          "rank": 9,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/loading#streaming-with-suspense",
+            "01-app/02-guides/streaming#example",
+            "01-app/01-getting-started/06-fetching-data#streaming",
+            "01-app/01-getting-started/04-linking-and-navigating#streaming",
+            "01-app/02-guides/optimizing-the-static-shell#keep-static-ui-in-the-shell"
+          ]
+        },
+        {
+          "id": "q05",
+          "question": "How do I show a fallback UI when a part of the app throws an unexpected runtime error?",
+          "query": "error.js error boundary error handling fallback UI react next.js",
+          "rank": 3,
+          "top5": [
+            "01-app/04-glossary#error-boundary",
+            "02-pages/03-building-your-application/06-configuring/12-error-handling#handling-client-errors",
+            "01-app/01-getting-started/10-error-handling#nested-error-boundaries",
+            "01-app/03-api-reference/04-functions/catchError#server-rendered-error-fallback",
+            "01-app/03-api-reference/04-functions/catchError#intro"
+          ]
+        },
+        {
+          "id": "q06",
+          "question": "How do I customize the page shown when a URL does not exist in the App Router?",
+          "query": "not-found js app router customize 404 page",
+          "rank": 7,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/not-found#metadata",
+            "02-pages/03-building-your-application/06-configuring/12-error-handling#handling-server-errors",
+            "01-app/03-api-reference/04-functions/not-found#intro",
+            "01-app/03-api-reference/03-file-conventions/not-found#global-not-found-js-experimental",
+            "01-app/01-getting-started/10-error-handling#not-found"
+          ]
+        },
+        {
+          "id": "q07",
+          "question": "How do I build a JSON API endpoint inside the app directory?",
+          "query": "app directory route.ts Route Handlers GET POST NextResponse Response JSON",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/04-functions/next-response#json",
+            "01-app/02-guides/backend-for-frontend#webhooks-and-callback-urls",
+            "01-app/03-api-reference/03-file-conventions/dynamic-routes#dynamic-get-route-handlers-with-generatestaticparams",
+            "01-app/02-guides/backend-for-frontend#nextrequest-and-nextresponse",
+            "01-app/03-api-reference/04-functions/generate-static-params#route-handlers-with-cache-components"
+          ]
+        },
+        {
+          "id": "q08",
+          "question": "What happened to middleware in Next.js 16?",
+          "query": "Next.js 16 middleware upgrade changes breaking updates routing middleware.ts",
+          "rank": 0,
+          "top5": [
+            "01-app/02-guides/upgrading/version-16#middleware-to-proxy",
+            "01-app/03-api-reference/03-file-conventions/proxy#how-to-migrate",
+            "01-app/02-guides/upgrading/version-16#or-upgrade-manually",
+            "01-app/02-guides/upgrading/version-16#review-migration-checklist",
+            "01-app/02-guides/upgrading/version-16#maximum-redirects-breaking-change"
+          ]
+        },
+        {
+          "id": "q09",
+          "question": "How do I make a component run in the browser so it can use useState and onClick?",
+          "query": "\"use client\" useState onClick Client Components rendering Next.js",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/01-directives/use-client#usage",
+            "01-app/01-getting-started/07-mutating-data#event-handlers",
+            "01-app/02-guides/lazy-loading#importing-client-components",
+            "01-app/01-getting-started/10-error-handling#nested-error-boundaries",
+            "01-app/01-getting-started/05-server-and-client-components#using-client-components"
+          ]
+        },
+        {
+          "id": "q10",
+          "question": "How do I let the Image component load pictures hosted on another domain?",
+          "query": "next/image remotePatterns domains next.config.js external images configuration",
+          "rank": 7,
+          "top5": [
+            "01-app/03-api-reference/02-components/image#deprecated-configuration-options",
+            "02-pages/04-api-reference/01-components/image-legacy#domains",
+            "01-app/02-guides/upgrading/version-16#images-domains-configuration-deprecated",
+            "02-pages/04-api-reference/01-components/image-legacy#remote-patterns",
+            "02-pages/04-api-reference/01-components/image-legacy#src"
+          ]
+        },
+        {
+          "id": "q11",
+          "question": "How do I use a Google Font without sending requests to Google from the browser?",
+          "query": "next/font google self-hosting local fonts optimizeFonts",
+          "rank": 1,
+          "top5": [
+            "01-app/01-getting-started/13-fonts#intro",
+            "01-app/04-glossary#font-optimization",
+            "01-app/03-api-reference/02-components/font#intro",
+            "01-app/03-api-reference/02-components/font#weight",
+            "01-app/03-api-reference/02-components/font#fallback"
+          ]
+        },
+        {
+          "id": "q12",
+          "question": "How do I stop a link in the footer from being prefetched?",
+          "query": "Link component prefetch false",
+          "rank": 4,
+          "top5": [
+            "01-app/02-guides/prefetching#preventing-too-many-prefetches",
+            "01-app/03-api-reference/02-components/link#reference",
+            "01-app/01-getting-started/04-linking-and-navigating#disabling-prefetching",
+            "01-app/03-api-reference/02-components/link#prefetch",
+            "01-app/02-guides/prefetching#hover-triggered-prefetch"
+          ]
+        },
+        {
+          "id": "q13",
+          "question": "How do I send the user to a different URL from a Server Component?",
+          "query": "redirect redirectFunction server components next/navigation",
+          "rank": 2,
+          "top5": [
+            "01-app/02-guides/redirecting#intro",
+            "01-app/02-guides/redirecting#redirect-function",
+            "01-app/03-api-reference/04-functions/redirect#client-component",
+            "01-app/03-api-reference/04-functions/redirect#intro",
+            "01-app/03-api-reference/04-functions/permanentRedirect#intro"
+          ]
+        },
+        {
+          "id": "q14",
+          "question": "How do I read a cookie value in a Server Component?",
+          "query": "next/headers cookies server component read value",
+          "rank": 4,
+          "top5": [
+            "01-app/03-api-reference/04-functions/after#with-request-apis",
+            "01-app/03-api-reference/03-file-conventions/route#cookies",
+            "01-app/02-guides/preventing-flash-before-hydration#when-to-use-other-approaches",
+            "01-app/03-api-reference/04-functions/cookies#intro",
+            "01-app/03-api-reference/04-functions/cookies#deleting-cookies"
+          ]
+        },
+        {
+          "id": "q15",
+          "question": "How do I prerender every blog post page at build time?",
+          "query": "generateStaticParams dynamic routes blog post build time static rendering",
+          "rank": 6,
+          "top5": [
+            "01-app/01-getting-started/04-linking-and-navigating#dynamic-segments-without-generatestaticparams",
+            "01-app/03-api-reference/04-functions/generate-static-params#prerendering",
+            "01-app/03-api-reference/03-file-conventions/dynamic-routes#with-generatestaticparams",
+            "01-app/03-api-reference/03-file-conventions/dynamic-routes#dynamic-get-route-handlers-with-generatestaticparams",
+            "01-app/03-api-reference/03-file-conventions/dynamic-routes#with-cache-components"
+          ]
+        },
+        {
+          "id": "q16",
+          "question": "How can one layout render two independent sections, like team and analytics, at the same time?",
+          "query": "layout parallel routes slots children page.js",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/parallel-routes#slots",
+            "01-app/03-api-reference/01-directives/use-cache#caching-a-route-segment-s-output-with-use-cache",
+            "01-app/03-api-reference/03-file-conventions/parallel-routes#default-js",
+            "01-app/03-api-reference/03-file-conventions/default#intro",
+            "01-app/04-glossary#parallel-routes"
+          ]
+        },
+        {
+          "id": "q17",
+          "question": "How do I open a photo in a modal while keeping a shareable URL for it?",
+          "query": "intercepting routes parallel routes modal photo gallery next/js",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/intercepting-routes#modals",
+            "01-app/03-api-reference/03-file-conventions/parallel-routes#modals",
+            "01-app/03-api-reference/03-file-conventions/intercepting-routes#intro",
+            "01-app/01-getting-started/02-project-structure#parallel-and-intercepted-routes",
+            "01-app/03-api-reference/03-file-conventions/intercepting-routes#convention"
+          ]
+        },
+        {
+          "id": "q18",
+          "question": "How can I group routes into folders without the folder name showing up in the URL?",
+          "query": "routing route groups folder convention parentheses filename convention URL path segment app router",
+          "rank": 2,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/route-groups#convention",
+            "01-app/04-glossary#route-groups",
+            "01-app/01-getting-started/02-project-structure#route-groups",
+            "01-app/01-getting-started/02-project-structure#route-groups-and-private-folders",
+            "01-app/01-getting-started/02-project-structure#dynamic-routes-2"
+          ]
+        },
+        {
+          "id": "q19",
+          "question": "Why is my environment variable undefined in client-side code?",
+          "query": "environment variables client-side NEXT_PUBLIC undefined config",
+          "rank": 4,
+          "top5": [
+            "01-app/02-guides/migrating/from-create-react-app#step-9-migrate-environment-variables",
+            "01-app/02-guides/upgrading/version-16#runtime-configuration",
+            "01-app/04-glossary#environment-variables",
+            "01-app/02-guides/environment-variables#bundling-environment-variables-for-the-browser",
+            "01-app/02-guides/environment-variables#runtime-environment-variables"
+          ]
+        },
+        {
+          "id": "q20",
+          "question": "How do I produce a minimal build to run in a Docker container?",
+          "query": "output standalone docker minimal build next.config.js public .next/standalone .next/static",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/05-config/01-next-config-js/output#automatically-copying-traced-files",
+            "01-app/01-getting-started/17-deploying#templates-2",
+            "01-app/02-guides/building#what-next-build-does",
+            "01-app/02-guides/single-page-applications#static-export-optional",
+            "01-app/03-api-reference/07-adapters/02-creating-an-adapter#basic-adapter-structure"
+          ]
+        },
+        {
+          "id": "q21",
+          "question": "How do I serve the whole app under a sub-path like /docs?",
+          "query": "next.config.js basePath base path sub-path routing",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/05-config/01-next-config-js/basePath#intro",
+            "01-app/03-api-reference/05-config/01-next-config-js/headers#headers-with-basepath-support",
+            "01-app/03-api-reference/05-config/01-next-config-js/redirects#redirects-with-basepath-support",
+            "01-app/03-api-reference/05-config/01-next-config-js/rewrites#rewrites-with-basepath-support",
+            "01-app/02-guides/migrating/from-create-react-app#using-a-custom-homepage-in-cra"
+          ]
+        },
+        {
+          "id": "q22",
+          "question": "How do I forward /api requests to another backend without changing the URL the user sees?",
+          "query": "route handler rewrite proxy next.config.js rewrites fetch",
+          "rank": 4,
+          "top5": [
+            "01-app/02-guides/multi-zones#routing-requests-using-proxy",
+            "01-app/02-guides/backend-for-frontend#content-negotiation",
+            "01-app/04-glossary#rewrite",
+            "01-app/02-guides/backend-for-frontend#proxying-to-a-backend",
+            "01-app/02-guides/multi-zones#how-to-route-requests-to-the-right-zone"
+          ]
+        },
+        {
+          "id": "q23",
+          "question": "Why should a component that reads useSearchParams be wrapped in Suspense?",
+          "query": "useSearchParams Suspense requirement client component rendering bailout",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/04-functions/use-search-params#prerendering",
+            "01-app/03-api-reference/04-functions/use-router#router-events",
+            "01-app/03-api-reference/04-functions/use-search-params#dynamic-rendering",
+            "01-app/01-getting-started/03-layouts-and-pages#rendering-with-search-params",
+            "01-app/03-api-reference/04-functions/use-search-params#intro"
+          ]
+        },
+        {
+          "id": "q24",
+          "question": "How do I navigate to another page from a button click handler?",
+          "query": "useRouter redirect usePathname next/navigation programmatic navigation click handler",
+          "rank": 4,
+          "top5": [
+            "01-app/03-api-reference/04-functions/redirect#client-component",
+            "01-app/02-guides/migrating/app-router-migration#step-5-migrating-routing-hooks",
+            "01-app/03-api-reference/04-functions/use-router#migrating-from-next-router",
+            "01-app/02-guides/redirecting#userouter-hook",
+            "01-app/03-api-reference/04-functions/use-search-params#updating-searchparams"
+          ]
+        },
+        {
+          "id": "q25",
+          "question": "How do I handle a form submission on the server without writing an API endpoint?",
+          "query": "Server Actions form submission app router useActionState action.ts",
+          "rank": 0,
+          "top5": [
+            "01-app/02-guides/forms#validation-errors",
+            "01-app/01-getting-started/10-error-handling#server-functions",
+            "01-app/02-guides/forms#pending-states",
+            "01-app/02-guides/authentication#sign-up-and-login-functionality",
+            "01-app/02-guides/single-page-applications#mutating-data-with-server-actions"
+          ]
+        },
+        {
+          "id": "q26",
+          "question": "How do I control how long a cached function stays fresh?",
+          "query": "next 4 cache revalidate unstable_cache time freshness duration fetch",
+          "rank": 0,
+          "top5": [
+            "01-app/02-guides/caching-without-cache-components#time-based-revalidation",
+            "01-app/02-guides/caching-without-cache-components#unstable-cache-for-non-fetch-functions",
+            "01-app/03-api-reference/04-functions/unstable_cache#parameters",
+            "01-app/02-guides/migrating-to-cache-components#unstable-cache",
+            "01-app/02-guides/incremental-static-regeneration#on-demand-revalidation-with-revalidatetag"
+          ]
+        },
+        {
+          "id": "q27",
+          "question": "How can editors preview unpublished content from a headless CMS?",
+          "query": "draft mode preview headless cms getStaticProps incremental static regeneration cookies next/headers",
+          "rank": 0,
+          "top5": [
+            "02-pages/02-guides/preview-mode#fetch-preview-data",
+            "02-pages/02-guides/draft-mode#fetch-draft-data",
+            "02-pages/02-guides/draft-mode#intro",
+            "02-pages/03-building-your-application/03-data-fetching/01-get-static-props#preview-mode",
+            "02-pages/04-api-reference/03-functions/get-static-props#context-parameter"
+          ]
+        },
+        {
+          "id": "q28",
+          "question": "How do I generate the image shown when a page is shared on social media?",
+          "query": "opengraph-image twitter-image metadata metadata-files generate-images NextResponse ImageResponse",
+          "rank": 3,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/01-metadata/opengraph-image#generate-images-using-code-js-ts-tsx",
+            "01-app/03-api-reference/04-functions/image-response#file-based-metadata",
+            "01-app/03-api-reference/03-file-conventions/01-metadata/opengraph-image#intro",
+            "01-app/03-api-reference/04-functions/image-response#intro",
+            "01-app/01-getting-started/02-project-structure#metadata-file-conventions"
+          ]
+        },
+        {
+          "id": "q29",
+          "question": "How do I give search engines a list of all my URLs?",
+          "query": "sitemap.xml sitemap.ts metadata generateSitemap Next.js",
+          "rank": 5,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/01-metadata/sitemap#generating-multiple-sitemaps",
+            "01-app/03-api-reference/03-file-conventions/route#non-ui-responses",
+            "01-app/03-api-reference/03-file-conventions/01-metadata/robots#generate-a-robots-file",
+            "01-app/01-getting-started/02-project-structure#metadata-file-conventions",
+            "01-app/03-api-reference/03-file-conventions/01-metadata/sitemap#generating-a-sitemap-using-code-js-ts"
+          ]
+        },
+        {
+          "id": "q30",
+          "question": "Where do I put code that must run once when the server starts, such as setting up monitoring?",
+          "query": "instrumentation.js register server startup monitoring telemetry",
+          "rank": 1,
+          "top5": [
+            "01-app/02-guides/instrumentation#convention",
+            "01-app/02-guides/open-telemetry#custom-spans",
+            "01-app/03-api-reference/03-file-conventions/instrumentation#register-optional",
+            "01-app/03-api-reference/03-file-conventions/instrumentation-client#usage",
+            "01-app/03-api-reference/03-file-conventions/instrumentation-client#intro"
+          ]
+        },
+        {
+          "id": "q31",
+          "question": "How can TypeScript catch typos in the href of my links?",
+          "query": "typescript strict route type checking next config experimental typedRoutes href",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/05-config/01-next-config-js/typedRoutes#intro",
+            "01-app/03-api-reference/05-config/02-typescript#statically-typed-links",
+            "01-app/03-api-reference/05-config/02-typescript#using-node-js-native-typescript-resolver-for-next-config-ts",
+            "01-app/03-api-reference/05-config/02-typescript#version-changes",
+            "01-app/03-api-reference/05-config/02-typescript#using-typescript-7"
+          ]
+        },
+        {
+          "id": "q32",
+          "question": "In the Pages Router, how do I fetch fresh data on every request?",
+          "query": "Pages Router getServerSideProps fetch fresh data SSR",
+          "rank": 1,
+          "top5": [
+            "02-pages/03-building-your-application/02-rendering/01-server-side-rendering#intro",
+            "02-pages/03-building-your-application/03-data-fetching/03-get-server-side-props#caching-with-server-side-rendering-ssr",
+            "02-pages/03-building-your-application/03-data-fetching/03-get-server-side-props#behavior",
+            "02-pages/03-building-your-application/03-data-fetching/03-get-server-side-props#example",
+            "02-pages/04-api-reference/03-functions/get-server-side-props#intro"
+          ]
+        },
+        {
+          "id": "q33",
+          "question": "In the Pages Router, how do I rebuild a static page in the background at most once per minute?",
+          "query": "Pages Router Incremental Static Regeneration ISR getStaticProps revalidate",
+          "rank": 3,
+          "top5": [
+            "01-app/02-guides/incremental-static-regeneration#functions-2",
+            "02-pages/03-building-your-application/03-data-fetching/01-get-static-props#when-does-getstaticprops-run",
+            "02-pages/04-api-reference/03-functions/get-static-props#revalidate",
+            "02-pages/04-api-reference/03-functions/get-static-props#version-history",
+            "01-app/02-guides/self-hosting#automatic-caching"
+          ]
+        },
+        {
+          "id": "q34",
+          "question": "How do I create an API endpoint with the Pages Router?",
+          "query": "pages router api routes api endpoints api development backend javascript typescript pages/api",
+          "rank": 0,
+          "top5": [
+            "01-app/02-guides/backend-for-frontend#intro",
+            "01-app/03-api-reference/08-turbopack#intro",
+            "01-app/02-guides/backend-for-frontend#proxying-to-a-backend",
+            "01-app/03-api-reference/05-config/02-typescript#using-typescript-7",
+            "01-app/02-guides/backend-for-frontend#public-endpoints"
+          ]
+        },
+        {
+          "id": "q35",
+          "question": "In the Pages Router, where do I add global CSS and a layout shared by every page?",
+          "query": "pages router _app.js global css layout",
+          "rank": 5,
+          "top5": [
+            "01-app/01-getting-started/11-css#global-css",
+            "01-app/02-guides/migrating/app-router-migration#step-7-styling",
+            "01-app/02-guides/tailwind-v3-css#configuring-tailwind-v3",
+            "01-app/01-getting-started/11-css#tailwind-css",
+            "02-pages/03-building-your-application/01-routing/05-custom-app#intro"
+          ]
+        },
+        {
+          "id": "q36",
+          "question": "How do I run logging or analytics after the response has already been sent?",
+          "query": "after response analytics logging next/serverwaitUntil",
+          "rank": 2,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/proxy#event",
+            "01-app/03-api-reference/04-functions/after#intro",
+            "01-app/03-api-reference/03-file-conventions/proxy#waituntil-and-nextfetchevent",
+            "01-app/03-api-reference/04-functions/after#platform-support",
+            "01-app/03-api-reference/04-functions/after#with-request-apis"
+          ]
+        },
+        {
+          "id": "q37",
+          "question": "How do I load a third-party script only when the browser is idle?",
+          "query": "third party scripts Script component strategy afterInteractive lazyOnload idle next/script",
+          "rank": 3,
+          "top5": [
+            "01-app/02-guides/scripts#strategy",
+            "01-app/03-api-reference/02-components/script#strategy",
+            "01-app/03-api-reference/02-components/script#lazyonload",
+            "01-app/03-api-reference/02-components/script#onload",
+            "01-app/03-api-reference/02-components/script#afterinteractive"
+          ]
+        },
+        {
+          "id": "q38",
+          "question": "How do I set the title and description of a page in the App Router?",
+          "query": "metadata generateMetadata title description app router layout.js page.js",
+          "rank": 1,
+          "top5": [
+            "01-app/01-getting-started/14-metadata-and-og-images#static-metadata",
+            "01-app/04-glossary#metadata",
+            "01-app/02-guides/migrating-to-cache-components#generatemetadata-and-generateviewport",
+            "01-app/03-api-reference/04-functions/generate-metadata#the-metadata-object",
+            "01-app/03-api-reference/04-functions/generate-metadata#merging"
+          ]
+        },
+        {
+          "id": "q39",
+          "question": "What is the difference between updateTag and revalidateTag?",
+          "query": "difference updateTag revalidateTag cache life cycle unstable_updateTag revalidateTag next/cache",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/04-functions/updateTag#differences-from-revalidatetag",
+            "01-app/03-api-reference/04-functions/revalidatePath#relationship-with-revalidatetag-and-updatetag",
+            "01-app/02-guides/upgrading/version-16#revalidatetag",
+            "01-app/03-api-reference/01-directives/use-cache#on-demand-revalidation",
+            "01-app/03-api-reference/01-directives/use-cache#revalidation"
+          ]
+        },
+        {
+          "id": "q40",
+          "question": "Can I keep using a webpack loader such as an SVG loader with Turbopack?",
+          "query": "Turbopack webpack loaders SVGR custom loaders unsupported migration",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/05-config/01-next-config-js/turbopack#configuring-webpack-loaders",
+            "01-app/03-api-reference/05-config/01-next-config-js/turbopack#supported-loaders",
+            "01-app/02-guides/local-development#4-check-custom-webpack-settings",
+            "01-app/03-api-reference/05-config/01-next-config-js/turbopack#advanced-webpack-loader-conditions",
+            "01-app/03-api-reference/08-turbopack#webpack-plugins"
+          ]
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "method": "rrf(bm25, bm25+rewrite)",
+      "recall": {
+        "recall@1": 0.425,
+        "recall@3": 0.7,
+        "recall@5": 0.775,
+        "recall@10": 0.85
+      },
+      "mrr": 0.5634027777777777,
+      "perQuestion": [
+        {
+          "id": "q01",
+          "question": "How do I create a page whose URL contains a variable part, like a blog post slug?",
+          "query": "dynamic routes [id] slug app router file conventions",
+          "rank": 1,
+          "top5": [
+            "01-app/01-getting-started/03-layouts-and-pages#creating-a-dynamic-segment",
+            "01-app/01-getting-started/03-layouts-and-pages#creating-a-nested-route",
+            "01-app/01-getting-started/02-project-structure#dynamic-routes",
+            "02-pages/03-building-your-application/01-routing/02-dynamic-routes#example",
+            "01-app/03-api-reference/03-file-conventions/dynamic-routes#convention"
+          ]
+        },
+        {
+          "id": "q02",
+          "question": "After a Server Action changes data, how do I make the page show the updated data?",
+          "query": "revalidatePath revalidateTag Server Actions router.refresh mutation data fetching Next.js",
+          "rank": 1,
+          "top5": [
+            "01-app/01-getting-started/07-mutating-data#revalidate-data",
+            "01-app/03-api-reference/04-functions/cookies#understanding-cookie-behavior-in-server-functions",
+            "01-app/01-getting-started/07-mutating-data#refresh-data",
+            "01-app/02-guides/server-actions#a-single-response-carries-data-and-ui",
+            "01-app/02-guides/migrating-to-cache-components#on-demand-revalidation-revalidatetag-revalidatepath-updatetag"
+          ]
+        },
+        {
+          "id": "q03",
+          "question": "How can every page title automatically include the site name as a suffix?",
+          "query": "generateMetadata template title default Next.js layout metadata object",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/04-functions/generate-metadata#metadata-fields",
+            "01-app/03-api-reference/03-file-conventions/not-found#metadata",
+            "01-app/02-guides/migrating/from-create-react-app#step-4-metadata",
+            "01-app/02-guides/migrating-to-cache-components#generatemetadata-and-generateviewport",
+            "01-app/03-api-reference/03-file-conventions/layout#metadata"
+          ]
+        },
+        {
+          "id": "q04",
+          "question": "How can I show a skeleton while a route is fetching its data?",
+          "query": "loading js suspense skeleton nextjs loading ui streaming",
+          "rank": 5,
+          "top5": [
+            "01-app/01-getting-started/06-fetching-data#streaming",
+            "01-app/02-guides/optimizing-the-static-shell#stream-request-time-work",
+            "01-app/03-api-reference/03-file-conventions/layout#interaction-with-loading-js",
+            "01-app/02-guides/videos#embedding-externally-hosted-videos",
+            "01-app/03-api-reference/03-file-conventions/loading#intro"
+          ]
+        },
+        {
+          "id": "q05",
+          "question": "How do I show a fallback UI when a part of the app throws an unexpected runtime error?",
+          "query": "error.js error boundary error handling fallback UI react next.js",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/error#intro",
+            "02-pages/03-building-your-application/06-configuring/12-error-handling#handling-client-errors",
+            "01-app/01-getting-started/10-error-handling#nested-error-boundaries",
+            "01-app/03-api-reference/04-functions/catchError#server-rendered-error-fallback",
+            "01-app/03-api-reference/04-functions/not-found#intro"
+          ]
+        },
+        {
+          "id": "q06",
+          "question": "How do I customize the page shown when a URL does not exist in the App Router?",
+          "query": "not-found js app router customize 404 page",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/not-found#metadata",
+            "01-app/03-api-reference/03-file-conventions/not-found#global-not-found-js-experimental",
+            "01-app/01-getting-started/01-installation#set-up-your-editor",
+            "02-pages/03-building-your-application/06-configuring/12-error-handling#handling-server-errors",
+            "01-app/04-glossary#not-found"
+          ]
+        },
+        {
+          "id": "q07",
+          "question": "How do I build a JSON API endpoint inside the app directory?",
+          "query": "app directory route.ts Route Handlers GET POST NextResponse Response JSON",
+          "rank": 2,
+          "top5": [
+            "01-app/02-guides/migrating/app-router-migration#step-6-migrating-data-fetching-methods",
+            "01-app/01-getting-started/15-route-handlers#convention",
+            "01-app/03-api-reference/03-file-conventions/dynamic-routes#dynamic-get-route-handlers-with-generatestaticparams",
+            "01-app/01-getting-started/15-route-handlers#intro",
+            "01-app/01-getting-started/15-route-handlers#caching"
+          ]
+        },
+        {
+          "id": "q08",
+          "question": "What happened to middleware in Next.js 16?",
+          "query": "Next.js 16 middleware upgrade changes breaking updates routing middleware.ts",
+          "rank": 10,
+          "top5": [
+            "01-app/02-guides/upgrading/version-16#middleware-to-proxy",
+            "01-app/03-api-reference/03-file-conventions/proxy#how-to-migrate",
+            "01-app/02-guides/upgrading/codemods#16-0",
+            "01-app/03-api-reference/03-file-conventions/proxy#version-history",
+            "01-app/02-guides/upgrading/version-16#review-migration-checklist"
+          ]
+        },
+        {
+          "id": "q09",
+          "question": "How do I make a component run in the browser so it can use useState and onClick?",
+          "query": "\"use client\" useState onClick Client Components rendering Next.js",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/01-directives/use-client#usage",
+            "01-app/01-getting-started/07-mutating-data#event-handlers",
+            "01-app/02-guides/lazy-loading#importing-client-components",
+            "01-app/01-getting-started/10-error-handling#nested-error-boundaries",
+            "01-app/01-getting-started/11-css#import-styles-from-node-modules"
+          ]
+        },
+        {
+          "id": "q10",
+          "question": "How do I let the Image component load pictures hosted on another domain?",
+          "query": "next/image remotePatterns domains next.config.js external images configuration",
+          "rank": 0,
+          "top5": [
+            "02-pages/04-api-reference/01-components/image-legacy#domains",
+            "01-app/02-guides/self-hosting#image-optimization",
+            "01-app/03-api-reference/02-components/image#props",
+            "02-pages/02-guides/internationalization#getting-started",
+            "01-app/02-guides/multi-zones#intro"
+          ]
+        },
+        {
+          "id": "q11",
+          "question": "How do I use a Google Font without sending requests to Google from the browser?",
+          "query": "next/font google self-hosting local fonts optimizeFonts",
+          "rank": 2,
+          "top5": [
+            "01-app/03-api-reference/02-components/font#intro",
+            "01-app/01-getting-started/13-fonts#intro",
+            "01-app/03-api-reference/02-components/font#weight",
+            "01-app/01-getting-started/13-fonts#google-fonts",
+            "01-app/03-api-reference/02-components/font#style"
+          ]
+        },
+        {
+          "id": "q12",
+          "question": "How do I stop a link in the footer from being prefetched?",
+          "query": "Link component prefetch false",
+          "rank": 1,
+          "top5": [
+            "01-app/02-guides/prefetching#disabled-prefetch",
+            "01-app/03-api-reference/02-components/link#prefetch",
+            "01-app/03-api-reference/03-file-conventions/02-route-segment-config/prefetch#relationship-with-the-link-prefetch-prop",
+            "01-app/02-guides/adopting-partial-prefetching#what-changes-for-link",
+            "01-app/02-guides/prefetching#hover-triggered-prefetch"
+          ]
+        },
+        {
+          "id": "q13",
+          "question": "How do I send the user to a different URL from a Server Component?",
+          "query": "redirect redirectFunction server components next/navigation",
+          "rank": 8,
+          "top5": [
+            "01-app/02-guides/redirecting#permanentredirect-function",
+            "01-app/02-guides/redirecting#nextresponse-redirect-in-proxy",
+            "01-app/03-api-reference/04-functions/next-response#redirect",
+            "01-app/01-getting-started/07-mutating-data#redirect-after-a-mutation",
+            "01-app/02-guides/third-party-libraries#google-tag-manager"
+          ]
+        },
+        {
+          "id": "q14",
+          "question": "How do I read a cookie value in a Server Component?",
+          "query": "next/headers cookies server component read value",
+          "rank": 4,
+          "top5": [
+            "01-app/03-api-reference/04-functions/after#with-request-apis",
+            "01-app/03-api-reference/03-file-conventions/route#cookies",
+            "01-app/03-api-reference/04-functions/cookies#deleting-cookies",
+            "01-app/03-api-reference/04-functions/cookies#intro",
+            "01-app/01-getting-started/07-mutating-data#cookies"
+          ]
+        },
+        {
+          "id": "q15",
+          "question": "How do I prerender every blog post page at build time?",
+          "query": "generateStaticParams dynamic routes blog post build time static rendering",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/dynamic-routes#with-cache-components",
+            "01-app/03-api-reference/04-functions/generate-static-params#prerendering",
+            "01-app/03-api-reference/03-file-conventions/dynamic-routes#dynamic-get-route-handlers-with-generatestaticparams",
+            "01-app/03-api-reference/03-file-conventions/dynamic-routes#with-generatestaticparams",
+            "01-app/01-getting-started/04-linking-and-navigating#dynamic-segments-without-generatestaticparams"
+          ]
+        },
+        {
+          "id": "q16",
+          "question": "How can one layout render two independent sections, like team and analytics, at the same time?",
+          "query": "layout parallel routes slots children page.js",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/parallel-routes#slots",
+            "01-app/03-api-reference/03-file-conventions/parallel-routes#default-js",
+            "01-app/03-api-reference/03-file-conventions/default#intro",
+            "01-app/03-api-reference/03-file-conventions/parallel-routes#tab-groups",
+            "01-app/03-api-reference/03-file-conventions/parallel-routes#intro"
+          ]
+        },
+        {
+          "id": "q17",
+          "question": "How do I open a photo in a modal while keeping a shareable URL for it?",
+          "query": "intercepting routes parallel routes modal photo gallery next/js",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/intercepting-routes#modals",
+            "01-app/03-api-reference/03-file-conventions/intercepting-routes#intro",
+            "01-app/03-api-reference/03-file-conventions/parallel-routes#modals",
+            "01-app/01-getting-started/02-project-structure#parallel-and-intercepted-routes",
+            "01-app/04-glossary#intercepting-routes"
+          ]
+        },
+        {
+          "id": "q18",
+          "question": "How can I group routes into folders without the folder name showing up in the URL?",
+          "query": "routing route groups folder convention parentheses filename convention URL path segment app router",
+          "rank": 1,
+          "top5": [
+            "01-app/04-glossary#route-groups",
+            "01-app/01-getting-started/02-project-structure#route-groups-and-private-folders",
+            "01-app/03-api-reference/03-file-conventions/route-groups#convention",
+            "01-app/01-getting-started/02-project-structure#private-folders",
+            "01-app/01-getting-started/02-project-structure#route-groups"
+          ]
+        },
+        {
+          "id": "q19",
+          "question": "Why is my environment variable undefined in client-side code?",
+          "query": "environment variables client-side NEXT_PUBLIC undefined config",
+          "rank": 3,
+          "top5": [
+            "01-app/02-guides/migrating/from-create-react-app#step-9-migrate-environment-variables",
+            "01-app/02-guides/environment-variables#runtime-environment-variables",
+            "01-app/02-guides/environment-variables#bundling-environment-variables-for-the-browser",
+            "01-app/02-guides/self-hosting#environment-variables",
+            "01-app/03-api-reference/05-config/01-next-config-js/env#intro"
+          ]
+        },
+        {
+          "id": "q20",
+          "question": "How do I produce a minimal build to run in a Docker container?",
+          "query": "output standalone docker minimal build next.config.js public .next/standalone .next/static",
+          "rank": 3,
+          "top5": [
+            "01-app/01-getting-started/17-deploying#templates-2",
+            "01-app/01-getting-started/17-deploying#intro",
+            "01-app/03-api-reference/05-config/01-next-config-js/output#automatically-copying-traced-files",
+            "01-app/02-guides/deploying-to-platforms#adapters",
+            "01-app/02-guides/local-development#2-avoid-common-docker-pitfalls"
+          ]
+        },
+        {
+          "id": "q21",
+          "question": "How do I serve the whole app under a sub-path like /docs?",
+          "query": "next.config.js basePath base path sub-path routing",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/05-config/01-next-config-js/basePath#intro",
+            "01-app/02-guides/migrating/from-create-react-app#using-a-custom-homepage-in-cra",
+            "01-app/03-api-reference/05-config/01-next-config-js/assetPrefix#intro",
+            "02-pages/02-guides/internationalization#sub-path-routing",
+            "02-pages/02-guides/internationalization#automatic-locale-detection"
+          ]
+        },
+        {
+          "id": "q22",
+          "question": "How do I forward /api requests to another backend without changing the URL the user sees?",
+          "query": "route handler rewrite proxy next.config.js rewrites fetch",
+          "rank": 1,
+          "top5": [
+            "01-app/02-guides/backend-for-frontend#proxying-to-a-backend",
+            "01-app/04-glossary#rewrite",
+            "01-app/03-api-reference/03-file-conventions/proxy#setting-headers",
+            "01-app/02-guides/migrating/from-create-react-app#proxying-api-requests",
+            "01-app/02-guides/backend-for-frontend#proxy"
+          ]
+        },
+        {
+          "id": "q23",
+          "question": "Why should a component that reads useSearchParams be wrapped in Suspense?",
+          "query": "useSearchParams Suspense requirement client component rendering bailout",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/04-functions/use-search-params#prerendering",
+            "01-app/03-api-reference/04-functions/use-router#router-events",
+            "02-pages/04-api-reference/03-functions/use-search-params#sharing-components-with-app-router",
+            "01-app/03-api-reference/04-functions/use-search-params#intro",
+            "01-app/03-api-reference/04-functions/use-pathname#do-something-in-response-to-a-route-change"
+          ]
+        },
+        {
+          "id": "q24",
+          "question": "How do I navigate to another page from a button click handler?",
+          "query": "useRouter redirect usePathname next/navigation programmatic navigation click handler",
+          "rank": 1,
+          "top5": [
+            "01-app/02-guides/redirecting#userouter-hook",
+            "01-app/03-api-reference/04-functions/redirect#client-component",
+            "01-app/01-getting-started/04-linking-and-navigating#native-history-api",
+            "02-pages/04-api-reference/03-functions/use-router#router-push",
+            "02-pages/04-api-reference/03-functions/use-router#router-back"
+          ]
+        },
+        {
+          "id": "q25",
+          "question": "How do I handle a form submission on the server without writing an API endpoint?",
+          "query": "Server Actions form submission app router useActionState action.ts",
+          "rank": 0,
+          "top5": [
+            "01-app/02-guides/authentication#sign-up-and-login-functionality",
+            "01-app/02-guides/preserving-ui-state#forms-inputs-and-state",
+            "01-app/02-guides/forms#nested-form-elements",
+            "01-app/01-getting-started/10-error-handling#server-functions",
+            "01-app/01-getting-started/07-mutating-data#client-components"
+          ]
+        },
+        {
+          "id": "q26",
+          "question": "How do I control how long a cached function stays fresh?",
+          "query": "next 4 cache revalidate unstable_cache time freshness duration fetch",
+          "rank": 0,
+          "top5": [
+            "01-app/01-getting-started/09-revalidating#intro",
+            "01-app/02-guides/incremental-static-regeneration#on-demand-revalidation-with-revalidatetag",
+            "01-app/02-guides/self-hosting#automatic-caching",
+            "01-app/03-api-reference/01-directives/use-cache#runtime-caching-considerations",
+            "01-app/02-guides/how-revalidation-works#the-revalidation-model"
+          ]
+        },
+        {
+          "id": "q27",
+          "question": "How can editors preview unpublished content from a headless CMS?",
+          "query": "draft mode preview headless cms getStaticProps incremental static regeneration cookies next/headers",
+          "rank": 9,
+          "top5": [
+            "02-pages/02-guides/preview-mode#fetch-preview-data",
+            "02-pages/02-guides/draft-mode#fetch-draft-data",
+            "02-pages/02-guides/draft-mode#intro",
+            "02-pages/03-building-your-application/03-data-fetching/01-get-static-props#preview-mode",
+            "02-pages/02-guides/preview-mode#securely-accessing-it-from-your-headless-cms"
+          ]
+        },
+        {
+          "id": "q28",
+          "question": "How do I generate the image shown when a page is shared on social media?",
+          "query": "opengraph-image twitter-image metadata metadata-files generate-images NextResponse ImageResponse",
+          "rank": 2,
+          "top5": [
+            "01-app/03-api-reference/04-functions/image-response#intro",
+            "01-app/03-api-reference/03-file-conventions/01-metadata/opengraph-image#intro",
+            "01-app/03-api-reference/03-file-conventions/01-metadata/opengraph-image#generate-images-using-code-js-ts-tsx",
+            "01-app/01-getting-started/14-metadata-and-og-images#static-open-graph-images",
+            "01-app/02-guides/production-checklist#metadata-and-seo"
+          ]
+        },
+        {
+          "id": "q29",
+          "question": "How do I give search engines a list of all my URLs?",
+          "query": "sitemap.xml sitemap.ts metadata generateSitemap Next.js",
+          "rank": 0,
+          "top5": [
+            "01-app/04-glossary#metadata",
+            "01-app/03-api-reference/05-config/01-next-config-js/htmlLimitedBots#intro",
+            "01-app/01-getting-started/14-metadata-and-og-images#static-metadata",
+            "01-app/03-api-reference/05-config/01-next-config-js/skipTrailingSlashRedirect#good-to-know",
+            "01-app/03-api-reference/03-file-conventions/01-metadata/sitemap#generating-multiple-sitemaps"
+          ]
+        },
+        {
+          "id": "q30",
+          "question": "Where do I put code that must run once when the server starts, such as setting up monitoring?",
+          "query": "instrumentation.js register server startup monitoring telemetry",
+          "rank": 4,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/instrumentation-client#intro",
+            "01-app/03-api-reference/03-file-conventions/instrumentation-client#usage",
+            "01-app/02-guides/analytics#client-instrumentation",
+            "01-app/02-guides/instrumentation#convention",
+            "01-app/02-guides/instrumentation#intro"
+          ]
+        },
+        {
+          "id": "q31",
+          "question": "How can TypeScript catch typos in the href of my links?",
+          "query": "typescript strict route type checking next config experimental typedRoutes href",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/05-config/02-typescript#statically-typed-links",
+            "01-app/03-api-reference/05-config/01-next-config-js/typedRoutes#intro",
+            "01-app/03-api-reference/05-config/02-typescript#version-changes",
+            "01-app/03-api-reference/05-config/02-typescript#using-typescript-7",
+            "01-app/03-api-reference/05-config/02-typescript#ide-plugin"
+          ]
+        },
+        {
+          "id": "q32",
+          "question": "In the Pages Router, how do I fetch fresh data on every request?",
+          "query": "Pages Router getServerSideProps fetch fresh data SSR",
+          "rank": 1,
+          "top5": [
+            "02-pages/03-building-your-application/02-rendering/01-server-side-rendering#intro",
+            "01-app/03-api-reference/05-config/01-next-config-js/headers#cache-control",
+            "02-pages/03-building-your-application/03-data-fetching/03-get-server-side-props#caching-with-server-side-rendering-ssr",
+            "02-pages/03-building-your-application/03-data-fetching/03-get-server-side-props#behavior",
+            "01-app/02-guides/migrating/app-router-migration#step-6-migrating-data-fetching-methods"
+          ]
+        },
+        {
+          "id": "q33",
+          "question": "In the Pages Router, how do I rebuild a static page in the background at most once per minute?",
+          "query": "Pages Router Incremental Static Regeneration ISR getStaticProps revalidate",
+          "rank": 1,
+          "top5": [
+            "02-pages/04-api-reference/03-functions/get-static-props#revalidate",
+            "02-pages/03-building-your-application/03-data-fetching/01-get-static-props#when-does-getstaticprops-run",
+            "01-app/02-guides/incremental-static-regeneration#handling-uncaught-exceptions",
+            "01-app/02-guides/incremental-static-regeneration#intro",
+            "01-app/04-glossary#incremental-static-regeneration-isr"
+          ]
+        },
+        {
+          "id": "q34",
+          "question": "How do I create an API endpoint with the Pages Router?",
+          "query": "pages router api routes api endpoints api development backend javascript typescript pages/api",
+          "rank": 3,
+          "top5": [
+            "01-app/02-guides/backend-for-frontend#intro",
+            "01-app/03-api-reference/05-config/02-typescript#intro",
+            "02-pages/03-building-your-application/01-routing/07-api-routes#intro",
+            "02-pages/02-guides/forms#server-forms",
+            "01-app/03-api-reference/08-turbopack#intro"
+          ]
+        },
+        {
+          "id": "q35",
+          "question": "In the Pages Router, where do I add global CSS and a layout shared by every page?",
+          "query": "pages router _app.js global css layout",
+          "rank": 3,
+          "top5": [
+            "01-app/01-getting-started/11-css#global-css",
+            "01-app/02-guides/migrating/app-router-migration#step-7-styling",
+            "02-pages/03-building-your-application/01-routing/05-custom-app#intro",
+            "01-app/02-guides/tailwind-v3-css#configuring-tailwind-v3",
+            "01-app/01-getting-started/11-css#tailwind-css"
+          ]
+        },
+        {
+          "id": "q36",
+          "question": "How do I run logging or analytics after the response has already been sent?",
+          "query": "after response analytics logging next/serverwaitUntil",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/04-functions/after#intro",
+            "01-app/03-api-reference/03-file-conventions/proxy#event",
+            "01-app/03-api-reference/04-functions/after#platform-support",
+            "01-app/02-guides/environment-variables#bundling-environment-variables-for-the-browser",
+            "01-app/03-api-reference/04-functions/after#with-request-apis"
+          ]
+        },
+        {
+          "id": "q37",
+          "question": "How do I load a third-party script only when the browser is idle?",
+          "query": "third party scripts Script component strategy afterInteractive lazyOnload idle next/script",
+          "rank": 3,
+          "top5": [
+            "01-app/02-guides/scripts#strategy",
+            "01-app/03-api-reference/02-components/script#strategy",
+            "01-app/03-api-reference/02-components/script#lazyonload",
+            "01-app/03-api-reference/02-components/script#onload",
+            "01-app/02-guides/scripts#application-scripts"
+          ]
+        },
+        {
+          "id": "q38",
+          "question": "How do I set the title and description of a page in the App Router?",
+          "query": "metadata generateMetadata title description app router layout.js page.js",
+          "rank": 3,
+          "top5": [
+            "01-app/02-guides/migrating-to-cache-components#generatemetadata-and-generateviewport",
+            "01-app/03-api-reference/04-functions/generate-metadata#merging",
+            "01-app/01-getting-started/14-metadata-and-og-images#static-metadata",
+            "01-app/01-getting-started/14-metadata-and-og-images#generated-metadata",
+            "01-app/04-glossary#metadata"
+          ]
+        },
+        {
+          "id": "q39",
+          "question": "What is the difference between updateTag and revalidateTag?",
+          "query": "difference updateTag revalidateTag cache life cycle unstable_updateTag revalidateTag next/cache",
+          "rank": 2,
+          "top5": [
+            "01-app/03-api-reference/04-functions/revalidatePath#relationship-with-revalidatetag-and-updatetag",
+            "01-app/03-api-reference/04-functions/updateTag#differences-from-revalidatetag",
+            "01-app/02-guides/upgrading/version-16#revalidatetag",
+            "01-app/03-api-reference/04-functions/updateTag#error-when-used-outside-server-actions",
+            "01-app/02-guides/migrating-to-cache-components#on-demand-revalidation-revalidatetag-revalidatepath-updatetag"
+          ]
+        },
+        {
+          "id": "q40",
+          "question": "Can I keep using a webpack loader such as an SVG loader with Turbopack?",
+          "query": "Turbopack webpack loaders SVGR custom loaders unsupported migration",
+          "rank": 2,
+          "top5": [
+            "01-app/03-api-reference/05-config/01-next-config-js/turbopack#supported-loaders",
+            "01-app/03-api-reference/05-config/01-next-config-js/turbopack#configuring-webpack-loaders",
+            "01-app/03-api-reference/05-config/01-next-config-js/turbopack#advanced-webpack-loader-conditions",
+            "01-app/03-api-reference/05-config/01-next-config-js/turbopack#module-types",
+            "01-app/03-api-reference/08-turbopack#webpack-plugins"
+          ]
+        }
+      ]
+    },
+    {
+      "lang": "es",
+      "method": "bm25",
+      "recall": {
+        "recall@1": 0.025,
+        "recall@3": 0.175,
+        "recall@5": 0.225,
+        "recall@10": 0.275
+      },
+      "mrr": 0.11111111111111112,
+      "perQuestion": [
+        {
+          "id": "q01",
+          "question": "¿Cómo creo una página cuya URL tenga una parte variable, como el slug de un post del blog?",
+          "query": "¿Cómo creo una página cuya URL tenga una parte variable, como el slug de un post del blog?",
+          "rank": 6,
+          "top5": [
+            "02-pages/03-building-your-application/01-routing/02-dynamic-routes#example",
+            "01-app/03-api-reference/05-config/01-next-config-js/rewrites#path-matching",
+            "01-app/03-api-reference/03-file-conventions/dynamic-routes#convention",
+            "01-app/03-api-reference/05-config/01-next-config-js/headers#path-matching",
+            "01-app/03-api-reference/05-config/01-next-config-js/redirects#path-matching"
+          ]
+        },
+        {
+          "id": "q02",
+          "question": "Después de que una Server Action cambia datos, ¿cómo hago que la página muestre los datos actualizados?",
+          "query": "Después de que una Server Action cambia datos, ¿cómo hago que la página muestre los datos actualizados?",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/loading#streaming-with-suspense",
+            "02-pages/03-building-your-application/01-routing/02-dynamic-routes#example",
+            "01-app/03-api-reference/04-functions/after#with-request-apis",
+            "01-app/02-guides/forms#validation-errors",
+            "01-app/01-getting-started/10-error-handling#server-functions"
+          ]
+        },
+        {
+          "id": "q03",
+          "question": "¿Cómo hago que el título de cada página incluya automáticamente el nombre del sitio al final?",
+          "query": "¿Cómo hago que el título de cada página incluya automáticamente el nombre del sitio al final?",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/04-functions/generate-metadata#applinks",
+            "01-app/02-guides/preventing-flash-before-hydration#syncing-with-react-state",
+            "02-pages/03-building-your-application/01-routing/02-dynamic-routes#example",
+            "01-app/03-api-reference/04-functions/generate-metadata#alternates",
+            "01-app/03-api-reference/03-file-conventions/01-metadata/sitemap#generate-a-localized-sitemap"
+          ]
+        },
+        {
+          "id": "q04",
+          "question": "¿Cómo muestro un esqueleto de carga mientras una ruta obtiene sus datos?",
+          "query": "¿Cómo muestro un esqueleto de carga mientras una ruta obtiene sus datos?",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/04-functions/generate-metadata#alternates",
+            "01-app/03-api-reference/03-file-conventions/01-metadata/sitemap#generate-a-localized-sitemap",
+            "01-app/03-api-reference/04-functions/generate-metadata#other-fields",
+            "01-app/03-api-reference/04-functions/use-selected-layout-segments#returns",
+            "01-app/03-api-reference/05-config/01-next-config-js/redirects#redirects-with-i18n-support"
+          ]
+        },
+        {
+          "id": "q05",
+          "question": "¿Cómo muestro una interfaz alternativa cuando una parte de la app lanza un error inesperado en tiempo de ejecución?",
+          "query": "¿Cómo muestro una interfaz alternativa cuando una parte de la app lanza un error inesperado en tiempo de ejecución?",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/04-functions/generate-metadata#alternates",
+            "01-app/03-api-reference/05-config/01-next-config-js/redirects#redirects-with-i18n-support",
+            "01-app/03-api-reference/05-config/01-next-config-js/headers#headers-with-i18n-support",
+            "01-app/03-api-reference/05-config/01-next-config-js/rewrites#rewrites-with-i18n-support",
+            "01-app/03-api-reference/04-functions/generate-metadata#other-fields"
+          ]
+        },
+        {
+          "id": "q06",
+          "question": "¿Cómo personalizo la página que se muestra cuando una URL no existe en el App Router?",
+          "query": "¿Cómo personalizo la página que se muestra cuando una URL no existe en el App Router?",
+          "rank": 0,
+          "top5": [
+            "02-pages/03-building-your-application/01-routing/02-dynamic-routes#example",
+            "01-app/02-guides/preventing-flash-before-hydration#syncing-with-react-state",
+            "01-app/03-api-reference/04-functions/use-selected-layout-segments#returns",
+            "01-app/03-api-reference/05-config/01-next-config-js/urlImports#intro",
+            "01-app/02-guides/internationalization#routing-overview"
+          ]
+        },
+        {
+          "id": "q07",
+          "question": "¿Cómo creo un endpoint de API que devuelva JSON dentro de la carpeta app?",
+          "query": "¿Cómo creo un endpoint de API que devuelva JSON dentro de la carpeta app?",
+          "rank": 0,
+          "top5": [
+            "02-pages/03-building-your-application/01-routing/07-api-routes#catch-all-api-routes",
+            "02-pages/02-guides/post-css#customizing-target-browsers",
+            "01-app/03-api-reference/03-file-conventions/01-metadata/sitemap#generate-a-localized-sitemap",
+            "01-app/03-api-reference/04-functions/generate-metadata#alternates",
+            "02-pages/03-building-your-application/01-routing/07-api-routes#sending-a-json-response"
+          ]
+        },
+        {
+          "id": "q08",
+          "question": "¿Qué pasó con el middleware en Next.js 16?",
+          "query": "¿Qué pasó con el middleware en Next.js 16?",
+          "rank": 3,
+          "top5": [
+            "01-app/02-guides/upgrading/version-16#middleware-to-proxy",
+            "01-app/03-api-reference/03-file-conventions/middleware#intro",
+            "01-app/01-getting-started/16-proxy#intro",
+            "01-app/03-api-reference/05-config/01-next-config-js/skipProxyUrlNormalize#deprecated-alias",
+            "01-app/02-guides/upgrading/codemods#16-0"
+          ]
+        },
+        {
+          "id": "q09",
+          "question": "¿Cómo hago que un componente se ejecute en el navegador para poder usar useState y onClick?",
+          "query": "¿Cómo hago que un componente se ejecute en el navegador para poder usar useState y onClick?",
+          "rank": 2,
+          "top5": [
+            "01-app/02-guides/lazy-loading#importing-client-components",
+            "01-app/03-api-reference/01-directives/use-client#usage",
+            "01-app/01-getting-started/07-mutating-data#event-handlers",
+            "01-app/02-guides/preventing-flash-before-hydration#syncing-with-react-state",
+            "01-app/01-getting-started/04-linking-and-navigating#native-history-api"
+          ]
+        },
+        {
+          "id": "q10",
+          "question": "¿Cómo permito que el componente Image cargue imágenes alojadas en otro dominio?",
+          "query": "¿Cómo permito que el componente Image cargue imágenes alojadas en otro dominio?",
+          "rank": 0,
+          "top5": [
+            "01-app/02-guides/local-development#3-windows-use-dev-drive-or-wsl-2",
+            "01-app/02-guides/preventing-flash-before-hydration#syncing-with-react-state",
+            "01-app/03-api-reference/05-config/01-next-config-js/images#cloudinary",
+            "01-app/01-getting-started/12-images#intro",
+            "01-app/02-guides/static-exports#image-optimization"
+          ]
+        },
+        {
+          "id": "q11",
+          "question": "¿Cómo uso una fuente de Google sin que el navegador haga peticiones a Google?",
+          "query": "¿Cómo uso una fuente de Google sin que el navegador haga peticiones a Google?",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/04-functions/generate-metadata#alternates",
+            "01-app/02-guides/preventing-flash-before-hydration#syncing-with-react-state",
+            "01-app/03-api-reference/03-file-conventions/01-metadata/sitemap#generate-a-localized-sitemap",
+            "01-app/03-api-reference/04-functions/generate-metadata#other-fields",
+            "01-app/02-guides/third-party-libraries#google-analytics"
+          ]
+        },
+        {
+          "id": "q12",
+          "question": "¿Cómo evito que un enlace del pie de página se precargue?",
+          "query": "¿Cómo evito que un enlace del pie de página se precargue?",
+          "rank": 0,
+          "top5": [
+            "02-pages/03-building-your-application/01-routing/02-dynamic-routes#example",
+            "01-app/03-api-reference/04-functions/generate-metadata#alternates",
+            "01-app/03-api-reference/03-file-conventions/01-metadata/sitemap#generate-a-localized-sitemap",
+            "01-app/02-guides/preserving-ui-state#effect-and-media-cleanup",
+            "01-app/02-guides/streaming#push-dynamic-access-down"
+          ]
+        },
+        {
+          "id": "q13",
+          "question": "¿Cómo envío al usuario a otra URL desde un Server Component?",
+          "query": "¿Cómo envío al usuario a otra URL desde un Server Component?",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/04-functions/generate-metadata#applinks",
+            "01-app/02-guides/upgrading/version-16#runtime-configuration",
+            "01-app/03-api-reference/08-turbopack#import-meta-env",
+            "01-app/02-guides/lazy-loading#skipping-ssr",
+            "01-app/02-guides/lazy-loading#importing-client-components"
+          ]
+        },
+        {
+          "id": "q14",
+          "question": "¿Cómo leo el valor de una cookie en un Server Component?",
+          "query": "¿Cómo leo el valor de una cookie en un Server Component?",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/04-functions/generate-metadata#alternates",
+            "01-app/03-api-reference/05-config/01-next-config-js/redirects#redirects-with-i18n-support",
+            "01-app/03-api-reference/03-file-conventions/route#cookies",
+            "01-app/03-api-reference/05-config/01-next-config-js/rewrites#rewrites-with-i18n-support",
+            "01-app/03-api-reference/05-config/01-next-config-js/headers#headers-with-i18n-support"
+          ]
+        },
+        {
+          "id": "q15",
+          "question": "¿Cómo genero de antemano todas las páginas de posts del blog al momento del build?",
+          "query": "¿Cómo genero de antemano todas las páginas de posts del blog al momento del build?",
+          "rank": 0,
+          "top5": [
+            "02-pages/03-building-your-application/01-routing/02-dynamic-routes#example",
+            "02-pages/04-api-reference/03-functions/get-static-props#reading-files-use-process-cwd",
+            "01-app/01-getting-started/08-caching#static-cached-and-streaming",
+            "01-app/03-api-reference/03-file-conventions/01-metadata/sitemap#generate-a-localized-sitemap",
+            "02-pages/03-building-your-application/03-data-fetching/01-get-static-props#using-getstaticprops-to-fetch-data-from-a-cms"
+          ]
+        },
+        {
+          "id": "q16",
+          "question": "¿Cómo puede un layout mostrar dos secciones independientes, como equipo y analítica, al mismo tiempo?",
+          "query": "¿Cómo puede un layout mostrar dos secciones independientes, como equipo y analítica, al mismo tiempo?",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/04-functions/generate-metadata#applinks",
+            "01-app/03-api-reference/04-functions/use-selected-layout-segments#returns",
+            "01-app/03-api-reference/04-functions/use-selected-layout-segment#returns",
+            "01-app/03-api-reference/04-functions/generate-metadata#verification",
+            "01-app/03-api-reference/04-functions/forbidden#good-to-know"
+          ]
+        },
+        {
+          "id": "q17",
+          "question": "¿Cómo abro una foto en un modal manteniendo una URL que se pueda compartir?",
+          "query": "¿Cómo abro una foto en un modal manteniendo una URL que se pueda compartir?",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/intercepting-routes#modals",
+            "01-app/02-guides/preserving-ui-state#the-has-selector",
+            "01-app/03-api-reference/03-file-conventions/parallel-routes#modals",
+            "01-app/02-guides/local-development#3-windows-use-dev-drive-or-wsl-2",
+            "01-app/01-getting-started/02-project-structure#parallel-and-intercepted-routes"
+          ]
+        },
+        {
+          "id": "q18",
+          "question": "¿Cómo agrupo rutas en carpetas sin que el nombre de la carpeta aparezca en la URL?",
+          "query": "¿Cómo agrupo rutas en carpetas sin que el nombre de la carpeta aparezca en la URL?",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/04-functions/generate-metadata#alternates",
+            "01-app/03-api-reference/04-functions/generate-metadata#other-fields",
+            "01-app/03-api-reference/03-file-conventions/01-metadata/sitemap#generate-a-localized-sitemap",
+            "01-app/03-api-reference/05-config/01-next-config-js/redirects#redirects-with-i18n-support",
+            "01-app/03-api-reference/05-config/01-next-config-js/rewrites#rewrites-with-i18n-support"
+          ]
+        },
+        {
+          "id": "q19",
+          "question": "¿Por qué mi variable de entorno es undefined en el código del cliente?",
+          "query": "¿Por qué mi variable de entorno es undefined en el código del cliente?",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/01-metadata/sitemap#generate-a-localized-sitemap",
+            "01-app/03-api-reference/04-functions/generate-metadata#alternates",
+            "01-app/03-api-reference/05-config/01-next-config-js/redirects#redirects-with-i18n-support",
+            "01-app/03-api-reference/05-config/01-next-config-js/rewrites#rewrites-with-i18n-support",
+            "01-app/02-guides/preventing-flash-before-hydration#syncing-with-react-state"
+          ]
+        },
+        {
+          "id": "q20",
+          "question": "¿Cómo genero un build mínimo para correrlo en un contenedor Docker?",
+          "query": "¿Cómo genero un build mínimo para correrlo en un contenedor Docker?",
+          "rank": 4,
+          "top5": [
+            "01-app/02-guides/preventing-flash-before-hydration#storing-the-theme-in-a-cookie",
+            "01-app/02-guides/local-development#3-windows-use-dev-drive-or-wsl-2",
+            "01-app/02-guides/internationalization#resources",
+            "01-app/01-getting-started/17-deploying#docker",
+            "01-app/02-guides/local-development#2-avoid-common-docker-pitfalls"
+          ]
+        },
+        {
+          "id": "q21",
+          "question": "¿Cómo sirvo toda la app bajo una subruta como /docs?",
+          "query": "¿Cómo sirvo toda la app bajo una subruta como /docs?",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/04-functions/use-selected-layout-segments#returns",
+            "01-app/03-api-reference/03-file-conventions/route#dynamic-route-segments",
+            "01-app/03-api-reference/04-functions/use-selected-layout-segments#intro",
+            "01-app/02-guides/lazy-loading#importing-client-components",
+            "01-app/03-api-reference/03-file-conventions/dynamic-routes#catch-all-segments"
+          ]
+        },
+        {
+          "id": "q22",
+          "question": "¿Cómo redirijo las peticiones de /api a otro backend sin cambiar la URL que ve el usuario?",
+          "query": "¿Cómo redirijo las peticiones de /api a otro backend sin cambiar la URL que ve el usuario?",
+          "rank": 3,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/01-metadata/sitemap#generate-a-localized-sitemap",
+            "01-app/03-api-reference/04-functions/generate-metadata#other-fields",
+            "01-app/02-guides/backend-for-frontend#proxying-to-a-backend",
+            "01-app/03-api-reference/04-functions/generate-metadata#alternates",
+            "01-app/02-guides/backend-for-frontend#access-to-protected-resources"
+          ]
+        },
+        {
+          "id": "q23",
+          "question": "¿Por qué un componente que lee useSearchParams debe ir envuelto en Suspense?",
+          "query": "¿Por qué un componente que lee useSearchParams debe ir envuelto en Suspense?",
+          "rank": 2,
+          "top5": [
+            "01-app/03-api-reference/04-functions/use-router#router-events",
+            "01-app/03-api-reference/04-functions/use-search-params#prerendering",
+            "02-pages/04-api-reference/03-functions/use-search-params#sharing-components-with-app-router",
+            "01-app/03-api-reference/04-functions/use-search-params#intro",
+            "02-pages/04-api-reference/03-functions/use-search-params#intro"
+          ]
+        },
+        {
+          "id": "q24",
+          "question": "¿Cómo navego a otra página desde el manejador de clic de un botón?",
+          "query": "¿Cómo navego a otra página desde el manejador de clic de un botón?",
+          "rank": 0,
+          "top5": [
+            "01-app/02-guides/preventing-flash-before-hydration#syncing-with-react-state",
+            "02-pages/03-building-your-application/01-routing/02-dynamic-routes#example",
+            "01-app/03-api-reference/04-functions/userAgent#isbot",
+            "01-app/03-api-reference/04-functions/generate-metadata#alternates",
+            "01-app/03-api-reference/03-file-conventions/01-metadata/sitemap#generate-a-localized-sitemap"
+          ]
+        },
+        {
+          "id": "q25",
+          "question": "¿Cómo proceso el envío de un formulario en el servidor sin escribir un endpoint de API?",
+          "query": "¿Cómo proceso el envío de un formulario en el servidor sin escribir un endpoint de API?",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/04-functions/generate-metadata#alternates",
+            "01-app/03-api-reference/05-config/01-next-config-js/rewrites#rewrites-with-i18n-support",
+            "01-app/03-api-reference/05-config/01-next-config-js/redirects#redirects-with-i18n-support",
+            "01-app/03-api-reference/05-config/01-next-config-js/headers#headers-with-i18n-support",
+            "01-app/03-api-reference/04-functions/generate-metadata#other-fields"
+          ]
+        },
+        {
+          "id": "q26",
+          "question": "¿Cómo controlo cuánto tiempo se mantiene vigente una función en caché?",
+          "query": "¿Cómo controlo cuánto tiempo se mantiene vigente una función en caché?",
+          "rank": 0,
+          "top5": [
+            "01-app/02-guides/local-development#3-windows-use-dev-drive-or-wsl-2",
+            "01-app/02-guides/how-revalidation-works#soft-tags",
+            "01-app/03-api-reference/04-functions/use-selected-layout-segments#intro",
+            "01-app/04-glossary#middleware",
+            "01-app/03-api-reference/04-functions/use-selected-layout-segments#returns"
+          ]
+        },
+        {
+          "id": "q27",
+          "question": "¿Cómo pueden los editores previsualizar contenido no publicado de un CMS headless?",
+          "query": "¿Cómo pueden los editores previsualizar contenido no publicado de un CMS headless?",
+          "rank": 0,
+          "top5": [
+            "02-pages/02-guides/draft-mode#securely-accessing-it-from-your-headless-cms",
+            "02-pages/02-guides/preview-mode#securely-accessing-it-from-your-headless-cms",
+            "01-app/02-guides/draft-mode#step-2-access-the-route-handler-from-your-headless-cms",
+            "02-pages/02-guides/preview-mode#fetch-preview-data",
+            "02-pages/02-guides/draft-mode#fetch-draft-data"
+          ]
+        },
+        {
+          "id": "q28",
+          "question": "¿Cómo genero la imagen que aparece cuando una página se comparte en redes sociales?",
+          "query": "¿Cómo genero la imagen que aparece cuando una página se comparte en redes sociales?",
+          "rank": 0,
+          "top5": [
+            "02-pages/03-building-your-application/01-routing/02-dynamic-routes#example",
+            "01-app/02-guides/local-development#3-windows-use-dev-drive-or-wsl-2",
+            "01-app/02-guides/preserving-ui-state#effect-and-media-cleanup",
+            "01-app/02-guides/streaming#push-dynamic-access-down",
+            "01-app/03-api-reference/04-functions/use-selected-layout-segment#intro"
+          ]
+        },
+        {
+          "id": "q29",
+          "question": "¿Cómo les doy a los buscadores una lista de todas mis URLs?",
+          "query": "¿Cómo les doy a los buscadores una lista de todas mis URLs?",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/04-functions/use-selected-layout-segments#returns",
+            "01-app/03-api-reference/04-functions/use-selected-layout-segment#returns",
+            "01-app/03-api-reference/04-functions/generate-metadata#alternates",
+            "01-app/03-api-reference/03-file-conventions/01-metadata/sitemap#generate-a-localized-sitemap",
+            "01-app/03-api-reference/04-functions/generate-metadata#other-fields"
+          ]
+        },
+        {
+          "id": "q30",
+          "question": "¿Dónde pongo código que debe ejecutarse una sola vez al iniciar el servidor, como la configuración de monitoreo?",
+          "query": "¿Dónde pongo código que debe ejecutarse una sola vez al iniciar el servidor, como la configuración de monitoreo?",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/04-functions/generate-metadata#applinks",
+            "01-app/03-api-reference/05-config/01-next-config-js/rewrites#wildcard-path-matching",
+            "01-app/03-api-reference/05-config/01-next-config-js/redirects#wildcard-path-matching",
+            "01-app/03-api-reference/04-functions/generate-metadata#alternates",
+            "01-app/02-guides/preventing-flash-before-hydration#syncing-with-react-state"
+          ]
+        },
+        {
+          "id": "q31",
+          "question": "¿Cómo puede TypeScript detectar errores de escritura en el href de mis enlaces?",
+          "query": "¿Cómo puede TypeScript detectar errores de escritura en el href de mis enlaces?",
+          "rank": 4,
+          "top5": [
+            "01-app/03-api-reference/04-functions/generate-metadata#alternates",
+            "01-app/03-api-reference/04-functions/generate-metadata#other-fields",
+            "01-app/03-api-reference/03-file-conventions/01-metadata/sitemap#generate-a-localized-sitemap",
+            "01-app/03-api-reference/05-config/02-typescript#statically-typed-links",
+            "01-app/03-api-reference/05-config/01-next-config-js/useTypeScriptCli#intro"
+          ]
+        },
+        {
+          "id": "q32",
+          "question": "En el Pages Router, ¿cómo obtengo datos frescos en cada petición?",
+          "query": "En el Pages Router, ¿cómo obtengo datos frescos en cada petición?",
+          "rank": 0,
+          "top5": [
+            "02-pages/03-building-your-application/01-routing/02-dynamic-routes#example",
+            "02-pages/03-building-your-application/01-routing/07-api-routes#streaming-responses",
+            "01-app/02-guides/local-development#3-windows-use-dev-drive-or-wsl-2",
+            "01-app/02-guides/preventing-flash-before-hydration#syncing-with-react-state",
+            "01-app/02-guides/redirecting#intro"
+          ]
+        },
+        {
+          "id": "q33",
+          "question": "En el Pages Router, ¿cómo regenero una página estática en segundo plano como máximo una vez por minuto?",
+          "query": "En el Pages Router, ¿cómo regenero una página estática en segundo plano como máximo una vez por minuto?",
+          "rank": 0,
+          "top5": [
+            "02-pages/03-building-your-application/01-routing/02-dynamic-routes#example",
+            "01-app/02-guides/preventing-flash-before-hydration#syncing-with-react-state",
+            "01-app/02-guides/internationalization#resources",
+            "02-pages/02-guides/internationalization#intro",
+            "01-app/02-guides/preventing-flash-before-hydration#storing-the-theme-in-a-cookie"
+          ]
+        },
+        {
+          "id": "q34",
+          "question": "¿Cómo creo un endpoint de API con el Pages Router?",
+          "query": "¿Cómo creo un endpoint de API con el Pages Router?",
+          "rank": 0,
+          "top5": [
+            "02-pages/03-building-your-application/01-routing/02-dynamic-routes#example",
+            "01-app/03-api-reference/05-config/01-next-config-js/redirects#redirects-with-i18n-support",
+            "01-app/03-api-reference/04-functions/generate-metadata#alternates",
+            "01-app/02-guides/preventing-flash-before-hydration#syncing-with-react-state",
+            "01-app/03-api-reference/05-config/01-next-config-js/rewrites#rewrites-with-i18n-support"
+          ]
+        },
+        {
+          "id": "q35",
+          "question": "En el Pages Router, ¿dónde agrego el CSS global y un layout compartido por todas las páginas?",
+          "query": "En el Pages Router, ¿dónde agrego el CSS global y un layout compartido por todas las páginas?",
+          "rank": 9,
+          "top5": [
+            "01-app/01-getting-started/11-css#tailwind-css",
+            "01-app/02-guides/migrating/app-router-migration#step-7-styling",
+            "01-app/01-getting-started/11-css#global-css",
+            "01-app/02-guides/migrating/from-create-react-app#step-5-styles",
+            "01-app/02-guides/tailwind-v3-css#configuring-tailwind-v3"
+          ]
+        },
+        {
+          "id": "q36",
+          "question": "¿Cómo ejecuto logging o analítica después de que la respuesta ya fue enviada?",
+          "query": "¿Cómo ejecuto logging o analítica después de que la respuesta ya fue enviada?",
+          "rank": 0,
+          "top5": [
+            "01-app/02-guides/local-development#detailed-fetch-logging",
+            "01-app/03-api-reference/04-functions/generate-metadata#alternates",
+            "01-app/03-api-reference/03-file-conventions/01-metadata/sitemap#generate-a-localized-sitemap",
+            "01-app/03-api-reference/05-config/01-next-config-js/exportPathMap#customizing-the-output-directory",
+            "01-app/03-api-reference/05-config/01-next-config-js/logging#disabling-logging"
+          ]
+        },
+        {
+          "id": "q37",
+          "question": "¿Cómo cargo un script de terceros solo cuando el navegador está inactivo?",
+          "query": "¿Cómo cargo un script de terceros solo cuando el navegador está inactivo?",
+          "rank": 0,
+          "top5": [
+            "01-app/02-guides/preventing-flash-before-hydration#syncing-with-react-state",
+            "01-app/03-api-reference/04-functions/generate-metadata#alternates",
+            "01-app/03-api-reference/03-file-conventions/01-metadata/sitemap#generate-a-localized-sitemap",
+            "01-app/03-api-reference/04-functions/generate-metadata#other-fields",
+            "01-app/03-api-reference/04-functions/forbidden#good-to-know"
+          ]
+        },
+        {
+          "id": "q38",
+          "question": "¿Cómo defino el título y la descripción de una página en el App Router?",
+          "query": "¿Cómo defino el título y la descripción de una página en el App Router?",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/04-functions/generate-metadata#alternates",
+            "01-app/03-api-reference/05-config/01-next-config-js/redirects#redirects-with-i18n-support",
+            "02-pages/03-building-your-application/01-routing/02-dynamic-routes#example",
+            "01-app/02-guides/preventing-flash-before-hydration#syncing-with-react-state",
+            "01-app/02-guides/how-revalidation-works#soft-tags"
+          ]
+        },
+        {
+          "id": "q39",
+          "question": "¿Cuál es la diferencia entre updateTag y revalidateTag?",
+          "query": "¿Cuál es la diferencia entre updateTag y revalidateTag?",
+          "rank": 2,
+          "top5": [
+            "01-app/03-api-reference/04-functions/updateTag#error-when-used-outside-server-actions",
+            "01-app/03-api-reference/04-functions/updateTag#differences-from-revalidatetag",
+            "01-app/03-api-reference/04-functions/revalidatePath#relationship-with-revalidatetag-and-updatetag",
+            "01-app/02-guides/migrating-to-cache-components#on-demand-revalidation-revalidatetag-revalidatepath-updatetag",
+            "01-app/02-guides/upgrading/version-16#revalidatetag"
+          ]
+        },
+        {
+          "id": "q40",
+          "question": "¿Puedo seguir usando un loader de webpack, como uno para SVG, con Turbopack?",
+          "query": "¿Puedo seguir usando un loader de webpack, como uno para SVG, con Turbopack?",
+          "rank": 2,
+          "top5": [
+            "01-app/03-api-reference/05-config/01-next-config-js/turbopack#supported-loaders",
+            "01-app/03-api-reference/05-config/01-next-config-js/turbopack#configuring-webpack-loaders",
+            "01-app/03-api-reference/05-config/01-next-config-js/turbopack#module-types",
+            "01-app/03-api-reference/05-config/01-next-config-js/turbopack#advanced-webpack-loader-conditions",
+            "01-app/03-api-reference/08-turbopack#language-features"
+          ]
+        }
+      ]
+    },
+    {
+      "lang": "es",
+      "method": "bm25+rewrite",
+      "recall": {
+        "recall@1": 0.225,
+        "recall@3": 0.5,
+        "recall@5": 0.675,
+        "recall@10": 0.825
+      },
+      "mrr": 0.406031746031746,
+      "perQuestion": [
+        {
+          "id": "q01",
+          "question": "¿Cómo creo una página cuya URL tenga una parte variable, como el slug de un post del blog?",
+          "query": "dynamic routes params slug app router file convention Next.js [slug] page.js",
+          "rank": 4,
+          "top5": [
+            "01-app/03-api-reference/04-functions/use-params#returns",
+            "01-app/03-api-reference/03-file-conventions/dynamic-routes#convention",
+            "02-pages/03-building-your-application/01-routing/02-dynamic-routes#convention",
+            "01-app/01-getting-started/03-layouts-and-pages#creating-a-dynamic-segment",
+            "01-app/03-api-reference/03-file-conventions/page#displaying-content-based-on-params"
+          ]
+        },
+        {
+          "id": "q02",
+          "question": "Después de que una Server Action cambia datos, ¿cómo hago que la página muestre los datos actualizados?",
+          "query": "revalidatePath revalidateTag redirect Server Actions data mutation Next.js",
+          "rank": 2,
+          "top5": [
+            "01-app/01-getting-started/07-mutating-data#redirect-after-a-mutation",
+            "01-app/01-getting-started/07-mutating-data#revalidate-data",
+            "01-app/02-guides/server-actions#a-single-response-carries-data-and-ui",
+            "01-app/02-guides/server-actions#choosing-a-cache-update",
+            "01-app/02-guides/migrating-to-cache-components#on-demand-revalidation-revalidatetag-revalidatepath-updatetag"
+          ]
+        },
+        {
+          "id": "q03",
+          "question": "¿Cómo hago que el título de cada página incluya automáticamente el nombre del sitio al final?",
+          "query": "metadata title template absolute default template.js layout.js Next.js",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/04-functions/generate-metadata#metadata-fields",
+            "01-app/03-api-reference/04-functions/generate-metadata#types",
+            "01-app/03-api-reference/03-file-conventions/error#global-error",
+            "01-app/03-api-reference/03-file-conventions/layout#metadata",
+            "01-app/01-getting-started/14-metadata-and-og-images#static-metadata"
+          ]
+        },
+        {
+          "id": "q04",
+          "question": "¿Cómo muestro un esqueleto de carga mientras una ruta obtiene sus datos?",
+          "query": "loading.js loading tsx Suspense streaming data fetching Next.js",
+          "rank": 0,
+          "top5": [
+            "01-app/01-getting-started/06-fetching-data#streaming",
+            "01-app/01-getting-started/06-fetching-data#client-components",
+            "01-app/02-guides/streaming#parallel-streaming-with-sibling-boundaries",
+            "01-app/02-guides/client-side-data-fetching/index#choose-a-client-fetching-pattern",
+            "01-app/03-api-reference/03-file-conventions/loading#streaming-with-suspense"
+          ]
+        },
+        {
+          "id": "q05",
+          "question": "¿Cómo muestro una interfaz alternativa cuando una parte de la app lanza un error inesperado en tiempo de ejecución?",
+          "query": "error handling error.js error boundary UI react next.js",
+          "rank": 3,
+          "top5": [
+            "01-app/04-glossary#error-boundary",
+            "02-pages/03-building-your-application/06-configuring/12-error-handling#handling-client-errors",
+            "01-app/01-getting-started/10-error-handling#nested-error-boundaries",
+            "01-app/03-api-reference/04-functions/catchError#intro",
+            "01-app/02-guides/streaming#error-handling-mid-stream"
+          ]
+        },
+        {
+          "id": "q06",
+          "question": "¿Cómo personalizo la página que se muestra cuando una URL no existe en el App Router?",
+          "query": "app router not found custom page 404 not-found.js metadata",
+          "rank": 8,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/not-found#metadata",
+            "01-app/03-api-reference/03-file-conventions/not-found#global-not-found-js-experimental",
+            "02-pages/04-api-reference/03-functions/get-server-side-props#notfound",
+            "02-pages/03-building-your-application/01-routing/08-custom-error#customizing-the-404-page",
+            "02-pages/04-api-reference/03-functions/get-static-props#notfound"
+          ]
+        },
+        {
+          "id": "q07",
+          "question": "¿Cómo creo un endpoint de API que devuelva JSON dentro de la carpeta app?",
+          "query": "app router route.js api routes json response NextResponse",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/04-functions/next-response#json",
+            "01-app/03-api-reference/03-file-conventions/proxy#nextresponse",
+            "01-app/02-guides/backend-for-frontend#nextrequest-and-nextresponse",
+            "01-app/03-api-reference/04-functions/not-found#serving-a-404-from-a-route-handler",
+            "01-app/02-guides/redirecting#2-optimizing-data-lookup-performance"
+          ]
+        },
+        {
+          "id": "q08",
+          "question": "¿Qué pasó con el middleware en Next.js 16?",
+          "query": "Next.js 16 middleware changes breaking updates upgrade guide migration middleware.ts",
+          "rank": 0,
+          "top5": [
+            "01-app/02-guides/upgrading/version-16#review-migration-checklist",
+            "01-app/03-api-reference/03-file-conventions/proxy#version-history",
+            "01-app/02-guides/upgrading/version-16#use-a-coding-agent-recommended",
+            "01-app/03-api-reference/03-file-conventions/middleware#intro",
+            "01-app/02-guides/upgrading/version-16#middleware-to-proxy"
+          ]
+        },
+        {
+          "id": "q09",
+          "question": "¿Cómo hago que un componente se ejecute en el navegador para poder usar useState y onClick?",
+          "query": "'use client' directive components useState onClick browser execution",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/01-directives/use-client#usage",
+            "01-app/01-getting-started/05-server-and-client-components#using-client-components",
+            "01-app/01-getting-started/07-mutating-data#event-handlers",
+            "01-app/01-getting-started/05-server-and-client-components#third-party-components",
+            "01-app/02-guides/lazy-loading#importing-client-components"
+          ]
+        },
+        {
+          "id": "q10",
+          "question": "¿Cómo permito que el componente Image cargue imágenes alojadas en otro dominio?",
+          "query": "next/image remotePatterns domains loader configuration image optimization",
+          "rank": 9,
+          "top5": [
+            "01-app/03-api-reference/02-components/image#deprecated-configuration-options",
+            "01-app/02-guides/upgrading/version-16#images-domains-configuration-deprecated",
+            "02-pages/04-api-reference/01-components/image-legacy#domains",
+            "02-pages/04-api-reference/01-components/image-legacy#src",
+            "01-app/03-api-reference/02-components/image#version-history"
+          ]
+        },
+        {
+          "id": "q11",
+          "question": "¿Cómo uso una fuente de Google sin que el navegador haga peticiones a Google?",
+          "query": "next/font google self hosting download optimization local fonts",
+          "rank": 2,
+          "top5": [
+            "01-app/04-glossary#font-optimization",
+            "01-app/01-getting-started/13-fonts#intro",
+            "01-app/03-api-reference/02-components/font#intro",
+            "01-app/03-api-reference/02-components/font#weight",
+            "01-app/03-api-reference/02-components/font#fallback"
+          ]
+        },
+        {
+          "id": "q12",
+          "question": "¿Cómo evito que un enlace del pie de página se precargue?",
+          "query": "Link component prefetch false footer",
+          "rank": 1,
+          "top5": [
+            "01-app/02-guides/prefetching#disabled-prefetch",
+            "01-app/02-guides/prefetching#preventing-too-many-prefetches",
+            "01-app/03-api-reference/02-components/link#reference",
+            "01-app/01-getting-started/04-linking-and-navigating#disabling-prefetching",
+            "01-app/03-api-reference/02-components/link#prefetch"
+          ]
+        },
+        {
+          "id": "q13",
+          "question": "¿Cómo envío al usuario a otra URL desde un Server Component?",
+          "query": "redirect Server Component redirect() next/navigation",
+          "rank": 3,
+          "top5": [
+            "01-app/03-api-reference/04-functions/redirect#client-component",
+            "01-app/03-api-reference/04-functions/redirect#server-component",
+            "01-app/02-guides/redirecting#redirect-function",
+            "01-app/02-guides/redirecting#intro",
+            "01-app/03-api-reference/04-functions/redirect#parameters"
+          ]
+        },
+        {
+          "id": "q14",
+          "question": "¿Cómo leo el valor de una cookie en un Server Component?",
+          "query": "cookies next/headers server component",
+          "rank": 7,
+          "top5": [
+            "01-app/03-api-reference/04-functions/cookies#understanding-cookie-behavior-in-server-components",
+            "01-app/03-api-reference/04-functions/after#with-request-apis",
+            "01-app/02-guides/preventing-flash-before-hydration#when-to-use-other-approaches",
+            "01-app/03-api-reference/04-functions/cookies#deleting-cookies",
+            "01-app/03-api-reference/03-file-conventions/route#cookies"
+          ]
+        },
+        {
+          "id": "q15",
+          "question": "¿Cómo genero de antemano todas las páginas de posts del blog al momento del build?",
+          "query": "generateStaticParams blog posts static site generation SSG build time Next.js dynamic routes",
+          "rank": 5,
+          "top5": [
+            "01-app/03-api-reference/04-functions/generate-static-params#prerendering",
+            "01-app/03-api-reference/03-file-conventions/dynamic-routes#with-generatestaticparams",
+            "01-app/01-getting-started/04-linking-and-navigating#dynamic-segments-without-generatestaticparams",
+            "01-app/03-api-reference/03-file-conventions/dynamic-routes#dynamic-get-route-handlers-with-generatestaticparams",
+            "01-app/03-api-reference/04-functions/generate-static-params#intro"
+          ]
+        },
+        {
+          "id": "q16",
+          "question": "¿Cómo puede un layout mostrar dos secciones independientes, como equipo y analítica, al mismo tiempo?",
+          "query": "Next.js layout parallel routes @folder slot children",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/parallel-routes#slots",
+            "01-app/03-api-reference/03-file-conventions/parallel-routes#default-js",
+            "01-app/03-api-reference/03-file-conventions/parallel-routes#tab-groups",
+            "01-app/03-api-reference/03-file-conventions/default#intro",
+            "01-app/01-getting-started/02-project-structure#parallel-and-intercepted-routes"
+          ]
+        },
+        {
+          "id": "q17",
+          "question": "¿Cómo abro una foto en un modal manteniendo una URL que se pueda compartir?",
+          "query": "Next.js intercepting routes parallel routes modal photo URL routing catch-all page.js layout.js",
+          "rank": 2,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/intercepting-routes#intro",
+            "01-app/03-api-reference/03-file-conventions/parallel-routes#modals",
+            "01-app/03-api-reference/03-file-conventions/intercepting-routes#modals",
+            "01-app/01-getting-started/02-project-structure#parallel-and-intercepted-routes",
+            "01-app/03-api-reference/03-file-conventions/intercepting-routes#convention"
+          ]
+        },
+        {
+          "id": "q18",
+          "question": "¿Cómo agrupo rutas en carpetas sin que el nombre de la carpeta aparezca en la URL?",
+          "query": "route groups folder parenthesis routing navigation Next.js app directory *( )*",
+          "rank": 3,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/route-groups#convention",
+            "01-app/01-getting-started/02-project-structure#route-groups",
+            "01-app/04-glossary#route-groups",
+            "01-app/03-api-reference/03-file-conventions/route-groups#intro",
+            "01-app/01-getting-started/02-project-structure#organize-routes-without-affecting-the-url-path"
+          ]
+        },
+        {
+          "id": "q19",
+          "question": "¿Por qué mi variable de entorno es undefined en el código del cliente?",
+          "query": "client side environment variables NEXT_PUBLIC undefined configuration",
+          "rank": 4,
+          "top5": [
+            "01-app/04-glossary#environment-variables",
+            "01-app/02-guides/migrating/from-create-react-app#step-9-migrate-environment-variables",
+            "01-app/02-guides/upgrading/version-16#runtime-configuration",
+            "01-app/02-guides/environment-variables#bundling-environment-variables-for-the-browser",
+            "01-app/02-guides/environment-variables#runtime-environment-variables"
+          ]
+        },
+        {
+          "id": "q20",
+          "question": "¿Cómo genero un build mínimo para correrlo en un contenedor Docker?",
+          "query": "next.js docker standalone output output: 'standalone' next.config.js dockerfile production",
+          "rank": 2,
+          "top5": [
+            "01-app/01-getting-started/17-deploying#templates-2",
+            "01-app/03-api-reference/05-config/01-next-config-js/output#automatically-copying-traced-files",
+            "01-app/02-guides/local-development#2-avoid-common-docker-pitfalls",
+            "01-app/01-getting-started/17-deploying#docker",
+            "01-app/03-api-reference/05-config/01-next-config-js/output#intro"
+          ]
+        },
+        {
+          "id": "q21",
+          "question": "¿Cómo sirvo toda la app bajo una subruta como /docs?",
+          "query": "next.config.js basePath /docs routing",
+          "rank": 4,
+          "top5": [
+            "01-app/03-api-reference/05-config/01-next-config-js/redirects#redirects-with-basepath-support",
+            "01-app/03-api-reference/05-config/01-next-config-js/headers#headers-with-basepath-support",
+            "01-app/03-api-reference/05-config/01-next-config-js/rewrites#rewrites-with-basepath-support",
+            "01-app/03-api-reference/05-config/01-next-config-js/basePath#intro",
+            "01-app/02-guides/migrating/from-create-react-app#using-a-custom-homepage-in-cra"
+          ]
+        },
+        {
+          "id": "q22",
+          "question": "¿Cómo redirijo las peticiones de /api a otro backend sin cambiar la URL que ve el usuario?",
+          "query": "next.config.js rewrites api routing proxy destination",
+          "rank": 2,
+          "top5": [
+            "01-app/03-api-reference/05-config/01-next-config-js/skipProxyUrlNormalize#good-to-know",
+            "01-app/03-api-reference/05-config/01-next-config-js/rewrites#intro",
+            "01-app/02-guides/multi-zones#how-to-route-requests-to-the-right-zone",
+            "01-app/02-guides/migrating/from-create-react-app#proxying-api-requests",
+            "01-app/02-guides/multi-zones#routing-requests-using-proxy"
+          ]
+        },
+        {
+          "id": "q23",
+          "question": "¿Por qué un componente que lee useSearchParams debe ir envuelto en Suspense?",
+          "query": "useSearchParams Suspense client component client-side rendering prerendering next.js",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/04-functions/use-search-params#prerendering",
+            "01-app/03-api-reference/04-functions/use-router#router-events",
+            "02-pages/04-api-reference/03-functions/use-search-params#sharing-components-with-app-router",
+            "02-pages/04-api-reference/03-functions/use-search-params#behavior-during-prerendering",
+            "01-app/01-getting-started/03-layouts-and-pages#rendering-with-search-params"
+          ]
+        },
+        {
+          "id": "q24",
+          "question": "¿Cómo navego a otra página desde el manejador de clic de un botón?",
+          "query": "router push useRouter navigation event handler click Next.js",
+          "rank": 1,
+          "top5": [
+            "01-app/02-guides/redirecting#userouter-hook",
+            "01-app/02-guides/prefetching#extending-or-ejecting-link",
+            "01-app/03-api-reference/04-functions/use-router#disabling-scroll-to-top",
+            "01-app/03-api-reference/04-functions/use-router#intro",
+            "02-pages/04-api-reference/03-functions/use-router#router-push"
+          ]
+        },
+        {
+          "id": "q25",
+          "question": "¿Cómo proceso el envío de un formulario en el servidor sin escribir un endpoint de API?",
+          "query": "Server Actions use server action \"use server\" form submission mutations action.ts",
+          "rank": 7,
+          "top5": [
+            "01-app/03-api-reference/02-components/form#mutations-with-server-actions",
+            "01-app/04-glossary#server-action",
+            "01-app/02-guides/server-actions#intro",
+            "01-app/01-getting-started/07-mutating-data#client-components",
+            "01-app/02-guides/forms#nested-form-elements"
+          ]
+        },
+        {
+          "id": "q26",
+          "question": "¿Cómo controlo cuánto tiempo se mantiene vigente una función en caché?",
+          "query": "revalidate cache fetch nextConfig dynamic revalidateTag revalidatePath route segment config",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/04-functions/revalidatePath#relationship-with-revalidatetag-and-updatetag",
+            "01-app/02-guides/migrating-to-cache-components#on-demand-revalidation-revalidatetag-revalidatepath-updatetag",
+            "01-app/01-getting-started/09-revalidating#revalidatepath",
+            "01-app/02-guides/cdn-caching#cache-control-headers",
+            "01-app/02-guides/server-actions#choosing-a-cache-update"
+          ]
+        },
+        {
+          "id": "q27",
+          "question": "¿Cómo pueden los editores previsualizar contenido no publicado de un CMS headless?",
+          "query": "Draft Mode preview headless CMS content preview.js cookies bypass-secret",
+          "rank": 0,
+          "top5": [
+            "02-pages/02-guides/preview-mode#fetch-preview-data",
+            "01-app/02-guides/draft-mode#what-this-guide-covers",
+            "02-pages/02-guides/draft-mode#fetch-draft-data",
+            "02-pages/02-guides/draft-mode#securely-accessing-it-from-your-headless-cms",
+            "01-app/02-guides/draft-mode#step-2-access-the-route-handler-from-your-headless-cms"
+          ]
+        },
+        {
+          "id": "q28",
+          "question": "¿Cómo genero la imagen que aparece cuando una página se comparte en redes sociales?",
+          "query": "metadata image opengraph twitter-image icon.js apple-icon.js opengraph-image.tsx metadata metadata-files",
+          "rank": 8,
+          "top5": [
+            "01-app/01-getting-started/02-project-structure#metadata-file-conventions",
+            "01-app/01-getting-started/14-metadata-and-og-images#file-based-metadata",
+            "01-app/02-guides/upgrading/version-16#async-request-apis-breaking-change",
+            "01-app/02-guides/upgrading/version-16#async-parameters-for-icon-and-open-graph-image-breaking-change",
+            "01-app/02-guides/upgrading/version-15#async-request-apis-breaking-change"
+          ]
+        },
+        {
+          "id": "q29",
+          "question": "¿Cómo les doy a los buscadores una lista de todas mis URLs?",
+          "query": "sitemap.xml sitemap.ts Metadata generateSitemap robots.txt",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/01-metadata/robots#generate-a-robots-file",
+            "01-app/03-api-reference/03-file-conventions/route#non-ui-responses",
+            "01-app/03-api-reference/03-file-conventions/01-metadata/robots#customizing-specific-user-agents",
+            "01-app/01-getting-started/02-project-structure#metadata-file-conventions",
+            "01-app/01-getting-started/14-metadata-and-og-images#file-based-metadata"
+          ]
+        },
+        {
+          "id": "q30",
+          "question": "¿Dónde pongo código que debe ejecutarse una sola vez al iniciar el servidor, como la configuración de monitoreo?",
+          "query": "instrumentation.js register server startup Next.js configuration",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/instrumentation#register-optional",
+            "01-app/02-guides/instrumentation#convention",
+            "01-app/02-guides/self-hosting#environment-variables",
+            "01-app/02-guides/environment-variables#runtime-environment-variables",
+            "01-app/03-api-reference/03-file-conventions/instrumentation#specifying-the-runtime"
+          ]
+        },
+        {
+          "id": "q31",
+          "question": "¿Cómo puede TypeScript detectar errores de escritura en el href de mis enlaces?",
+          "query": "typescript strict type checking href next/link app router experimental typedRoutes",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/05-config/01-next-config-js/typedRoutes#intro",
+            "01-app/03-api-reference/05-config/02-typescript#statically-typed-links",
+            "01-app/03-api-reference/05-config/02-typescript#using-node-js-native-typescript-resolver-for-next-config-ts",
+            "01-app/03-api-reference/05-config/02-typescript#version-changes",
+            "01-app/03-api-reference/05-config/02-typescript#using-typescript-7"
+          ]
+        },
+        {
+          "id": "q32",
+          "question": "En el Pages Router, ¿cómo obtengo datos frescos en cada petición?",
+          "query": "getServerSideProps data fetching pages router fresh data",
+          "rank": 2,
+          "top5": [
+            "02-pages/03-building-your-application/03-data-fetching/03-get-server-side-props#caching-with-server-side-rendering-ssr",
+            "02-pages/03-building-your-application/02-rendering/01-server-side-rendering#intro",
+            "02-pages/04-api-reference/03-functions/get-server-side-props#version-history",
+            "02-pages/03-building-your-application/03-data-fetching/03-get-server-side-props#when-should-i-use-getserversideprops",
+            "02-pages/04-api-reference/03-functions/get-server-side-props#intro"
+          ]
+        },
+        {
+          "id": "q33",
+          "question": "En el Pages Router, ¿cómo regenero una página estática en segundo plano como máximo una vez por minuto?",
+          "query": "pages router incremental static regeneration getStaticProps revalidate next js",
+          "rank": 4,
+          "top5": [
+            "02-pages/03-building-your-application/03-data-fetching/01-get-static-props#when-does-getstaticprops-run",
+            "01-app/02-guides/incremental-static-regeneration#functions-2",
+            "02-pages/04-api-reference/03-functions/get-static-props#version-history",
+            "02-pages/04-api-reference/03-functions/get-static-props#revalidate",
+            "01-app/02-guides/incremental-static-regeneration#handling-uncaught-exceptions"
+          ]
+        },
+        {
+          "id": "q34",
+          "question": "¿Cómo creo un endpoint de API con el Pages Router?",
+          "query": "pages router api routes api endpoints api directory javascript typescript",
+          "rank": 0,
+          "top5": [
+            "03-architecture/nextjs-compiler#relay",
+            "01-app/03-api-reference/08-turbopack#intro",
+            "01-app/03-api-reference/05-config/02-typescript#using-typescript-7",
+            "02-pages/03-building-your-application/01-routing/01-pages-and-layouts#index-routes",
+            "01-app/03-api-reference/05-config/01-next-config-js/transpilePackages#when-you-need-it"
+          ]
+        },
+        {
+          "id": "q35",
+          "question": "En el Pages Router, ¿dónde agrego el CSS global y un layout compartido por todas las páginas?",
+          "query": "pages router _app.js global css layout",
+          "rank": 5,
+          "top5": [
+            "01-app/01-getting-started/11-css#global-css",
+            "01-app/02-guides/migrating/app-router-migration#step-7-styling",
+            "01-app/02-guides/tailwind-v3-css#configuring-tailwind-v3",
+            "01-app/01-getting-started/11-css#tailwind-css",
+            "02-pages/03-building-your-application/01-routing/05-custom-app#intro"
+          ]
+        },
+        {
+          "id": "q36",
+          "question": "¿Cómo ejecuto logging o analítica después de que la respuesta ya fue enviada?",
+          "query": "after() unstable_after analytics logging post-response response sent",
+          "rank": 3,
+          "top5": [
+            "01-app/03-api-reference/04-functions/after#version-history",
+            "01-app/03-api-reference/03-file-conventions/proxy#event",
+            "01-app/03-api-reference/04-functions/after#intro",
+            "01-app/03-api-reference/04-functions/after#with-request-apis",
+            "01-app/02-guides/streaming#the-http-contract"
+          ]
+        },
+        {
+          "id": "q37",
+          "question": "¿Cómo cargo un script de terceros solo cuando el navegador está inactivo?",
+          "query": "next script strategy afterInteractive lazyOnload third party",
+          "rank": 4,
+          "top5": [
+            "01-app/02-guides/scripts#strategy",
+            "01-app/03-api-reference/02-components/script#onload",
+            "01-app/03-api-reference/02-components/script#strategy",
+            "01-app/03-api-reference/02-components/script#lazyonload",
+            "01-app/03-api-reference/02-components/script#afterinteractive"
+          ]
+        },
+        {
+          "id": "q38",
+          "question": "¿Cómo defino el título y la descripción de una página en el App Router?",
+          "query": "metadata title description generateMetadata static metadata App Router next.js",
+          "rank": 2,
+          "top5": [
+            "01-app/02-guides/migrating-to-cache-components#generatemetadata-and-generateviewport",
+            "01-app/01-getting-started/14-metadata-and-og-images#static-metadata",
+            "01-app/03-api-reference/04-functions/generate-metadata#with-cache-components",
+            "01-app/01-getting-started/14-metadata-and-og-images#generated-metadata",
+            "01-app/03-api-reference/04-functions/generate-metadata#the-metadata-object"
+          ]
+        },
+        {
+          "id": "q39",
+          "question": "¿Cuál es la diferencia entre updateTag y revalidateTag?",
+          "query": "next/cache revalidateTag cacheLife cacheTag updateTag",
+          "rank": 9,
+          "top5": [
+            "01-app/03-api-reference/01-directives/use-cache#revalidation",
+            "01-app/03-api-reference/01-directives/use-cache#on-demand-revalidation",
+            "01-app/02-guides/upgrading/version-16#revalidatetag",
+            "01-app/04-glossary#revalidation",
+            "01-app/03-api-reference/04-functions/revalidateTag#revalidation-behavior"
+          ]
+        },
+        {
+          "id": "q40",
+          "question": "¿Puedo seguir usando un loader de webpack, como uno para SVG, con Turbopack?",
+          "query": "Turbopack webpack loaders SVGR SVGLoader next.config.js unsupported features migration",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/05-config/01-next-config-js/turbopack#configuring-webpack-loaders",
+            "01-app/03-api-reference/05-config/01-next-config-js/turbopack#supported-loaders",
+            "01-app/03-api-reference/08-turbopack#css-and-styling",
+            "01-app/03-api-reference/08-turbopack#webpack-plugins",
+            "01-app/03-api-reference/05-config/01-next-config-js/turbopack#advanced-webpack-loader-conditions"
+          ]
+        }
+      ]
+    },
+    {
+      "lang": "es",
+      "method": "rrf(bm25, bm25+rewrite)",
+      "recall": {
+        "recall@1": 0.1,
+        "recall@3": 0.4,
+        "recall@5": 0.475,
+        "recall@10": 0.675
+      },
+      "mrr": 0.26374007936507937,
+      "perQuestion": [
+        {
+          "id": "q01",
+          "question": "¿Cómo creo una página cuya URL tenga una parte variable, como el slug de un post del blog?",
+          "query": "dynamic routes params slug app router file convention Next.js [slug] page.js",
+          "rank": 3,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/dynamic-routes#convention",
+            "02-pages/03-building-your-application/01-routing/02-dynamic-routes#example",
+            "01-app/01-getting-started/03-layouts-and-pages#creating-a-dynamic-segment",
+            "01-app/01-getting-started/02-project-structure#dynamic-routes",
+            "01-app/03-api-reference/03-file-conventions/dynamic-routes#with-cache-components"
+          ]
+        },
+        {
+          "id": "q02",
+          "question": "Después de que una Server Action cambia datos, ¿cómo hago que la página muestre los datos actualizados?",
+          "query": "revalidatePath revalidateTag redirect Server Actions data mutation Next.js",
+          "rank": 7,
+          "top5": [
+            "01-app/02-guides/server-actions#choosing-a-cache-update",
+            "01-app/02-guides/server-actions#a-single-response-carries-data-and-ui",
+            "01-app/03-api-reference/04-functions/cookies#understanding-cookie-behavior-in-server-functions",
+            "01-app/03-api-reference/03-file-conventions/loading#streaming-with-suspense",
+            "01-app/01-getting-started/07-mutating-data#redirect-after-a-mutation"
+          ]
+        },
+        {
+          "id": "q03",
+          "question": "¿Cómo hago que el título de cada página incluya automáticamente el nombre del sitio al final?",
+          "query": "metadata title template absolute default template.js layout.js Next.js",
+          "rank": 5,
+          "top5": [
+            "01-app/03-api-reference/04-functions/generate-metadata#other-fields",
+            "01-app/03-api-reference/03-file-conventions/layout#metadata",
+            "01-app/03-api-reference/04-functions/generate-metadata#ordering",
+            "01-app/03-api-reference/04-functions/generate-metadata#applinks",
+            "01-app/03-api-reference/04-functions/generate-metadata#metadata-fields"
+          ]
+        },
+        {
+          "id": "q04",
+          "question": "¿Cómo muestro un esqueleto de carga mientras una ruta obtiene sus datos?",
+          "query": "loading.js loading tsx Suspense streaming data fetching Next.js",
+          "rank": 0,
+          "top5": [
+            "01-app/02-guides/preserving-ui-state#prerendering-hidden-content",
+            "01-app/02-guides/streaming#push-dynamic-access-down",
+            "01-app/03-api-reference/04-functions/generate-metadata#alternates",
+            "01-app/01-getting-started/06-fetching-data#streaming",
+            "01-app/03-api-reference/03-file-conventions/01-metadata/sitemap#generate-a-localized-sitemap"
+          ]
+        },
+        {
+          "id": "q05",
+          "question": "¿Cómo muestro una interfaz alternativa cuando una parte de la app lanza un error inesperado en tiempo de ejecución?",
+          "query": "error handling error.js error boundary UI react next.js",
+          "rank": 9,
+          "top5": [
+            "01-app/03-api-reference/04-functions/not-found#intro",
+            "01-app/03-api-reference/04-functions/forbidden#intro",
+            "01-app/03-api-reference/04-functions/unauthorized#intro",
+            "01-app/03-api-reference/04-functions/generate-metadata#alternates",
+            "01-app/04-glossary#error-boundary"
+          ]
+        },
+        {
+          "id": "q06",
+          "question": "¿Cómo personalizo la página que se muestra cuando una URL no existe en el App Router?",
+          "query": "app router not found custom page 404 not-found.js metadata",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/not-found#metadata",
+            "01-app/03-api-reference/03-file-conventions/not-found#global-not-found-js-experimental",
+            "02-pages/04-api-reference/03-functions/use-router#router-beforepopstate",
+            "02-pages/04-api-reference/03-functions/use-router#router-events",
+            "02-pages/03-building-your-application/01-routing/02-dynamic-routes#example"
+          ]
+        },
+        {
+          "id": "q07",
+          "question": "¿Cómo creo un endpoint de API que devuelva JSON dentro de la carpeta app?",
+          "query": "app router route.js api routes json response NextResponse",
+          "rank": 0,
+          "top5": [
+            "02-pages/03-building-your-application/01-routing/07-api-routes#intro",
+            "02-pages/03-building-your-application/01-routing/07-api-routes#sending-a-json-response",
+            "01-app/03-api-reference/04-functions/unauthorized#fetching-data-with-route-handlers",
+            "02-pages/02-guides/forms#server-forms",
+            "02-pages/03-building-your-application/01-routing/07-api-routes#catch-all-api-routes"
+          ]
+        },
+        {
+          "id": "q08",
+          "question": "¿Qué pasó con el middleware en Next.js 16?",
+          "query": "Next.js 16 middleware changes breaking updates upgrade guide migration middleware.ts",
+          "rank": 0,
+          "top5": [
+            "01-app/02-guides/upgrading/version-16#middleware-to-proxy",
+            "01-app/03-api-reference/03-file-conventions/middleware#intro",
+            "01-app/03-api-reference/03-file-conventions/proxy#version-history",
+            "01-app/02-guides/upgrading/version-16#review-migration-checklist",
+            "01-app/03-api-reference/03-file-conventions/proxy#how-to-migrate"
+          ]
+        },
+        {
+          "id": "q09",
+          "question": "¿Cómo hago que un componente se ejecute en el navegador para poder usar useState y onClick?",
+          "query": "'use client' directive components useState onClick browser execution",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/01-directives/use-client#usage",
+            "01-app/02-guides/lazy-loading#importing-client-components",
+            "01-app/01-getting-started/07-mutating-data#event-handlers",
+            "01-app/01-getting-started/05-server-and-client-components#using-client-components",
+            "01-app/01-getting-started/04-linking-and-navigating#native-history-api"
+          ]
+        },
+        {
+          "id": "q10",
+          "question": "¿Cómo permito que el componente Image cargue imágenes alojadas en otro dominio?",
+          "query": "next/image remotePatterns domains loader configuration image optimization",
+          "rank": 0,
+          "top5": [
+            "01-app/02-guides/static-exports#image-optimization",
+            "01-app/01-getting-started/12-images#intro",
+            "02-pages/04-api-reference/01-components/image-legacy#contentdispositiontype",
+            "01-app/03-api-reference/02-components/image#configuration-options",
+            "01-app/03-api-reference/02-components/image#props"
+          ]
+        },
+        {
+          "id": "q11",
+          "question": "¿Cómo uso una fuente de Google sin que el navegador haga peticiones a Google?",
+          "query": "next/font google self hosting download optimization local fonts",
+          "rank": 3,
+          "top5": [
+            "01-app/03-api-reference/02-components/font#weight",
+            "01-app/03-api-reference/02-components/font#style",
+            "01-app/01-getting-started/13-fonts#google-fonts",
+            "01-app/03-api-reference/02-components/font#axes",
+            "01-app/01-getting-started/13-fonts#intro"
+          ]
+        },
+        {
+          "id": "q12",
+          "question": "¿Cómo evito que un enlace del pie de página se precargue?",
+          "query": "Link component prefetch false footer",
+          "rank": 2,
+          "top5": [
+            "02-pages/03-building-your-application/01-routing/02-dynamic-routes#example",
+            "01-app/02-guides/prefetching#disabled-prefetch",
+            "01-app/03-api-reference/04-functions/generate-metadata#alternates",
+            "01-app/02-guides/prefetching#preventing-too-many-prefetches",
+            "01-app/03-api-reference/03-file-conventions/01-metadata/sitemap#generate-a-localized-sitemap"
+          ]
+        },
+        {
+          "id": "q13",
+          "question": "¿Cómo envío al usuario a otra URL desde un Server Component?",
+          "query": "redirect Server Component redirect() next/navigation",
+          "rank": 8,
+          "top5": [
+            "01-app/02-guides/self-hosting#version-skew",
+            "01-app/02-guides/backend-for-frontend#webhooks-and-callback-urls",
+            "01-app/03-api-reference/04-functions/generate-metadata#applinks",
+            "01-app/03-api-reference/04-functions/redirect#client-component",
+            "01-app/02-guides/upgrading/version-16#runtime-configuration"
+          ]
+        },
+        {
+          "id": "q14",
+          "question": "¿Cómo leo el valor de una cookie en un Server Component?",
+          "query": "cookies next/headers server component",
+          "rank": 6,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/route#cookies",
+            "01-app/03-api-reference/04-functions/cookies#understanding-cookie-behavior-in-server-components",
+            "01-app/03-api-reference/04-functions/after#with-request-apis",
+            "01-app/03-api-reference/04-functions/cookies#deleting-cookies",
+            "01-app/01-getting-started/07-mutating-data#cookies"
+          ]
+        },
+        {
+          "id": "q15",
+          "question": "¿Cómo genero de antemano todas las páginas de posts del blog al momento del build?",
+          "query": "generateStaticParams blog posts static site generation SSG build time Next.js dynamic routes",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/04-functions/generate-static-params#prerendering",
+            "02-pages/03-building-your-application/02-rendering/02-static-site-generation#static-generation-with-data",
+            "01-app/03-api-reference/03-file-conventions/dynamic-routes#dynamic-get-route-handlers-with-generatestaticparams",
+            "01-app/03-api-reference/03-file-conventions/dynamic-routes#with-generatestaticparams",
+            "01-app/02-guides/incremental-static-regeneration#intro"
+          ]
+        },
+        {
+          "id": "q16",
+          "question": "¿Cómo puede un layout mostrar dos secciones independientes, como equipo y analítica, al mismo tiempo?",
+          "query": "Next.js layout parallel routes @folder slot children",
+          "rank": 3,
+          "top5": [
+            "01-app/02-guides/mdx#shared-layouts",
+            "01-app/03-api-reference/04-functions/generate-metadata#applinks",
+            "01-app/03-api-reference/03-file-conventions/parallel-routes#slots",
+            "01-app/03-api-reference/04-functions/use-selected-layout-segments#returns",
+            "01-app/03-api-reference/03-file-conventions/parallel-routes#default-js"
+          ]
+        },
+        {
+          "id": "q17",
+          "question": "¿Cómo abro una foto en un modal manteniendo una URL que se pueda compartir?",
+          "query": "Next.js intercepting routes parallel routes modal photo URL routing catch-all page.js layout.js",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/intercepting-routes#modals",
+            "01-app/03-api-reference/03-file-conventions/parallel-routes#modals",
+            "01-app/03-api-reference/03-file-conventions/intercepting-routes#intro",
+            "01-app/01-getting-started/02-project-structure#parallel-and-intercepted-routes",
+            "01-app/03-api-reference/04-functions/use-selected-layout-segments#returns"
+          ]
+        },
+        {
+          "id": "q18",
+          "question": "¿Cómo agrupo rutas en carpetas sin que el nombre de la carpeta aparezca en la URL?",
+          "query": "route groups folder parenthesis routing navigation Next.js app directory *( )*",
+          "rank": 7,
+          "top5": [
+            "01-app/03-api-reference/04-functions/use-selected-layout-segments#intro",
+            "01-app/03-api-reference/04-functions/generate-metadata#alternates",
+            "01-app/03-api-reference/03-file-conventions/route-groups#convention",
+            "01-app/03-api-reference/04-functions/generate-metadata#other-fields",
+            "01-app/01-getting-started/02-project-structure#route-groups"
+          ]
+        },
+        {
+          "id": "q19",
+          "question": "¿Por qué mi variable de entorno es undefined en el código del cliente?",
+          "query": "client side environment variables NEXT_PUBLIC undefined configuration",
+          "rank": 0,
+          "top5": [
+            "01-app/02-guides/environment-variables#environment-variable-load-order",
+            "01-app/03-api-reference/05-config/02-typescript#type-intellisense-for-environment-variables",
+            "01-app/02-guides/environment-variables#referencing-other-variables",
+            "01-app/03-api-reference/03-file-conventions/01-metadata/sitemap#generate-a-localized-sitemap",
+            "01-app/04-glossary#environment-variables"
+          ]
+        },
+        {
+          "id": "q20",
+          "question": "¿Cómo genero un build mínimo para correrlo en un contenedor Docker?",
+          "query": "next.js docker standalone output output: 'standalone' next.config.js dockerfile production",
+          "rank": 2,
+          "top5": [
+            "01-app/02-guides/local-development#2-avoid-common-docker-pitfalls",
+            "01-app/01-getting-started/17-deploying#docker",
+            "01-app/01-getting-started/17-deploying#templates-2",
+            "01-app/01-getting-started/17-deploying#intro",
+            "01-app/03-api-reference/05-config/01-next-config-js/output#intro"
+          ]
+        },
+        {
+          "id": "q21",
+          "question": "¿Cómo sirvo toda la app bajo una subruta como /docs?",
+          "query": "next.config.js basePath /docs routing",
+          "rank": 10,
+          "top5": [
+            "01-app/03-api-reference/05-config/01-next-config-js/adapterPath#adapters",
+            "01-app/03-api-reference/03-file-conventions/proxy#matcher",
+            "01-app/03-api-reference/04-functions/use-selected-layout-segments#returns",
+            "01-app/03-api-reference/05-config/01-next-config-js/redirects#redirects-with-basepath-support",
+            "01-app/03-api-reference/03-file-conventions/route#dynamic-route-segments"
+          ]
+        },
+        {
+          "id": "q22",
+          "question": "¿Cómo redirijo las peticiones de /api a otro backend sin cambiar la URL que ve el usuario?",
+          "query": "next.config.js rewrites api routing proxy destination",
+          "rank": 1,
+          "top5": [
+            "01-app/02-guides/backend-for-frontend#proxying-to-a-backend",
+            "01-app/02-guides/migrating/from-create-react-app#proxying-api-requests",
+            "01-app/03-api-reference/05-config/01-next-config-js/rewrites#rewrites-with-i18n-support",
+            "02-pages/02-guides/internationalization#prefixing-the-default-locale",
+            "01-app/03-api-reference/03-file-conventions/proxy#intro"
+          ]
+        },
+        {
+          "id": "q23",
+          "question": "¿Por qué un componente que lee useSearchParams debe ir envuelto en Suspense?",
+          "query": "useSearchParams Suspense client component client-side rendering prerendering next.js",
+          "rank": 2,
+          "top5": [
+            "01-app/03-api-reference/04-functions/use-router#router-events",
+            "01-app/03-api-reference/04-functions/use-search-params#prerendering",
+            "02-pages/04-api-reference/03-functions/use-search-params#sharing-components-with-app-router",
+            "02-pages/04-api-reference/03-functions/use-search-params#behavior-during-prerendering",
+            "01-app/03-api-reference/04-functions/use-search-params#intro"
+          ]
+        },
+        {
+          "id": "q24",
+          "question": "¿Cómo navego a otra página desde el manejador de clic de un botón?",
+          "query": "router push useRouter navigation event handler click Next.js",
+          "rank": 3,
+          "top5": [
+            "02-pages/03-building-your-application/01-routing/02-dynamic-routes#example",
+            "01-app/02-guides/preventing-flash-before-hydration#syncing-with-react-state",
+            "01-app/02-guides/redirecting#userouter-hook",
+            "01-app/02-guides/prefetching#extending-or-ejecting-link",
+            "01-app/03-api-reference/04-functions/userAgent#isbot"
+          ]
+        },
+        {
+          "id": "q25",
+          "question": "¿Cómo proceso el envío de un formulario en el servidor sin escribir un endpoint de API?",
+          "query": "Server Actions use server action \"use server\" form submission mutations action.ts",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/04-functions/generate-metadata#alternates",
+            "01-app/03-api-reference/02-components/form#mutations-with-server-actions",
+            "01-app/03-api-reference/05-config/01-next-config-js/rewrites#rewrites-with-i18n-support",
+            "01-app/04-glossary#server-action",
+            "01-app/03-api-reference/05-config/01-next-config-js/redirects#redirects-with-i18n-support"
+          ]
+        },
+        {
+          "id": "q26",
+          "question": "¿Cómo controlo cuánto tiempo se mantiene vigente una función en caché?",
+          "query": "revalidate cache fetch nextConfig dynamic revalidateTag revalidatePath route segment config",
+          "rank": 0,
+          "top5": [
+            "01-app/02-guides/how-revalidation-works#soft-tags",
+            "01-app/02-guides/local-development#3-windows-use-dev-drive-or-wsl-2",
+            "01-app/03-api-reference/04-functions/revalidatePath#relationship-with-revalidatetag-and-updatetag",
+            "01-app/02-guides/migrating-to-cache-components#on-demand-revalidation-revalidatetag-revalidatepath-updatetag",
+            "01-app/03-api-reference/04-functions/use-selected-layout-segments#intro"
+          ]
+        },
+        {
+          "id": "q27",
+          "question": "¿Cómo pueden los editores previsualizar contenido no publicado de un CMS headless?",
+          "query": "Draft Mode preview headless CMS content preview.js cookies bypass-secret",
+          "rank": 0,
+          "top5": [
+            "02-pages/02-guides/draft-mode#securely-accessing-it-from-your-headless-cms",
+            "02-pages/02-guides/preview-mode#fetch-preview-data",
+            "02-pages/02-guides/preview-mode#securely-accessing-it-from-your-headless-cms",
+            "01-app/02-guides/draft-mode#step-2-access-the-route-handler-from-your-headless-cms",
+            "02-pages/02-guides/draft-mode#fetch-draft-data"
+          ]
+        },
+        {
+          "id": "q28",
+          "question": "¿Cómo genero la imagen que aparece cuando una página se comparte en redes sociales?",
+          "query": "metadata image opengraph twitter-image icon.js apple-icon.js opengraph-image.tsx metadata metadata-files",
+          "rank": 0,
+          "top5": [
+            "02-pages/03-building-your-application/01-routing/02-dynamic-routes#example",
+            "01-app/01-getting-started/02-project-structure#metadata-file-conventions",
+            "01-app/02-guides/local-development#3-windows-use-dev-drive-or-wsl-2",
+            "01-app/01-getting-started/14-metadata-and-og-images#file-based-metadata",
+            "01-app/02-guides/preserving-ui-state#effect-and-media-cleanup"
+          ]
+        },
+        {
+          "id": "q29",
+          "question": "¿Cómo les doy a los buscadores una lista de todas mis URLs?",
+          "query": "sitemap.xml sitemap.ts Metadata generateSitemap robots.txt",
+          "rank": 0,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/01-metadata/sitemap#generate-a-localized-sitemap",
+            "01-app/03-api-reference/04-functions/generate-metadata#alternates",
+            "01-app/03-api-reference/04-functions/generate-sitemaps#urls",
+            "01-app/03-api-reference/03-file-conventions/01-metadata/robots#intro",
+            "01-app/03-api-reference/04-functions/generate-sitemaps#version-history"
+          ]
+        },
+        {
+          "id": "q30",
+          "question": "¿Dónde pongo código que debe ejecutarse una sola vez al iniciar el servidor, como la configuración de monitoreo?",
+          "query": "instrumentation.js register server startup Next.js configuration",
+          "rank": 2,
+          "top5": [
+            "01-app/03-api-reference/04-functions/generate-metadata#applinks",
+            "01-app/03-api-reference/03-file-conventions/instrumentation#register-optional",
+            "01-app/03-api-reference/05-config/01-next-config-js/rewrites#wildcard-path-matching",
+            "01-app/02-guides/instrumentation#convention",
+            "01-app/03-api-reference/05-config/01-next-config-js/redirects#wildcard-path-matching"
+          ]
+        },
+        {
+          "id": "q31",
+          "question": "¿Cómo puede TypeScript detectar errores de escritura en el href de mis enlaces?",
+          "query": "typescript strict type checking href next/link app router experimental typedRoutes",
+          "rank": 1,
+          "top5": [
+            "01-app/03-api-reference/05-config/02-typescript#statically-typed-links",
+            "01-app/03-api-reference/05-config/02-typescript#using-typescript-7",
+            "01-app/03-api-reference/05-config/02-typescript#version-changes",
+            "01-app/03-api-reference/05-config/02-typescript#ide-plugin",
+            "01-app/01-getting-started/01-installation#ide-plugin"
+          ]
+        },
+        {
+          "id": "q32",
+          "question": "En el Pages Router, ¿cómo obtengo datos frescos en cada petición?",
+          "query": "getServerSideProps data fetching pages router fresh data",
+          "rank": 4,
+          "top5": [
+            "02-pages/03-building-your-application/01-routing/02-dynamic-routes#example",
+            "02-pages/03-building-your-application/03-data-fetching/03-get-server-side-props#caching-with-server-side-rendering-ssr",
+            "02-pages/03-building-your-application/01-routing/07-api-routes#streaming-responses",
+            "02-pages/03-building-your-application/02-rendering/01-server-side-rendering#intro",
+            "01-app/02-guides/local-development#3-windows-use-dev-drive-or-wsl-2"
+          ]
+        },
+        {
+          "id": "q33",
+          "question": "En el Pages Router, ¿cómo regenero una página estática en segundo plano como máximo una vez por minuto?",
+          "query": "pages router incremental static regeneration getStaticProps revalidate next js",
+          "rank": 9,
+          "top5": [
+            "02-pages/03-building-your-application/01-routing/05-custom-app#getinitialprops-with-app",
+            "02-pages/03-building-your-application/01-routing/02-dynamic-routes#example",
+            "02-pages/03-building-your-application/03-data-fetching/01-get-static-props#when-does-getstaticprops-run",
+            "01-app/02-guides/preventing-flash-before-hydration#syncing-with-react-state",
+            "01-app/02-guides/incremental-static-regeneration#functions-2"
+          ]
+        },
+        {
+          "id": "q34",
+          "question": "¿Cómo creo un endpoint de API con el Pages Router?",
+          "query": "pages router api routes api endpoints api directory javascript typescript",
+          "rank": 3,
+          "top5": [
+            "01-app/02-guides/backend-for-frontend#intro",
+            "01-app/03-api-reference/04-functions/use-pathname#intro",
+            "02-pages/03-building-your-application/01-routing/07-api-routes#intro",
+            "01-app/02-guides/migrating/app-router-migration#step-5-migrating-routing-hooks",
+            "02-pages/03-building-your-application/01-routing/02-dynamic-routes#example"
+          ]
+        },
+        {
+          "id": "q35",
+          "question": "En el Pages Router, ¿dónde agrego el CSS global y un layout compartido por todas las páginas?",
+          "query": "pages router _app.js global css layout",
+          "rank": 6,
+          "top5": [
+            "01-app/01-getting-started/11-css#global-css",
+            "01-app/02-guides/migrating/app-router-migration#step-7-styling",
+            "01-app/01-getting-started/11-css#tailwind-css",
+            "01-app/02-guides/tailwind-v3-css#configuring-tailwind-v3",
+            "01-app/02-guides/migrating/from-create-react-app#step-5-styles"
+          ]
+        },
+        {
+          "id": "q36",
+          "question": "¿Cómo ejecuto logging o analítica después de que la respuesta ya fue enviada?",
+          "query": "after() unstable_after analytics logging post-response response sent",
+          "rank": 3,
+          "top5": [
+            "01-app/02-guides/local-development#detailed-fetch-logging",
+            "01-app/03-api-reference/05-config/01-next-config-js/logging#server-functions",
+            "01-app/03-api-reference/04-functions/after#intro",
+            "01-app/03-api-reference/05-config/01-next-config-js/logging#disabling-logging",
+            "01-app/01-getting-started/06-fetching-data#server-components"
+          ]
+        },
+        {
+          "id": "q37",
+          "question": "¿Cómo cargo un script de terceros solo cuando el navegador está inactivo?",
+          "query": "next script strategy afterInteractive lazyOnload third party",
+          "rank": 0,
+          "top5": [
+            "01-app/02-guides/preventing-flash-before-hydration#syncing-with-react-state",
+            "01-app/02-guides/scripts#application-scripts",
+            "01-app/02-guides/scripts#executing-additional-code",
+            "01-app/03-api-reference/02-components/script#onerror",
+            "01-app/02-guides/scripts#strategy"
+          ]
+        },
+        {
+          "id": "q38",
+          "question": "¿Cómo defino el título y la descripción de una página en el App Router?",
+          "query": "metadata title description generateMetadata static metadata App Router next.js",
+          "rank": 5,
+          "top5": [
+            "01-app/03-api-reference/03-file-conventions/not-found#metadata",
+            "01-app/03-api-reference/04-functions/generate-metadata#alternates",
+            "01-app/02-guides/migrating-to-cache-components#generatemetadata-and-generateviewport",
+            "01-app/03-api-reference/05-config/01-next-config-js/redirects#redirects-with-i18n-support",
+            "01-app/01-getting-started/14-metadata-and-og-images#static-metadata"
+          ]
+        },
+        {
+          "id": "q39",
+          "question": "¿Cuál es la diferencia entre updateTag y revalidateTag?",
+          "query": "next/cache revalidateTag cacheLife cacheTag updateTag",
+          "rank": 3,
+          "top5": [
+            "01-app/02-guides/upgrading/version-16#revalidatetag",
+            "01-app/02-guides/migrating-to-cache-components#on-demand-revalidation-revalidatetag-revalidatepath-updatetag",
+            "01-app/03-api-reference/04-functions/updateTag#differences-from-revalidatetag",
+            "01-app/03-api-reference/01-directives/use-cache#on-demand-revalidation",
+            "01-app/03-api-reference/04-functions/updateTag#error-when-used-outside-server-actions"
+          ]
+        },
+        {
+          "id": "q40",
+          "question": "¿Puedo seguir usando un loader de webpack, como uno para SVG, con Turbopack?",
+          "query": "Turbopack webpack loaders SVGR SVGLoader next.config.js unsupported features migration",
+          "rank": 2,
+          "top5": [
+            "01-app/03-api-reference/05-config/01-next-config-js/turbopack#supported-loaders",
+            "01-app/03-api-reference/05-config/01-next-config-js/turbopack#configuring-webpack-loaders",
+            "01-app/03-api-reference/05-config/01-next-config-js/turbopack#advanced-webpack-loader-conditions",
+            "01-app/03-api-reference/08-turbopack#language-features",
+            "01-app/03-api-reference/05-config/01-next-config-js/turbopack#module-types"
+          ]
+        }
+      ]
+    }
+  ]
+}

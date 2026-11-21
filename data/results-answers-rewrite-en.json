@@ -1,0 +1,1345 @@
+{
+  "date": "2026-11-21T17:40:57.218Z",
+  "model": "gemini-3.5-flash-lite",
+  "judge": "openai/gpt-oss-120b",
+  "retrieval": "BM25 top 5 sobre consulta reescrita",
+  "lang": "en",
+  "nextVersion": "16.4.6",
+  "summary": {
+    "answered": 40,
+    "accuracy": 0.9125,
+    "correct": 35,
+    "partial": 3,
+    "incorrect": 2,
+    "citationPrecision": 0.9583333333333334,
+    "answersWithoutCitations": 0
+  },
+  "rows": [
+    {
+      "id": "q01",
+      "question": "How do I create a page whose URL contains a variable part, like a blog post slug?",
+      "query": "dynamic routes [id] slug app router file conventions",
+      "retrieved": [
+        "02-pages/03-building-your-application/01-routing/02-dynamic-routes#convention",
+        "01-app/03-api-reference/04-functions/use-params#returns",
+        "01-app/01-getting-started/03-layouts-and-pages#creating-a-dynamic-segment",
+        "01-app/03-api-reference/02-components/link#linking-to-dynamic-route-segments",
+        "01-app/03-api-reference/04-functions/generate-image-metadata#image-generation-function-props"
+      ],
+      "answer": "You can create a dynamic segment by wrapping a file or folder name in square brackets, such as `[slug]` [1, 3]. Routes generated this way allow you to create pages from data without manually creating a route for each individual item [3].\n\nFor example, you can create a dynamic route file at `app/blog/[slug]/page.tsx` and access the `params` prop to use the dynamic segment [3]:\n\n```tsx filename=\"app/blog/[slug]/page.tsx\" switcher\nexport default async function BlogPostPage({\n  params,\n}: {\n  params: Promise<{ slug: string }>\n}) {\n  const { slug } = await params\n  const post = await getPost(slug)\n\n  return (\n    <div>\n      <h1>{post.title}</h1>\n      <p>{post.content}</p>\n    </div>\n  )\n}\n```",
+      "cited": [
+        1,
+        3
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly states to wrap the folder name in square brackets (e.g., app/blog/[slug]/page.tsx) and that the value is accessed via the params prop, matching the reference.",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 3,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q02",
+      "question": "After a Server Action changes data, how do I make the page show the updated data?",
+      "query": "revalidatePath revalidateTag Server Actions router.refresh mutation data fetching Next.js",
+      "retrieved": [
+        "01-app/01-getting-started/07-mutating-data#revalidate-data",
+        "01-app/01-getting-started/07-mutating-data#redirect-after-a-mutation",
+        "01-app/02-guides/server-actions#choosing-a-cache-update",
+        "01-app/01-getting-started/07-mutating-data#refresh-data",
+        "01-app/02-guides/server-actions#a-single-response-carries-data-and-ui"
+      ],
+      "answer": "After a Server Action changes data, you can make the page show updated data by revalidating the cache or refreshing the page within the Server Function [1, 4]. \n\nYou can use the following methods:\n- **`revalidatePath`**: Invalidate cached data by URL path [3].\n- **`updateTag`**: Immediately expire a tag when you need read-your-own-writes [3].\n- **`revalidateTag`**: Perform a stale-while-revalidate refresh of a tag [3].\n- **`refresh`**: Refetch the current route's RSC Payload without invalidating cached data [3, 4].\n\n```ts filename=\"app/lib/actions.ts\"\n'use server'\nimport { revalidatePath } from 'next/cache'\n\nexport async function createPost(formData: FormData) {\n  // Mutate data...\n  revalidatePath('/posts')\n}\n```",
+      "cited": [
+        1,
+        3,
+        4
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer includes revalidatePath, revalidateTag, and updateTag as the reference suggests and adds no contradictory information.",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 3,
+            "supports": true
+          },
+          {
+            "n": 4,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q03",
+      "question": "How can every page title automatically include the site name as a suffix?",
+      "query": "generateMetadata template title default Next.js layout metadata object",
+      "retrieved": [
+        "01-app/03-api-reference/04-functions/generate-metadata#metadata-fields",
+        "01-app/03-api-reference/03-file-conventions/layout#metadata",
+        "01-app/03-api-reference/04-functions/generate-metadata#types",
+        "01-app/01-getting-started/14-metadata-and-og-images#static-metadata",
+        "01-app/03-api-reference/04-functions/generate-metadata#the-metadata-object"
+      ],
+      "answer": "To automatically include a site name as a suffix for page titles, you can use `title.template` in a layout's metadata object [1]. \n\nWhen defining a `title.template`, a `default` title is required [1]. The `%s` placeholder in the template is replaced by the title defined in child route segments [1].\n\n```tsx filename=\"app/layout.tsx\"\nimport type { Metadata } from 'next'\n\nexport const metadata: Metadata = {\n  title: {\n    template: '%s | Acme',\n    default: 'Acme',\n  },\n}\n```[1]",
+      "cited": [
+        1
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly describes setting title.template in the root layout with a default fallback, matching the reference",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q04",
+      "question": "How can I show a skeleton while a route is fetching its data?",
+      "query": "loading js suspense skeleton nextjs loading ui streaming",
+      "retrieved": [
+        "01-app/03-api-reference/03-file-conventions/loading#streaming-with-suspense",
+        "01-app/02-guides/streaming#example",
+        "01-app/01-getting-started/06-fetching-data#streaming",
+        "01-app/01-getting-started/04-linking-and-navigating#streaming",
+        "01-app/02-guides/optimizing-the-static-shell#keep-static-ui-in-the-shell"
+      ],
+      "answer": "You can show a skeleton while a route is fetching its data by creating a `loading.js` (or `loading.tsx`) file in your route folder [3, 4]. Behind the scenes, Next.js automatically wraps the page and its children in a `<Suspense>` boundary using this file as the fallback [3, 4].\n\n```tsx filename=\"app/dashboard/loading.tsx\"\nexport default function Loading() {\n  return <LoadingSkeleton />\n}\n```\n\nAlternatively, you can manually wrap specific components with `<Suspense>` and provide a fallback UI like a skeleton or spinner [1, 3].",
+      "cited": [
+        1,
+        3,
+        4
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly states that adding a loading.js/tsx file shows a skeleton by having Next.js wrap the page in a Suspense fallback, matching the reference.",
+        "citations": [
+          {
+            "n": 3,
+            "supports": true
+          },
+          {
+            "n": 4,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q05",
+      "question": "How do I show a fallback UI when a part of the app throws an unexpected runtime error?",
+      "query": "error.js error boundary error handling fallback UI react next.js",
+      "retrieved": [
+        "01-app/04-glossary#error-boundary",
+        "02-pages/03-building-your-application/06-configuring/12-error-handling#handling-client-errors",
+        "01-app/01-getting-started/10-error-handling#nested-error-boundaries",
+        "01-app/03-api-reference/04-functions/catchError#server-rendered-error-fallback",
+        "01-app/03-api-reference/04-functions/catchError#intro"
+      ],
+      "answer": "To show a fallback UI when an unexpected runtime error occurs, you can use Next.js error boundaries. \n\nFor route segments in the App Router, create an `error.js` file inside the route segment to automatically wrap it in an error boundary [1, 3]. \n\nFor component-level error recovery anywhere in your component tree, you can use the `catchError` function to create a custom error boundary wrapper [3, 4, 5]:\n\n```tsx filename=\"app/custom-error-boundary.tsx\"\n'use client'\n\nimport { catchError, type ErrorInfo } from 'next/error'\n\nfunction ErrorFallback(props: { title: string }, { error, retry }: ErrorInfo) {\n  return (\n    <div>\n      <h2>{props.title}</h2>\n      <button onClick={() => retry()}>Try again</button>\n    </div>\n  )\n}\n\nexport default catchError(ErrorFallback)\n```",
+      "cited": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly states that adding an error.js client component to a segment provides an error boundary with error and retry props, matching the reference, and adds no contradictory information.",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 3,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q06",
+      "question": "How do I customize the page shown when a URL does not exist in the App Router?",
+      "query": "not-found js app router customize 404 page",
+      "retrieved": [
+        "01-app/03-api-reference/03-file-conventions/not-found#metadata",
+        "02-pages/03-building-your-application/06-configuring/12-error-handling#handling-server-errors",
+        "01-app/03-api-reference/04-functions/not-found#intro",
+        "01-app/03-api-reference/03-file-conventions/not-found#global-not-found-js-experimental",
+        "01-app/01-getting-started/10-error-handling#not-found"
+      ],
+      "answer": "To customize the 404 page in the App Router, you can use `not-found.js` for route-level missing resources or `global-not-found.js` for URLs that do not match any route at all [1, 4, 5]. \n\nYou can trigger the route-level not-found UI by calling the `notFound()` function inside a component, Server Function, or Route Handler when a resource is missing [3, 5].\n\n```tsx filename=\"app/blog/[slug]/page.tsx\"\nimport { notFound } from 'next/navigation'\n\nexport default async function Page({ params }) {\n  const { slug } = await params\n  const post = getPostBySlug(slug)\n\n  if (!post) {\n    notFound()\n  }\n\n  return <div>{post.title}</div>\n}\n```[5]\n\nFor an application-wide 404 page when a URL doesn't match any route, enable the `globalNotFound` flag in `next.config.ts` and create an `app/global-not-found.tsx` file that returns a full HTML document containing `<html>` and `<body>` tags [4]. Both the root `not-found.js` and `global-not-found.js` support exporting a `metadata` object or `generateMetadata` function to customize head tags [1].",
+      "cited": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "verdict": {
+        "correctness": "incorrect",
+        "reason": "The answer adds contradictory information about requiring a global-not-found file for unmatched URLs, which conflicts with the reference that the root app/not-found.js handles them.",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 3,
+            "supports": true
+          },
+          {
+            "n": 4,
+            "supports": true
+          },
+          {
+            "n": 5,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q07",
+      "question": "How do I build a JSON API endpoint inside the app directory?",
+      "query": "app directory route.ts Route Handlers GET POST NextResponse Response JSON",
+      "retrieved": [
+        "01-app/03-api-reference/04-functions/next-response#json",
+        "01-app/02-guides/backend-for-frontend#webhooks-and-callback-urls",
+        "01-app/03-api-reference/03-file-conventions/dynamic-routes#dynamic-get-route-handlers-with-generatestaticparams",
+        "01-app/02-guides/backend-for-frontend#nextrequest-and-nextresponse",
+        "01-app/03-api-reference/04-functions/generate-static-params#route-handlers-with-cache-components"
+      ],
+      "answer": "You can build a JSON API endpoint inside the `app` directory by creating a Route Handler (e.g., `app/api/route.ts`) and returning a response with a JSON body using `NextResponse.json()` or `Response.json()` [1, 3]. \n\n```ts filename=\"app/api/route.ts\"\nimport { NextResponse } from 'next/server'\n\nexport async function GET(request: Request) {\n  return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 })\n}\n```",
+      "cited": [
+        1,
+        3
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly describes creating a route.ts file with exported HTTP method functions that return JSON responses, matching the reference without contradictions.",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 3,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q08",
+      "question": "What happened to middleware in Next.js 16?",
+      "query": "Next.js 16 middleware upgrade changes breaking updates routing middleware.ts",
+      "retrieved": [
+        "01-app/02-guides/upgrading/version-16#middleware-to-proxy",
+        "01-app/03-api-reference/03-file-conventions/proxy#how-to-migrate",
+        "01-app/02-guides/upgrading/version-16#or-upgrade-manually",
+        "01-app/02-guides/upgrading/version-16#review-migration-checklist",
+        "01-app/02-guides/upgrading/version-16#maximum-redirects-breaking-change"
+      ],
+      "answer": "In Next.js 16, the `middleware` filename, named export, and related configuration flags (like `skipMiddlewareUrlNormalize`) are deprecated and renamed to `proxy` to clarify network boundaries, routing focus, and to move away from the confusion of Express.js-style middleware [1, 2]. \n\nThe runtime for `proxy` is strictly `nodejs` and cannot be configured, meaning the `edge` runtime is not supported in `proxy` [1]. If you still want to use the `edge` runtime, you must keep using `middleware` [1]. You can rename your files manually or use the Next.js version 16 codemod to automate the migration [1, 2].\n\n```ts filename=\"proxy.ts\" switcher\nexport function proxy(request: Request) {}\n```",
+      "cited": [
+        1,
+        2
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer includes the deprecation and rename to proxy and notes it runs on the server, matching the reference without contradictions",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 2,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q09",
+      "question": "How do I make a component run in the browser so it can use useState and onClick?",
+      "query": "\"use client\" useState onClick Client Components rendering Next.js",
+      "retrieved": [
+        "01-app/03-api-reference/01-directives/use-client#usage",
+        "01-app/01-getting-started/07-mutating-data#event-handlers",
+        "01-app/02-guides/lazy-loading#importing-client-components",
+        "01-app/01-getting-started/10-error-handling#nested-error-boundaries",
+        "01-app/01-getting-started/05-server-and-client-components#using-client-components"
+      ],
+      "answer": "To make a component run in the browser and use features like `useState` and `onClick`, you need to create a Client Component by adding the `'use client'` directive at the very top of the file, before any imports [1, 5]. \n\n```tsx filename=\"app/components/counter.tsx\"\n'use client'\n\nimport { useState } from 'react'\n\nexport default function Counter() {\n  const [count, setCount] = useState(0)\n\n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={() => setCount(count + 1)}>Increment</button>\n    </div>\n  )\n}\n```\n\nOnce a file is marked with `'use client'`, it establishes a boundary, and all of its imports and directly rendered components will be included in the client bundle [5]. Remember that any props passed to this component from the server must be serializable [1].",
+      "cited": [
+        1,
+        5
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly states to add the 'use client' directive at the top of the file before imports and adds no contradictory information.",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 5,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q10",
+      "question": "How do I let the Image component load pictures hosted on another domain?",
+      "query": "next/image remotePatterns domains next.config.js external images configuration",
+      "retrieved": [
+        "01-app/03-api-reference/02-components/image#deprecated-configuration-options",
+        "02-pages/04-api-reference/01-components/image-legacy#domains",
+        "01-app/02-guides/upgrading/version-16#images-domains-configuration-deprecated",
+        "02-pages/04-api-reference/01-components/image-legacy#remote-patterns",
+        "02-pages/04-api-reference/01-components/image-legacy#src"
+      ],
+      "answer": "To allow the Image component to load pictures hosted on an external domain, you must configure the `remotePatterns` property in your `next.config.js` file [4, 5]. \n\n```js filename=\"next.config.js\"\nmodule.exports = {\n  images: {\n    remotePatterns: [\n      {\n        protocol: 'https',\n        hostname: 'example.com',\n      },\n    ],\n  },\n}\n```\n\nThe `images.domains` configuration can also be used, but it has been deprecated since Next.js 14 in favor of the stricter `remotePatterns` for better security [1, 2, 3].",
+      "cited": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "verdict": {
+        "correctness": "partial",
+        "reason": "The answer mentions configuring remotePatterns but omits the need to pass a URL as src and manually provide width and height.",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 2,
+            "supports": true
+          },
+          {
+            "n": 3,
+            "supports": true
+          },
+          {
+            "n": 4,
+            "supports": true
+          },
+          {
+            "n": 5,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q11",
+      "question": "How do I use a Google Font without sending requests to Google from the browser?",
+      "query": "next/font google self-hosting local fonts optimizeFonts",
+      "retrieved": [
+        "01-app/01-getting-started/13-fonts#intro",
+        "01-app/04-glossary#font-optimization",
+        "01-app/03-api-reference/02-components/font#intro",
+        "01-app/03-api-reference/02-components/font#weight",
+        "01-app/03-api-reference/02-components/font#fallback"
+      ],
+      "answer": "You can use Google Fonts without sending requests to Google from the browser by using the `next/font/google` module [1, 3]. \n\nNext.js includes built-in automatic self-hosting for any font file [1, 3]. When you use `next/font`, the CSS and font files are downloaded at build time and self-hosted alongside your other static assets, completely removing external network requests for improved privacy and performance [1, 3].\n\n```tsx filename=\"app/layout.tsx\"\nimport { Inter } from 'next/font/google'\n\nconst inter = Inter({\n  subsets: ['latin'],\n})\n\nexport default function RootLayout({\n  children,\n}: {\n  children: React.ReactNode\n}) {\n  return (\n    <html lang=\"en\" className={inter.className}>\n      <body>{children}</body>\n    </html>\n  )\n}\n```[3]",
+      "cited": [
+        1,
+        3
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly states to import from next/font/google and that Next.js self‑hosts the font, matching the reference without contradictions.",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 3,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q12",
+      "question": "How do I stop a link in the footer from being prefetched?",
+      "query": "Link component prefetch false",
+      "retrieved": [
+        "01-app/02-guides/prefetching#preventing-too-many-prefetches",
+        "01-app/03-api-reference/02-components/link#reference",
+        "01-app/01-getting-started/04-linking-and-navigating#disabling-prefetching",
+        "01-app/03-api-reference/02-components/link#prefetch",
+        "01-app/02-guides/prefetching#hover-triggered-prefetch"
+      ],
+      "answer": "To stop a link from being prefetched automatically when it enters the viewport, you can set the `prefetch` prop on the `<Link>` component to `false` [1, 3]. \n\n```tsx\n<Link prefetch={false} href=\"/footer-link\">\n  Footer Link\n</Link>\n```\n\nIn the App Router, setting `prefetch={false}` ensures prefetching will never happen when entering the viewport or on hover [4]. Note that disabling prefetching means static routes will only be fetched upon click, and dynamic routes will wait to be rendered on the server before navigation [1, 3].",
+      "cited": [
+        1,
+        3,
+        4
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly states that adding prefetch={false} to the Link component disables prefetching, matching the reference.",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 3,
+            "supports": true
+          },
+          {
+            "n": 4,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q13",
+      "question": "How do I send the user to a different URL from a Server Component?",
+      "query": "redirect redirectFunction server components next/navigation",
+      "retrieved": [
+        "01-app/02-guides/redirecting#intro",
+        "01-app/02-guides/redirecting#redirect-function",
+        "01-app/03-api-reference/04-functions/redirect#client-component",
+        "01-app/03-api-reference/04-functions/redirect#intro",
+        "01-app/03-api-reference/04-functions/permanentRedirect#intro"
+      ],
+      "answer": "To send a user to a different URL from a Server Component, you can use the `redirect` or `permanentRedirect` functions [1, 2, 5]. \n\nThe `redirect` function issues a temporary redirect (307 status code in this context), while `permanentRedirect` issues a permanent redirect (308 status code) [1, 2, 5]. \n\n```ts\nimport { redirect } from 'next/navigation'\n\nexport default async function Page() {\n  redirect('/new-url')\n}\n```",
+      "cited": [
+        1,
+        2,
+        5
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly states to use redirect() or permanentRedirect() from next/navigation for Server Components, matching the reference.",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 2,
+            "supports": true
+          },
+          {
+            "n": 5,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q14",
+      "question": "How do I read a cookie value in a Server Component?",
+      "query": "next/headers cookies server component read value",
+      "retrieved": [
+        "01-app/03-api-reference/04-functions/after#with-request-apis",
+        "01-app/03-api-reference/03-file-conventions/route#cookies",
+        "01-app/02-guides/preventing-flash-before-hydration#when-to-use-other-approaches",
+        "01-app/03-api-reference/04-functions/cookies#intro",
+        "01-app/03-api-reference/04-functions/cookies#deleting-cookies"
+      ],
+      "answer": "You can read an incoming request cookie in a Server Component using the async `cookies` function from `next/headers` [4]. \n\n```tsx filename=\"app/page.tsx\" switcher\nimport { cookies } from 'next/headers'\n\nexport default async function Page() {\n  const cookieStore = await cookies()\n  const theme = cookieStore.get('theme')\n  return '...'\n}\n```",
+      "cited": [
+        4
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly describes awaiting cookies() and using .get(name) in a Server Component, matching the reference without contradictions.",
+        "citations": [
+          {
+            "n": 4,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q15",
+      "question": "How do I prerender every blog post page at build time?",
+      "query": "generateStaticParams dynamic routes blog post build time static rendering",
+      "retrieved": [
+        "01-app/01-getting-started/04-linking-and-navigating#dynamic-segments-without-generatestaticparams",
+        "01-app/03-api-reference/04-functions/generate-static-params#prerendering",
+        "01-app/03-api-reference/03-file-conventions/dynamic-routes#with-generatestaticparams",
+        "01-app/03-api-reference/03-file-conventions/dynamic-routes#dynamic-get-route-handlers-with-generatestaticparams",
+        "01-app/03-api-reference/03-file-conventions/dynamic-routes#with-cache-components"
+      ],
+      "answer": "To prerender all blog post pages at build time, supply the full list of paths by returning them from the `generateStaticParams` function in your dynamic segment page [2]:\n\n```tsx filename=\"app/blog/[slug]/page.tsx\"\nexport async function generateStaticParams() {\n  const posts = await fetch('https://.../posts').then((res) => res.json())\n\n  return posts.map((post) => ({\n    slug: post.slug,\n  }))\n}\n\nexport default async function Page({\n  params,\n}: {\n  params: Promise<{ slug: string }>\n}) {\n  const { slug } = await params\n  // ...\n}\n```\n\nYou must always return an array from `generateStaticParams`, even if it is empty [2]. When using ⁠`fetch` inside `generateStaticParams`, requests are automatically deduplicated to speed up build time [3].",
+      "cited": [
+        2,
+        3
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly explains exporting generateStaticParams to return all params for build‑time prerendering and adds accurate, non‑contradictory details",
+        "citations": [
+          {
+            "n": 2,
+            "supports": true
+          },
+          {
+            "n": 3,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q16",
+      "question": "How can one layout render two independent sections, like team and analytics, at the same time?",
+      "query": "layout parallel routes slots children page.js",
+      "retrieved": [
+        "01-app/03-api-reference/03-file-conventions/parallel-routes#slots",
+        "01-app/03-api-reference/01-directives/use-cache#caching-a-route-segment-s-output-with-use-cache",
+        "01-app/03-api-reference/03-file-conventions/parallel-routes#default-js",
+        "01-app/03-api-reference/03-file-conventions/default#intro",
+        "01-app/04-glossary#parallel-routes"
+      ],
+      "answer": "You can render multiple independent sections like team and analytics at the same time by using **parallel routes** [1, 5]. Parallel routes are created using named slots with the `@folder` convention (such as `@team` and `@analytics`) [1]. \n\nThese slots are passed as props to the shared parent layout component, allowing you to render them alongside the `children` prop in parallel [1]:\n\n```tsx filename=\"app/layout.tsx\"\nexport default function Layout({\n  children,\n  team,\n  analytics,\n}: {\n  children: React.ReactNode\n  analytics: React.ReactNode\n  team: React.ReactNode\n}) {\n  return (\n    <>\n      {children}\n      {team}\n      {analytics}\n    </>\n  )\n}\n```",
+      "cited": [
+        1,
+        5
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly states that parallel routes using @folder named slots passed as props to the shared layout enable rendering two independent sections simultaneously",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 5,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q17",
+      "question": "How do I open a photo in a modal while keeping a shareable URL for it?",
+      "query": "intercepting routes parallel routes modal photo gallery next/js",
+      "retrieved": [
+        "01-app/03-api-reference/03-file-conventions/intercepting-routes#modals",
+        "01-app/03-api-reference/03-file-conventions/parallel-routes#modals",
+        "01-app/03-api-reference/03-file-conventions/intercepting-routes#intro",
+        "01-app/01-getting-started/02-project-structure#parallel-and-intercepted-routes",
+        "01-app/03-api-reference/03-file-conventions/intercepting-routes#convention"
+      ],
+      "answer": "To open a photo in a modal while keeping a shareable URL, you can use Parallel Routes and Intercepting Routes together [1, 2]. \n\n1. Create a dedicated photo page (e.g., `/photo/[id]`) so the URL is shareable and works on hard navigation or page refresh [1, 3].\n2. Use a parallel route slot (e.g., `@modal`) in your layout [1, 4].\n3. Inside that slot, use the intercepting route convention (such as `(.)` or `(..)`) to intercept the photo route and display it inside a modal component when navigating via client-side links [1, 2, 4, 5].",
+      "cited": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly describes combining intercepting routes with parallel routes to render a photo in a modal while keeping a shareable URL.",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 2,
+            "supports": true
+          },
+          {
+            "n": 3,
+            "supports": true
+          },
+          {
+            "n": 4,
+            "supports": true
+          },
+          {
+            "n": 5,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q18",
+      "question": "How can I group routes into folders without the folder name showing up in the URL?",
+      "query": "routing route groups folder convention parentheses filename convention URL path segment app router",
+      "retrieved": [
+        "01-app/03-api-reference/03-file-conventions/route-groups#convention",
+        "01-app/04-glossary#route-groups",
+        "01-app/01-getting-started/02-project-structure#route-groups",
+        "01-app/01-getting-started/02-project-structure#route-groups-and-private-folders",
+        "01-app/01-getting-started/02-project-structure#dynamic-routes-2"
+      ],
+      "answer": "You can group routes into folders without affecting the URL structure by creating a route group [1, 2]. \n\nA route group is created by wrapping a folder's name in parentheses, such as `(folderName)` [1] or `(marketing)` [2]. This convention indicates that the folder is strictly for organizational purposes and will be omitted from the route's URL path [1, 3, 4].",
+      "cited": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly states that wrapping a folder name in parentheses creates a route group that is omitted from the URL, matching the reference",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 2,
+            "supports": true
+          },
+          {
+            "n": 3,
+            "supports": true
+          },
+          {
+            "n": 4,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q19",
+      "question": "Why is my environment variable undefined in client-side code?",
+      "query": "environment variables client-side NEXT_PUBLIC undefined config",
+      "retrieved": [
+        "01-app/02-guides/migrating/from-create-react-app#step-9-migrate-environment-variables",
+        "01-app/02-guides/upgrading/version-16#runtime-configuration",
+        "01-app/04-glossary#environment-variables",
+        "01-app/02-guides/environment-variables#bundling-environment-variables-for-the-browser",
+        "01-app/02-guides/environment-variables#runtime-environment-variables"
+      ],
+      "answer": "Your environment variable is likely undefined in client-side code because, by default, environment variables are only available on the server [3, 5]. \n\nTo expose an environment variable to the browser, you must prefix its name with `NEXT_PUBLIC_` [1, 3, 5]. Furthermore, dynamic lookups (such as using bracket notation like `process.env[varName]` or destructuring `const env = process.env`) will not work or be inlined [4].",
+      "cited": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly states that only NEXT_PUBLIC_ variables are inlined for the browser and others remain server‑only, matching the reference.",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 3,
+            "supports": true
+          },
+          {
+            "n": 4,
+            "supports": true
+          },
+          {
+            "n": 5,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q20",
+      "question": "How do I produce a minimal build to run in a Docker container?",
+      "query": "output standalone docker minimal build next.config.js public .next/standalone .next/static",
+      "retrieved": [
+        "01-app/03-api-reference/05-config/01-next-config-js/output#automatically-copying-traced-files",
+        "01-app/01-getting-started/17-deploying#templates-2",
+        "01-app/02-guides/building#what-next-build-does",
+        "01-app/02-guides/single-page-applications#static-export-optional",
+        "01-app/03-api-reference/07-adapters/02-creating-an-adapter#basic-adapter-structure"
+      ],
+      "answer": "To produce a minimal build to run in a Docker container, you can configure Next.js to use the standalone output mode [2]. Enable this by setting `output: 'standalone'` in your `next.config.js` (or `next.config.ts`) file [1, 4].\n\n```js filename=\"next.config.js\"\nmodule.exports = {\n  output: 'standalone',\n}\n```\n\nWhen you run `next build`, Next.js will bundle only the necessary runtime files and dependencies into a `.next/standalone` folder along with a minimal `server.js` file [1, 2, 3].",
+      "cited": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly states to set output: 'standalone' in next.config, which creates a .next/standalone folder with only needed files for Docker deployment.",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 2,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q21",
+      "question": "How do I serve the whole app under a sub-path like /docs?",
+      "query": "next.config.js basePath base path sub-path routing",
+      "retrieved": [
+        "01-app/03-api-reference/05-config/01-next-config-js/basePath#intro",
+        "01-app/03-api-reference/05-config/01-next-config-js/headers#headers-with-basepath-support",
+        "01-app/03-api-reference/05-config/01-next-config-js/redirects#redirects-with-basepath-support",
+        "01-app/03-api-reference/05-config/01-next-config-js/rewrites#rewrites-with-basepath-support",
+        "01-app/02-guides/migrating/from-create-react-app#using-a-custom-homepage-in-cra"
+      ],
+      "answer": "To deploy a Next.js application under a sub-path of a domain, you can use the `basePath` configuration option in your `next.config.js` file [1]. \n\nFor example, to use `/docs` as the path prefix, configure it like this [1]:\n\n```js filename=\"next.config.js\"\nmodule.exports = {\n  basePath: '/docs',\n}\n```\n\nThis value must be set at build time and cannot be changed without re-building because it is inlined into the client-side bundles [1].",
+      "cited": [
+        1
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly states to set basePath:'/docs' in next.config, matching the reference and providing accurate details",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q22",
+      "question": "How do I forward /api requests to another backend without changing the URL the user sees?",
+      "query": "route handler rewrite proxy next.config.js rewrites fetch",
+      "retrieved": [
+        "01-app/02-guides/multi-zones#routing-requests-using-proxy",
+        "01-app/02-guides/backend-for-frontend#content-negotiation",
+        "01-app/04-glossary#rewrite",
+        "01-app/02-guides/backend-for-frontend#proxying-to-a-backend",
+        "01-app/02-guides/multi-zones#how-to-route-requests-to-the-right-zone"
+      ],
+      "answer": "To forward requests to another backend without changing the URL the user sees, you can use `rewrites` in `next.config.js` or a proxy rewrite [3, 4]. Rewrites map an incoming request path to a different destination path while keeping the URL unchanged in the browser [3]. \n\nFor example, you can configure rewrites in `next.config.js`:\n\n```js filename=\"next.config.js\"\nmodule.exports = {\n  async rewrites() {\n    return [\n      {\n        source: '/api/:path*',\n        destination: 'https://api.example.com/api/:path*',\n      },\n    ]\n  },\n}\n```",
+      "cited": [
+        3,
+        4
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly describes adding rewrites in next.config to map the source to an external destination, matching the reference, and adds no contradictory information.",
+        "citations": [
+          {
+            "n": 3,
+            "supports": true
+          },
+          {
+            "n": 4,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q23",
+      "question": "Why should a component that reads useSearchParams be wrapped in Suspense?",
+      "query": "useSearchParams Suspense requirement client component rendering bailout",
+      "retrieved": [
+        "01-app/03-api-reference/04-functions/use-search-params#prerendering",
+        "01-app/03-api-reference/04-functions/use-router#router-events",
+        "01-app/03-api-reference/04-functions/use-search-params#dynamic-rendering",
+        "01-app/01-getting-started/03-layouts-and-pages#rendering-with-search-params",
+        "01-app/03-api-reference/04-functions/use-search-params#intro"
+      ],
+      "answer": "Wrapping a component that uses `useSearchParams` in a `Suspense` boundary allows the Client Component tree up to that closest boundary to be prerendered [1]. During production builds, static pages that call `useSearchParams` from a Client Component must be wrapped in a `Suspense` boundary, or the build will fail [1]. \n\nAdditionally, calling `useSearchParams` on a prerendered route causes the part of the tree up to the closest `Suspense` boundary to be client-side rendered, while allowing the rest of the route to remain prerendered [1].",
+      "cited": [
+        1
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly explains that wrapping in Suspense isolates the client‑side rendering caused by useSearchParams while allowing the rest of the prerendered route to stay prerendered",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q24",
+      "question": "How do I navigate to another page from a button click handler?",
+      "query": "useRouter redirect usePathname next/navigation programmatic navigation click handler",
+      "retrieved": [
+        "01-app/03-api-reference/04-functions/redirect#client-component",
+        "01-app/02-guides/migrating/app-router-migration#step-5-migrating-routing-hooks",
+        "01-app/03-api-reference/04-functions/use-router#migrating-from-next-router",
+        "01-app/02-guides/redirecting#userouter-hook",
+        "01-app/03-api-reference/04-functions/use-search-params#updating-searchparams"
+      ],
+      "answer": "To navigate to another page from an event handler like a button click in a Client Component, you can use the `push` method from the `useRouter` hook imported from `next/navigation` [4]. \n\n```tsx filename=\"app/page.tsx\"\n'use client'\n\nimport { useRouter } from 'next/navigation'\n\nexport default function Page() {\n  const router = useRouter()\n\n  return (\n    <button type=\"button\" onClick={() => router.push('/dashboard')}>\n      Dashboard\n    </button>\n  )\n}\n```[4]",
+      "cited": [
+        4
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly states using useRouter from next/navigation in a client component and calling router.push, matching the reference answer.",
+        "citations": [
+          {
+            "n": 4,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q25",
+      "question": "How do I handle a form submission on the server without writing an API endpoint?",
+      "query": "Server Actions form submission app router useActionState action.ts",
+      "retrieved": [
+        "01-app/02-guides/forms#validation-errors",
+        "01-app/01-getting-started/10-error-handling#server-functions",
+        "01-app/02-guides/forms#pending-states",
+        "01-app/02-guides/authentication#sign-up-and-login-functionality",
+        "01-app/02-guides/single-page-applications#mutating-data-with-server-actions"
+      ],
+      "answer": "You can handle form submissions directly on the server by using Server Actions [4]. Server Actions always execute on the server and can be invoked directly by passing them to the form's `action` attribute [3, 4].\n\n```tsx filename=\"app/ui/signup-form.tsx\"\nimport { signup } from '@/app/actions/auth'\n\nexport function SignupForm() {\n  return (\n    <form action={signup}>\n      <input name=\"email\" type=\"email\" placeholder=\"Email\" />\n      <button type=\"submit\">Sign Up</button>\n    </form>\n  )\n}\n```[4]",
+      "cited": [
+        3,
+        4
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly explains that a Server Action (a server‑only async function) can be passed to a form's action prop to handle the submission and receive FormData, matching the reference answer, and adds compatible details without contradiction.",
+        "citations": [
+          {
+            "n": 4,
+            "supports": true
+          },
+          {
+            "n": 3,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q26",
+      "question": "How do I control how long a cached function stays fresh?",
+      "query": "next 4 cache revalidate unstable_cache time freshness duration fetch",
+      "retrieved": [
+        "01-app/02-guides/caching-without-cache-components#time-based-revalidation",
+        "01-app/02-guides/caching-without-cache-components#unstable-cache-for-non-fetch-functions",
+        "01-app/03-api-reference/04-functions/unstable_cache#parameters",
+        "01-app/02-guides/migrating-to-cache-components#unstable-cache",
+        "01-app/02-guides/incremental-static-regeneration#on-demand-revalidation-with-revalidatetag"
+      ],
+      "answer": "To control how long a cached function stays fresh, you can use the `revalidate` option [1, 2, 3]. \n\nWhen using `fetch`, pass the `next.revalidate` option with the desired number of seconds [1].\n```tsx\nconst data = await fetch('https://...', { next: { revalidate: 3600 } })\n```[1]\n\nWhen using `unstable_cache` for database queries or other asynchronous functions, specify the `revalidate` property in the options object as the number of seconds before the cache is revalidated [2, 3].",
+      "cited": [
+        1,
+        2,
+        3
+      ],
+      "verdict": {
+        "correctness": "incorrect",
+        "reason": "The answer describes using revalidate options instead of the cacheLife function referenced, and provides unrelated citations.",
+        "citations": [
+          {
+            "n": 1,
+            "supports": false
+          },
+          {
+            "n": 2,
+            "supports": false
+          },
+          {
+            "n": 3,
+            "supports": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "q27",
+      "question": "How can editors preview unpublished content from a headless CMS?",
+      "query": "draft mode preview headless cms getStaticProps incremental static regeneration cookies next/headers",
+      "retrieved": [
+        "02-pages/02-guides/preview-mode#fetch-preview-data",
+        "02-pages/02-guides/draft-mode#fetch-draft-data",
+        "02-pages/02-guides/draft-mode#intro",
+        "02-pages/03-building-your-application/03-data-fetching/01-get-static-props#preview-mode",
+        "02-pages/04-api-reference/03-functions/get-static-props#context-parameter"
+      ],
+      "answer": "Editors can preview unpublished content from a headless CMS by using Next.js features like **Draft Mode** (or the deprecated **Preview Mode**) [2, 4, 5]. These features allow Next.js to temporarily bypass static generation and render pages at request time instead of build time [3, 4].\n\nTo fetch draft data, you can update `getStaticProps` to check whether `context.draftMode` (or `context.preview`) is true, and then modify your API endpoint to fetch draft content rather than published content [1, 2]. \n\n```js\nexport async function getStaticProps(context) {\n  const url = context.draftMode\n    ? 'https://draft.example.com'\n    : 'https://production.example.com'\n  const res = await fetch(url)\n  // ...\n}\n```",
+      "cited": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "verdict": {
+        "correctness": "partial",
+        "reason": "The answer correctly identifies Draft Mode for previewing unpublished content but omits the detail about using a Route Handler to set a cookie as in the reference.",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 2,
+            "supports": true
+          },
+          {
+            "n": 3,
+            "supports": true
+          },
+          {
+            "n": 4,
+            "supports": true
+          },
+          {
+            "n": 5,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q28",
+      "question": "How do I generate the image shown when a page is shared on social media?",
+      "query": "opengraph-image twitter-image metadata metadata-files generate-images NextResponse ImageResponse",
+      "retrieved": [
+        "01-app/03-api-reference/03-file-conventions/01-metadata/opengraph-image#generate-images-using-code-js-ts-tsx",
+        "01-app/03-api-reference/04-functions/image-response#file-based-metadata",
+        "01-app/03-api-reference/03-file-conventions/01-metadata/opengraph-image#intro",
+        "01-app/03-api-reference/04-functions/image-response#intro",
+        "01-app/01-getting-started/02-project-structure#metadata-file-conventions"
+      ],
+      "answer": "You can set Open Graph and Twitter images for a route segment by using either literal image files (`.jpg`, `.png`, `.gif`) or by generating them using code (`.js`, `.ts`, `.tsx`) via the `opengraph-image` and `twitter-image` file conventions [1, 3].\n\nTo generate images using code, create an `opengraph-image` or `twitter-image` file that default exports a function utilizing the `ImageResponse` API from `next/og` [1]. By default, these generated images are statically optimized at build time unless they use request-time APIs or uncached data [1].",
+      "cited": [
+        1,
+        3
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly states that adding an opengraph-image file—either a static image or code returning an ImageResponse—sets the shared image, matching the reference.",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 3,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q29",
+      "question": "How do I give search engines a list of all my URLs?",
+      "query": "sitemap.xml sitemap.ts metadata generateSitemap Next.js",
+      "retrieved": [
+        "01-app/03-api-reference/03-file-conventions/01-metadata/sitemap#generating-multiple-sitemaps",
+        "01-app/03-api-reference/03-file-conventions/route#non-ui-responses",
+        "01-app/03-api-reference/03-file-conventions/01-metadata/robots#generate-a-robots-file",
+        "01-app/01-getting-started/02-project-structure#metadata-file-conventions",
+        "01-app/03-api-reference/03-file-conventions/01-metadata/sitemap#generating-a-sitemap-using-code-js-ts"
+      ],
+      "answer": "You can give search engines a list of all your URLs by using a sitemap file (`sitemap.xml` or generated via a `sitemap.ts`/`sitemap.js` file) [4, 5]. \n\nYou can programmatically generate a sitemap by exporting a default function from a `sitemap.ts` or `sitemap.js` file that returns an array of URL objects [5]. For large web applications, you can split sitemaps into multiple files either by nesting `sitemap.(xml|js|ts)` inside multiple route segments or by using the `generateSitemaps` function [1].",
+      "cited": [
+        1,
+        4,
+        5
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly states to add app/sitemap.xml or app/sitemap.ts exporting a function that returns URLs, matching the reference without contradictions",
+        "citations": [
+          {
+            "n": 4,
+            "supports": true
+          },
+          {
+            "n": 5,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q30",
+      "question": "Where do I put code that must run once when the server starts, such as setting up monitoring?",
+      "query": "instrumentation.js register server startup monitoring telemetry",
+      "retrieved": [
+        "01-app/02-guides/instrumentation#convention",
+        "01-app/02-guides/open-telemetry#custom-spans",
+        "01-app/03-api-reference/03-file-conventions/instrumentation#register-optional",
+        "01-app/03-api-reference/03-file-conventions/instrumentation-client#usage",
+        "01-app/03-api-reference/03-file-conventions/instrumentation-client#intro"
+      ],
+      "answer": "You should create an `instrumentation.ts` (or `.js`) file in the root directory of your project, or inside the `src` folder if you are using one [1]. \n\nInside this file, you must export a `register` function, which will be called once when a new Next.js server instance is initiated and must complete before the server is ready to handle requests [1, 3].\n\n```ts filename=\"instrumentation.ts\"\nimport { registerOTel } from '@vercel/otel'\n\nexport function register() {\n  registerOTel('next-app')\n}\n```",
+      "cited": [
+        1,
+        3
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly states to place the code in an instrumentation.ts file at the project root (or src) and export a register function that runs once when the server starts.",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 3,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q31",
+      "question": "How can TypeScript catch typos in the href of my links?",
+      "query": "typescript strict route type checking next config experimental typedRoutes href",
+      "retrieved": [
+        "01-app/03-api-reference/05-config/01-next-config-js/typedRoutes#intro",
+        "01-app/03-api-reference/05-config/02-typescript#statically-typed-links",
+        "01-app/03-api-reference/05-config/02-typescript#using-node-js-native-typescript-resolver-for-next-config-ts",
+        "01-app/03-api-reference/05-config/02-typescript#version-changes",
+        "01-app/03-api-reference/05-config/02-typescript#using-typescript-7"
+      ],
+      "answer": "To catch typos in link `href` properties using TypeScript, you need to enable the `typedRoutes` option in your `next.config.js` or `next.config.ts` file [1, 2]. This feature works in projects using TypeScript for both the Pages and App Router's `next/link` component, as well as `next/navigation` methods like `push`, `replace`, and `prefetch` in the App Router [2].\n\n```js filename=\"next.config.js\"\n/** @type {import('next').NextConfig} */\nconst nextConfig = {\n  typedRoutes: true,\n}\n\nmodule.exports = nextConfig\n```\n\nNext.js automatically generates a link definition file inside `.next/types` containing all existing routes, which allows your editor and the TypeScript compiler to validate literal `href` strings and warn you about invalid paths [2]. For non-literal strings, you may need to manually cast the path using `as Route` [2].",
+      "cited": [
+        1,
+        2
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly states that enabling typedRoutes in next.config provides statically typed links and adds accurate details without contradicting the reference.",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 2,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q32",
+      "question": "In the Pages Router, how do I fetch fresh data on every request?",
+      "query": "Pages Router getServerSideProps fetch fresh data SSR",
+      "retrieved": [
+        "02-pages/03-building-your-application/02-rendering/01-server-side-rendering#intro",
+        "02-pages/03-building-your-application/03-data-fetching/03-get-server-side-props#caching-with-server-side-rendering-ssr",
+        "02-pages/03-building-your-application/03-data-fetching/03-get-server-side-props#behavior",
+        "02-pages/03-building-your-application/03-data-fetching/03-get-server-side-props#example",
+        "02-pages/04-api-reference/03-functions/get-server-side-props#intro"
+      ],
+      "answer": "To fetch fresh data on every request in the Pages Router, use Server-side Rendering (also known as dynamic rendering) by exporting an async function named `getServerSideProps` from your page [1, 5]. \n\nThis function runs on the server on every request [1, 3], allowing you to fetch data directly from a database, CMS, or external API [3, 5], and pass it to the page component via props [1, 3]:\n\n```jsx\nexport default function Page({ data }) {\n  return <p>{data}</p>\n}\n\nexport async function getServerSideProps() {\n  const res = await fetch(`https://.../data`)\n  const data = await res.json()\n\n  return { props: { data } }\n}\n```[1]",
+      "cited": [
+        1,
+        3,
+        5
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly states that exporting getServerSideProps fetches fresh data on every request, matching the reference, and provides accurate supporting details.",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 3,
+            "supports": true
+          },
+          {
+            "n": 5,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q33",
+      "question": "In the Pages Router, how do I rebuild a static page in the background at most once per minute?",
+      "query": "Pages Router Incremental Static Regeneration ISR getStaticProps revalidate",
+      "retrieved": [
+        "01-app/02-guides/incremental-static-regeneration#functions-2",
+        "02-pages/03-building-your-application/03-data-fetching/01-get-static-props#when-does-getstaticprops-run",
+        "02-pages/04-api-reference/03-functions/get-static-props#revalidate",
+        "02-pages/04-api-reference/03-functions/get-static-props#version-history",
+        "01-app/02-guides/self-hosting#automatic-caching"
+      ],
+      "answer": "To rebuild a static page in the background at most once per minute, you can use the `revalidate` property set to `60` (seconds) inside your `getStaticProps` function [3]. \n\n```js\nexport async function getStaticProps() {\n  const res = await fetch('https://.../posts')\n  const posts = await res.json()\n\n  return {\n    props: {\n      posts,\n    },\n    revalidate: 60, // In seconds (once per minute)\n  }\n}\n```",
+      "cited": [
+        3
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly states to return revalidate: 60 from getStaticProps and provides a matching example without contradictions.",
+        "citations": [
+          {
+            "n": 3,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q34",
+      "question": "How do I create an API endpoint with the Pages Router?",
+      "query": "pages router api routes api endpoints api development backend javascript typescript pages/api",
+      "retrieved": [
+        "01-app/02-guides/backend-for-frontend#intro",
+        "01-app/03-api-reference/08-turbopack#intro",
+        "01-app/02-guides/backend-for-frontend#proxying-to-a-backend",
+        "01-app/03-api-reference/05-config/02-typescript#using-typescript-7",
+        "01-app/02-guides/backend-for-frontend#public-endpoints"
+      ],
+      "answer": "To implement the Backend for Frontend pattern using the Pages Router, you should use API Routes [1].",
+      "cited": [
+        1
+      ],
+      "verdict": {
+        "correctness": "partial",
+        "reason": "The answer mentions using API Routes but omits the key step of adding a file under pages/api that exports a default handler, making it incomplete.",
+        "citations": [
+          {
+            "n": 1,
+            "supports": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "q35",
+      "question": "In the Pages Router, where do I add global CSS and a layout shared by every page?",
+      "query": "pages router _app.js global css layout",
+      "retrieved": [
+        "01-app/01-getting-started/11-css#global-css",
+        "01-app/02-guides/migrating/app-router-migration#step-7-styling",
+        "01-app/02-guides/tailwind-v3-css#configuring-tailwind-v3",
+        "01-app/01-getting-started/11-css#tailwind-css",
+        "02-pages/03-building-your-application/01-routing/05-custom-app#intro"
+      ],
+      "answer": "In the Pages Router, you add global CSS by importing your stylesheet inside the `pages/_app.js` file [1]. \n\nYou can also use the `App` component (`pages/_app.js`) to create a shared layout between page changes [5].",
+      "cited": [
+        1,
+        5
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly states that global CSS and a shared layout are added via the custom App in pages/_app.js, matching the reference, and provides supporting citations.",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 5,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q36",
+      "question": "How do I run logging or analytics after the response has already been sent?",
+      "query": "after response analytics logging next/serverwaitUntil",
+      "retrieved": [
+        "01-app/03-api-reference/03-file-conventions/proxy#event",
+        "01-app/03-api-reference/04-functions/after#intro",
+        "01-app/03-api-reference/03-file-conventions/proxy#waituntil-and-nextfetchevent",
+        "01-app/03-api-reference/04-functions/after#platform-support",
+        "01-app/03-api-reference/04-functions/after#with-request-apis"
+      ],
+      "answer": "You can run background work like logging or analytics after a response is sent using either `after` or `waitUntil` [1, 2]. \n\n`after` schedules work to be executed after a response or prerender finishes, and can be used in Server Components, Server Functions, Route Handlers, and Proxy [2].\n\n```tsx filename=\"app/layout.tsx\"\nimport { after } from 'next/server'\nimport { log } from '@/app/utils'\n\nexport default function Layout({ children }: { children: React.ReactNode }) {\n  after(() => {\n    log()\n  })\n  return <>{children}</>\n}\n```[2]\n\nAlternatively, in Proxy, you can use the `waitUntil()` method provided by `NextFetchEvent` to keep the invocation alive until your background promise settles [1, 3].",
+      "cited": [
+        1,
+        2,
+        3
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer includes the reference’s key fact about using after and adds accurate, non‑contradictory details about waitUntil.",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 2,
+            "supports": true
+          },
+          {
+            "n": 3,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q37",
+      "question": "How do I load a third-party script only when the browser is idle?",
+      "query": "third party scripts Script component strategy afterInteractive lazyOnload idle next/script",
+      "retrieved": [
+        "01-app/02-guides/scripts#strategy",
+        "01-app/03-api-reference/02-components/script#strategy",
+        "01-app/03-api-reference/02-components/script#lazyonload",
+        "01-app/03-api-reference/02-components/script#onload",
+        "01-app/03-api-reference/02-components/script#afterinteractive"
+      ],
+      "answer": "To load a third-party script only when the browser is idle, you can use the `lazyOnload` strategy with the `next/script` component [1, 3]. This strategy injects the script client-side during browser idle time after all resources have been fetched [3].\n\n```jsx filename=\"app/page.js\"\nimport Script from 'next/script'\n\nexport default function Page() {\n  return (\n    <>\n      <Script src=\"https://example.com/script.js\" strategy=\"lazyOnload\" />\n    </>\n  )\n}\n```",
+      "cited": [
+        1,
+        3
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly states to use next/script with strategy=\"lazyOnload\" and provides appropriate code, matching the reference without contradictions.",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 3,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q38",
+      "question": "How do I set the title and description of a page in the App Router?",
+      "query": "metadata generateMetadata title description app router layout.js page.js",
+      "retrieved": [
+        "01-app/01-getting-started/14-metadata-and-og-images#static-metadata",
+        "01-app/04-glossary#metadata",
+        "01-app/02-guides/migrating-to-cache-components#generatemetadata-and-generateviewport",
+        "01-app/03-api-reference/04-functions/generate-metadata#the-metadata-object",
+        "01-app/03-api-reference/04-functions/generate-metadata#merging"
+      ],
+      "answer": "You can set the title and description of a page in the App Router by exporting a static `metadata` object from a `layout.js` or `page.js` file [1, 4]. \n\n```tsx filename=\"app/blog/layout.tsx\"\nimport type { Metadata } from 'next'\n\nexport const metadata: Metadata = {\n  title: 'My Blog',\n  description: '...',\n}\n\nexport default function Layout() {}\n```\n\nAlternatively, you can define metadata using the `generateMetadata` function [2, 3].",
+      "cited": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer correctly states that you export a metadata object or use generateMetadata from layout.js or page.js, matching the reference without contradictions.",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 2,
+            "supports": true
+          },
+          {
+            "n": 3,
+            "supports": true
+          },
+          {
+            "n": 4,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q39",
+      "question": "What is the difference between updateTag and revalidateTag?",
+      "query": "difference updateTag revalidateTag cache life cycle unstable_updateTag revalidateTag next/cache",
+      "retrieved": [
+        "01-app/03-api-reference/04-functions/updateTag#differences-from-revalidatetag",
+        "01-app/03-api-reference/04-functions/revalidatePath#relationship-with-revalidatetag-and-updatetag",
+        "01-app/02-guides/upgrading/version-16#revalidatetag",
+        "01-app/03-api-reference/01-directives/use-cache#on-demand-revalidation",
+        "01-app/03-api-reference/01-directives/use-cache#revalidation"
+      ],
+      "answer": "`updateTag` and `revalidateTag` differ in their usage, where they can be executed, and how they handle cached data:\n\n- **`updateTag`**: Can only be used in Server Actions, expires data immediately so the next request waits for fresh data without serving stale content, and is designed for read-your-own-writes scenarios [1].\n- **`revalidateTag`**: Can be used in both Server Actions and Route Handlers [1]. When using the recommended `profile=\"max\"`, it serves cached data while fetching fresh data in the background using a stale-while-revalidate approach [1, 3]. Without a profile, its legacy behavior is equivalent to `updateTag` [1].",
+      "cited": [
+        1,
+        3
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer includes all key differences and matches the reference without contradictions",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 3,
+            "supports": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q40",
+      "question": "Can I keep using a webpack loader such as an SVG loader with Turbopack?",
+      "query": "Turbopack webpack loaders SVGR custom loaders unsupported migration",
+      "retrieved": [
+        "01-app/03-api-reference/05-config/01-next-config-js/turbopack#configuring-webpack-loaders",
+        "01-app/03-api-reference/05-config/01-next-config-js/turbopack#supported-loaders",
+        "01-app/02-guides/local-development#4-check-custom-webpack-settings",
+        "01-app/03-api-reference/05-config/01-next-config-js/turbopack#advanced-webpack-loader-conditions",
+        "01-app/03-api-reference/08-turbopack#webpack-plugins"
+      ],
+      "answer": "Yes, many webpack loaders work with Turbopack, including SVG loaders like `@svgr/webpack` and `svg-inline-loader` [1, 2]. You can configure them in `next.config.js` under the `turbopack.rules` configuration [1]. \n\nHere is an example of configuring an SVG loader:\n\n```js filename=\"next.config.js\"\nmodule.exports = {\n  turbopack: {\n    rules: {\n      '*.svg': {\n        loaders: ['@svgr/webpack'],\n        as: '*.js',\n      },\n    },\n  },\n}\n```\n\nKeep in mind that Turbopack only supports a core subset of the webpack loader API, and loaders must return JavaScript code (loaders that transform files like stylesheets or images directly are not supported) [1].",
+      "cited": [
+        1,
+        2
+      ],
+      "verdict": {
+        "correctness": "correct",
+        "reason": "The answer includes the key facts from the reference and adds accurate supporting details without contradiction",
+        "citations": [
+          {
+            "n": 1,
+            "supports": true
+          },
+          {
+            "n": 2,
+            "supports": true
+          }
+        ]
+      }
+    }
+  ]
+}
