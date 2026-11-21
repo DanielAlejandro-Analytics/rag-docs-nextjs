@@ -50,7 +50,7 @@ Responde `gemini-3.5-flash-lite`. Juzga `openai/gpt-oss-120b` vía Groq: elegí 
 
 ## Correrlo en local
 
-Requiere Node 22 o superior (los scripts usan TypeScript directo con `node`).
+La página corre con Node 20.9 o superior. Los scripts del eval usan TypeScript directo con `node`, así que necesitan Node 22.18 o superior.
 
 ```bash
 npm install
