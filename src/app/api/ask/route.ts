@@ -4,7 +4,9 @@ import { QuotaError } from "@/lib/llm";
 export async function POST(request: Request) {
   let question: unknown;
   try {
-    ({ question } = await request.json());
+    const raw = await request.text();
+    if (raw.length > MAX_QUESTION * 4) return Response.json({ error: "Petición demasiado grande." }, { status: 413 });
+    ({ question } = JSON.parse(raw));
   } catch {
     return Response.json({ error: "Petición inválida." }, { status: 400 });
   }
@@ -16,7 +18,11 @@ export async function POST(request: Request) {
   const visitor = request.headers.get("x-forwarded-for")?.split(",")[0].trim() || "local";
   const quota = takeQuota(visitor);
   if (!quota.ok) {
-    return Response.json({ error: "Llegaste al límite de preguntas de hoy. Vuelve mañana.", remaining: 0 }, { status: 429 });
+    const error =
+      quota.reason === "global"
+        ? "El demo llegó a su límite de preguntas de hoy. Vuelve mañana."
+        : "Llegaste al límite de preguntas de hoy. Vuelve mañana.";
+    return Response.json({ error, remaining: quota.remaining }, { status: 429 });
   }
 
   try {

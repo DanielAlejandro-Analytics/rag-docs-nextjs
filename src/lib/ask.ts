@@ -6,6 +6,7 @@ import { modelOf } from "./llm.ts";
 import { answerQuestion, rewriteQuery } from "./rag.ts";
 
 export const DAILY_LIMIT = 5;
+export const GLOBAL_DAILY_LIMIT = 150; // tope total, para que nadie con muchas IPs agote la cuota gratuita
 export const MAX_QUESTION = 500;
 
 let cached: { index: ReturnType<typeof buildIndex>; nextVersion: string } | undefined;
@@ -23,12 +24,18 @@ function corpus() {
 // shortcut: contador en memoria por instancia; se reinicia con cada arranque en frío y no se comparte entre
 // instancias. Basta para un demo: el plan gratuito de Gemini no cobra. Pasar a Redis/KV si hay abuso real.
 const usage = new Map<string, { day: string; count: number }>();
-export function takeQuota(visitor: string): { ok: boolean; remaining: number } {
+let total = { day: "", count: 0 };
+export function takeQuota(visitor: string): { ok: boolean; remaining: number; reason?: "visitor" | "global" } {
   const day = new Date().toISOString().slice(0, 10);
-  const u = usage.get(visitor);
-  const count = u?.day === day ? u.count : 0;
-  if (count >= DAILY_LIMIT) return { ok: false, remaining: 0 };
+  if (total.day !== day) {
+    total = { day, count: 0 };
+    usage.clear(); // los contadores de días anteriores ya no sirven
+  }
+  const count = usage.get(visitor)?.count ?? 0;
+  if (count >= DAILY_LIMIT) return { ok: false, remaining: 0, reason: "visitor" };
+  if (total.count >= GLOBAL_DAILY_LIMIT) return { ok: false, remaining: DAILY_LIMIT - count, reason: "global" };
   usage.set(visitor, { day, count: count + 1 });
+  total.count++;
   return { ok: true, remaining: DAILY_LIMIT - count - 1 };
 }
 
