@@ -21,7 +21,7 @@ function corpus() {
   return cached;
 }
 
-// shortcut: contador en memoria por instancia; se reinicia con cada arranque en frío y no se comparte entre
+// Contador en memoria por instancia; se reinicia con cada arranque en frío y no se comparte entre
 // instancias. Basta para un demo: el plan gratuito de Gemini no cobra. Pasar a Redis/KV si hay abuso real.
 const usage = new Map<string, { day: string; count: number }>();
 let total = { day: "", count: 0 };

@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Tema de terminal ámbar (maqueta 2 de Gemini): fondo casi negro cálido, todo en ámbar. */
+/* Tema de terminal ámbar: fondo casi negro cálido, todo en ámbar. */
 :root {
   --bg: #0b0905;
   --surface: #14100a;

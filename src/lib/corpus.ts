@@ -4,7 +4,7 @@ const slug = (s: string) =>
   s.toLowerCase().replace(/`/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "intro";
 
 // Corta un .md de la documentación en fragmentos por encabezados ## y ###.
-// shortcut: no se parten secciones largas (máx. ~21 mil caracteres); partirlas si el modelo recibe demasiado texto.
+// Limitación: no se parten secciones largas (máx. ~21 mil caracteres); partirlas si el modelo recibe demasiado texto.
 export function chunkFile(path: string, raw: string): Chunk[] {
   const fm = raw.match(/^---\n([\s\S]*?)\n---\n/);
   const title = fm?.[1].match(/^title:\s*(.+)$/m)?.[1].trim() ?? path;
