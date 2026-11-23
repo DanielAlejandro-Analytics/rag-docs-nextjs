@@ -2,6 +2,8 @@
 
 Demo: https://rag-docs-nextjs.vercel.app
 
+![Buscador RAG sobre la documentación de Next.js 16](./docs/preview.png)
+
 Un buscador que responde preguntas sobre Next.js 16 usando solo la documentación oficial, y cita los fragmentos en los que se apoya. Lo hice para medir algo concreto: si la respuesta es correcta y si las citas de verdad la respaldan. La página [/resultados](https://rag-docs-nextjs.vercel.app/resultados) muestra los 40 casos de prueba, con lo que salió bien y lo que no.
 
 ## Cómo funciona
